@@ -1,0 +1,15 @@
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+article {
+  margin-bottom: 20px;
+}
+
+h3, p {
+  text-transform: capitalize;
+}

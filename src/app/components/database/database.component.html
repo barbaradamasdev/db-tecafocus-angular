@@ -1,0 +1,13 @@
+<div style="background: white;">
+
+
+<div>
+  <input [(ngModel)]="title" placeholder="Digite o título do filme" />
+  <button (click)="search()">Buscar</button>
+</div>
+
+<div *ngIf="movie">
+  <h2>Titulo: {{ movie?.Title }}</h2>
+</div>
+
+</div>

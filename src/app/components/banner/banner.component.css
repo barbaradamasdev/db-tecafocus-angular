@@ -1,0 +1,28 @@
+.banner {
+  /* width: 100vw; */
+  background: linear-gradient(to left, rgba(245, 246, 252, 0.025), rgba(10, 10, 10, 0.847)),
+            url(https://images.alphacoders.com/616/616438.jpg) center/cover no-repeat;
+  min-height: 400px;
+  height: 25vw;
+  color: white;
+}
+
+.banner .container {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap:20px;
+}
+
+ul {
+  list-style: none;
+  gap: 20px;
+}
+
+.banner p {
+  width: 40%;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
