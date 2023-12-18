@@ -1,4 +1,4 @@
-<section class="banner">
+<section class="banner" [style.background]="movieBgPoster" [style]="backgroundStyle" [routerLink]="['/movie', movieTitle]">
   <div class="container flex">
     <h1>{{movieTitle}}</h1>
     <p>{{moviePlot}}</p>
