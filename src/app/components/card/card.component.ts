@@ -1,10 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MoviedbService } from '../../services/moviedb.service';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
@@ -25,7 +26,7 @@ export class CardComponent implements OnInit  {
   private loadMovieDetails() {
     this.moviedbService.getMovieByTitle(this.movieTitle).subscribe(
       (data) => {
-        console.log('Detalhes do Filme:', data);
+        //console.log('Detalhes do Filme:', data);
         this.movieYear = data.Year;
         this.movieDirector = data.Director;
         this.moviePoster = data.Poster;

@@ -10,6 +10,7 @@ article {
   margin-bottom: 20px;
 }
 
-h3, p {
+h3,
+p {
   text-transform: capitalize;
 }
