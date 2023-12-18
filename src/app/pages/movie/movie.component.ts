@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MoviedbService } from '../../services/moviedb.service';
 
@@ -43,7 +44,7 @@ export class MovieComponent {
   private loadMovieDetails() {
     this.moviedbService.getMovieByTitle(this.movieTitle).subscribe(
       (data) => {
-        console.table(data);
+        //console.table(data);
         this.movieDirector = data.Director;
         this.movieYear = data.Year;
         this.movieGenre = data.Genre.split(',');
@@ -74,17 +75,5 @@ export class MovieComponent {
     const horas: number = Math.floor(minutos / 60);
     const minutosRestantes: number = minutos % 60;
     return { horas, minutos: minutosRestantes };
-  }
-
-  getMovieDetails() {
-    this.moviedbService.getMovieByTitle(this.movieTitle).subscribe(
-      (data) => {
-        console.log('Detalhes do Filme:', data);
-        // Aqui você pode manipular os dados conforme necessário
-      },
-      (error) => {
-        console.error('Erro ao obter detalhes do filme:', error);
-      }
-    );
   }
 }
