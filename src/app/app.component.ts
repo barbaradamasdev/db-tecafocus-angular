@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { BannerComponent } from "./components/banner/banner.component";
-import { CarouselComponent } from "./components/carousel/carousel.component";
+import { HomeComponent } from "./pages/home/home.component";
 import { DatabaseComponent } from './components/database/database.component';
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
     selector: 'app-root',
@@ -12,14 +13,17 @@ import { DatabaseComponent } from './components/database/database.component';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [
-      CommonModule,
-      RouterOutlet,
-      HeaderComponent,
-      BannerComponent,
-      CarouselComponent,
-      DatabaseComponent
+        CommonModule,
+        RouterOutlet,
+        RouterLink,
+        HeaderComponent,
+        BannerComponent,
+        DatabaseComponent,
+        HomeComponent,
+        FooterComponent
     ]
 })
 export class AppComponent {
-  title = 'tecafocus-db';
+  title = 'Teca Focus - Database';
+
 }
