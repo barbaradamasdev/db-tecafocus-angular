@@ -12,6 +12,6 @@ export class MoviedbService {
   constructor(private http:HttpClient) { }
 
   getMovieByTitle(title:string):Observable<any>{
-    return this.http.get(`https://www.omdbapi.com/?apikey=${this._key}&t=${title}`);
+    return this.http.get(`https://www.omdbapi.com/?apikey=${this._key}&t=${title}&plot=full`);
   }
 }
