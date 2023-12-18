@@ -11,16 +11,7 @@ export class MoviedbService {
 
   constructor(private http:HttpClient) { }
 
-  //private url:string =`https://www.omdbapi.com/?apikey=${this._key}`;
-
   getMovieByTitle(title:string):Observable<any>{
     return this.http.get(`https://www.omdbapi.com/?apikey=${this._key}&t=${title}`);
-    /* return this.http.get<Database[]>(this.url+`&t=${title}`); */
   }
-
-  //title = '&t=${title}'
-  //listarFilme(title:string):Observable<Database>{
-  //  return this.http.get<Database>(`https://www.omdbapi.com/?apikey=${this._key}&t=${title}`);
-  //  /* return this.http.get<Database[]>(this.url+`&t=${title}`); */
-  //}
 }

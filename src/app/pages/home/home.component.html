@@ -33,3 +33,38 @@
     <app-card *ngFor="let movieTitle of category.movies" [movieTitle]="movieTitle"></app-card>
   </div>
 </section>
+
+
+<ul>
+  <li><a [routerLink]="['/genre', 'terror']">Terror</a></li>
+  <li><a [routerLink]="['/genre', 'comedy']">Comedy</a></li>
+  <!-- <li><a [routerLink]="['/genre', genreTitle]">Drama</a></li> -->
+</ul>
+
+<!-- genres = [
+    "Action",
+    "Adventure",
+    "Animation",
+    "Biography",
+    "Comedy",
+    "Crime",
+    "Documentary",
+    "Drama",
+    "Family",
+    "Fantasy",
+    "Film Noir",
+    "History",
+    "Horror",
+    "Music",
+    "Musical",
+    "Mystery",
+    "Romance",
+    "Sci-Fi",
+    "Short",
+    "Sport",
+    "Superhero",
+    "Thriller",
+    "War",
+    "Western"
+]
+ -->

@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CardComponent } from "../../components/card/card.component";
 import { BannerComponent } from "../../components/banner/banner.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CardComponent, CommonModule, BannerComponent]
+    imports: [CardComponent, CommonModule, BannerComponent, RouterLink]
 })
 export class HomeComponent {
   categories = [
@@ -22,7 +23,7 @@ export class HomeComponent {
     },
     {
       title: 'Comedy',
-      movies: ['Ted Lasso', 'Barry', 'Abbott Elementary', 'Airplane!', 'Mr. Bean', 'Jury Duty', 'Beef', 'Tropic Thunder', 'Ace Ventura: Pet Detective']
+      movies: ['Ted Lasso', 'Barry', 'Abbott Elementary', 'Airplane!', 'Mr. Bean', 'Jury Duty', 'Beef', 'Tropic Thunder', 'Ace Ventura: Pet Detective', 'The 40 Year Old Virgin', 'Date Night']
     },
     {
       title: 'Classic',
@@ -61,4 +62,6 @@ export class HomeComponent {
       movies: ['The Witch', 'Gerald\'s Game', 'Us', 'Hellraiser', 'Split', 'Nope', 'Get out', 'The Black Phone', 'when evil lurks','The Visit']
     },
   ];
+  
+movieGenre: any|string;
 }
