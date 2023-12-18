@@ -37,16 +37,4 @@ export class CardComponent implements OnInit  {
       }
     );
   }
-
-  getMovieDetails() {
-    this.moviedbService.getMovieByTitle(this.movieTitle).subscribe(
-      (data) => {
-        console.log('Detalhes do Filme:', data);
-        // Aqui você pode manipular os dados conforme necessário
-      },
-      (error) => {
-        console.error('Erro ao obter detalhes do filme:', error);
-      }
-    );
-  }
 }
