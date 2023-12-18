@@ -2,13 +2,12 @@
   <nav class="container flex">
     <a routerLink="/home"><img class="logo" src="././assets/teca-logo-horizontal.png" alt=""></a>
 
-    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" [(ngModel)]="isCheckboxChecked">
       <label for="openSidebarMenu" class="menu-hamburguer">
           <div class="spinner diagonal part-1"></div>
           <div class="spinner horizontal"></div>
           <div class="spinner diagonal part-2"></div>
       </label>
-
 
     <div id="sidebarMenu" class="flex">
       <form class="search" id="form-search">

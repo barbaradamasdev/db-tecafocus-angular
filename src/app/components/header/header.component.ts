@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Database } from '../../models/Database.model';
 import { MoviedbService } from '../../services/moviedb.service';
 
@@ -12,13 +12,33 @@ import { MoviedbService } from '../../services/moviedb.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   title:string ='';
   movie: any;
   database?:Database;
+  isCheckboxChecked: boolean = false;
 
   constructor(private serviceDB:MoviedbService, private router: Router){}
+
+  ngOnInit() {
+    this.checkCheckboxState();
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.checkCheckboxState();
+      }
+    });
+  }
+
+  checkCheckboxState() {
+    const checkbox = document.getElementById('openSidebarMenu') as HTMLInputElement;
+    this.isCheckboxChecked = checkbox.checked;
+
+    if (this.isCheckboxChecked) {
+      checkbox.checked = false;
+    }
+  }
 
   search() {
     this.serviceDB.getMovieByTitle(this.title).subscribe((data) => {
