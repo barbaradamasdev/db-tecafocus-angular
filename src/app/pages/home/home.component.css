@@ -22,7 +22,7 @@
 
 /* Ponteiro da barra de rolagem */
 .carousel::-webkit-scrollbar-thumb {
-  background-color: #e2cd10;
+  background: linear-gradient(to right, #f3e6a3, #e2b353, #92661f);
   border-radius: 10px;
 }
 
@@ -31,3 +31,19 @@
   background-color: #f6f6f619;
   border-radius: 10px;
 }
+
+.category {
+  color: #c48d33;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#f2e28d
+#e2b353
+#c48d33
