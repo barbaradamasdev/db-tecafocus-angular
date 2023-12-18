@@ -31,7 +31,7 @@ export class HomeComponent {
     },
     {
       title: 'Anime',
-      movies: ['One Piece', 'Pluto', 'Attack on titan', 'Fullmetal Alchemist: Brotherhood', 'Vinland Saga', 'Demon Slayer: Kimetsu no Yaiba', 'Puella Magi Madoka Magica', 'Cowboy Bebop', 'Erased']
+      movies: ['One Piece', 'Pluto', 'Attack on titan', 'Fullmetal Alchemist: Brotherhood', 'Vinland Saga', 'Demon Slayer: Kimetsu no Yaiba', 'Puella Magi Madoka Magica', 'Cowboy Bebop', 'Erased', 'Ajin']
     },
     {
       title: 'Dorama',
@@ -62,6 +62,6 @@ export class HomeComponent {
       movies: ['The Witch', 'Gerald\'s Game', 'Us', 'Hellraiser', 'Split', 'Nope', 'Get out', 'The Black Phone', 'when evil lurks','The Visit']
     },
   ];
-  
+
 movieGenre: any|string;
 }
