@@ -4,7 +4,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./components/header/header.component";
 import { BannerComponent } from "./components/banner/banner.component";
 import { HomeComponent } from "./pages/home/home.component";
-import { DatabaseComponent } from './components/database/database.component';
 import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
@@ -18,7 +17,6 @@ import { FooterComponent } from "./components/footer/footer.component";
         RouterLink,
         HeaderComponent,
         BannerComponent,
-        DatabaseComponent,
         HomeComponent,
         FooterComponent
     ]

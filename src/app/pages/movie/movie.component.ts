@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { MoviedbService } from '../../services/moviedb.service';
 
@@ -9,7 +8,7 @@ import { MoviedbService } from '../../services/moviedb.service';
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './movie.component.html',
-  styleUrl: './movie.component.css'
+  styleUrls: ['./movie.component.css', '../home/home.component.css']
 })
 export class MovieComponent {
   movieTitle: string = '';

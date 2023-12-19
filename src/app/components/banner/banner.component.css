@@ -9,7 +9,7 @@
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  gap:20px;
+  gap: 20px;
 }
 
 ul {
@@ -19,6 +19,22 @@ ul {
 
 h1 {
   font-size: 2.4rem;
+}
+
+button,
+button::after {
+  max-width: 150px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 15px;
+  color: white;
+  transition: all 0.5s;
+}
+
+button:hover {
+  box-shadow: 3px 3px 3px 2px black;
+  background: rgba(0, 0, 0, 0.591);
 }
 
 @media screen and (min-width: 600px) {

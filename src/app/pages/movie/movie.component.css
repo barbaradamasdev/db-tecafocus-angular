@@ -13,16 +13,6 @@ p::first-letter {
   text-transform: capitalize;
 }
 
-.breadcrumb {
-  gap: 8px;
-  padding-top: 0;
-  font-size: .9rem;
-}
-
-.breadcrumb > * {
-  color: grey;
-}
-
 p span {
   color: #c48d33;
 }
