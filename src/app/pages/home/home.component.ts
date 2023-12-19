@@ -15,7 +15,7 @@ export class HomeComponent {
   categories = [
     {
       title: 'TV series',
-      movies: ['The office', 'Game of thrones', 'Severance', 'The Haunting of Hill House', 'The expanse', 'Ted Lasso']
+      movies: ['The office', 'Game of thrones', 'Severance', 'The Haunting of Hill House', 'The expanse', 'Ted Lasso', 'Silo']
     },
     {
       title: 'Drama',
@@ -27,7 +27,7 @@ export class HomeComponent {
     },
     {
       title: 'Classic',
-      movies: ['The Breakfast Club', 'Small Soldiers', 'Alien', 'The Terminator', 'Requiem for a Dream', 'Patch Adams', 'Police Academy', 'A Night at the Roxbury', 'The Mask', 'Dirty Dancing', 'Ghost', 'Dinosaurs', 'The Nutty Professor']
+      movies: ['The Breakfast Club', 'Small Soldiers', 'Alien', 'The Terminator', 'Requiem for a Dream', 'Patch Adams', 'Police Academy', 'A Night at the Roxbury', 'The Mask', 'Dirty Dancing', 'Ghost', 'Dinosaurs', 'The Nutty Professor', 'Beetlejuice']
     },
     {
       title: 'Anime',
@@ -59,7 +59,7 @@ export class HomeComponent {
     },
     {
       title: 'Terror',
-      movies: ['The Witch', 'Gerald\'s Game', 'Us', 'Hellraiser', 'Split', 'Nope', 'Get out', 'The Black Phone', 'when evil lurks','The Visit']
+      movies: ['The Witch', 'Gerald\'s Game', 'Us', 'Hellraiser', 'Split', 'Nope', 'Get out', 'The Black Phone', 'when evil lurks','The Visit', 'Hellraiser', 'The Fly']
     },
   ];
 
