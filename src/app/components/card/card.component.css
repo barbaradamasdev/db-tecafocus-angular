@@ -1,9 +1,14 @@
-img {
+img, img:after {
   width: 200px;
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 5px;
+  transition: all 0.3s;
+}
+
+img:hover {
+  box-shadow: 3px 3px 3px 2px #c48d33;
 }
 
 article {
@@ -14,3 +19,4 @@ h3,
 p {
   text-transform: capitalize;
 }
+
