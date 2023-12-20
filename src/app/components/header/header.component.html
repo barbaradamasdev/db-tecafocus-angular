@@ -3,7 +3,7 @@
     <a routerLink="/home"><img class="logo" src="././assets/teca-logo-horizontal.png" alt=""></a>
 
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" [(ngModel)]="isCheckboxChecked">
-      <label for="openSidebarMenu" class="menu-hamburguer">
+      <label for="openSidebarMenu" class="menu-hamburguer" (click)="checkCheckboxState()">
           <div class="spinner diagonal part-1"></div>
           <div class="spinner horizontal"></div>
           <div class="spinner diagonal part-2"></div>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Database } from '../../models/Database.model';
@@ -21,23 +21,25 @@ export class HeaderComponent implements OnInit {
 
   constructor(private serviceDB:MoviedbService, private router: Router){}
 
-  ngOnInit() {
-    this.checkCheckboxState();
+  @ViewChild('openSidebarMenu', { static: false })
+  openSidebarMenu!: ElementRef<HTMLInputElement>;
 
+  checkCheckboxState() {
+    if (this.openSidebarMenu && this.openSidebarMenu.nativeElement) {
+      this.isCheckboxChecked = this.openSidebarMenu.nativeElement.checked;
+
+      if (this.isCheckboxChecked) {
+        this.openSidebarMenu.nativeElement.checked = false;
+      }
+    }
+  }
+
+  ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.checkCheckboxState();
       }
     });
-  }
-
-  checkCheckboxState() {
-    const checkbox = document.getElementById('openSidebarMenu') as HTMLInputElement;
-    this.isCheckboxChecked = checkbox.checked;
-
-    if (this.isCheckboxChecked) {
-      checkbox.checked = false;
-    }
   }
 
   search() {
