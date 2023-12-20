@@ -1,4 +1,4 @@
-<section class="banner" [style.background]="movieBgPoster" [style]="backgroundStyle" [routerLink]="['/movie', movieTitle]">
+<section class="banner" [style.background]="movieBgPoster" [style]="backgroundStyle">
   <div class="container flex">
     <h1>{{movieTitle}}</h1>
     <p>{{moviePlot}}</p>
@@ -7,6 +7,6 @@
       <li>{{movieYear}}</li>
       <li>{{movieimdbRating}}</li>
     </ul>
-    <button>See more</button>
+    <button [routerLink]="['/movie', movieTitle]">See more</button>
   </div>
 </section>
