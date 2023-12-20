@@ -18,7 +18,7 @@
         <p>{{ movieType }}</p>
         <p>{{ movieYear }}</p>
         @if (movieType === 'movie') {
-          <p>{{ movieRunTime }}</p>
+          <p>{{ movieRunTime | tempoDeFilme }}</p>
         } @else if (movieType === 'series'){
           <p>{{ totalSeasons }} seasons</p>
         }
@@ -65,5 +65,35 @@
     <hr>
     <p><span>Awards:</span> {{ movieAwards }}</p>
   </div>
-
 </article>
+
+<section  class="flex container seasonsinfo">
+<!-- <section *ngIf="movieType !== 'movie'" class="flex container seasonsinfo"> -->
+  <div class="seasonsselect flex container">
+    <p>Seasons:</p>
+    <div *ngFor="let season of seasons">
+      <button class="border" (click)="selectSeason(season)" [ngClass]="{'active': season.active}">{{season.Season}}</button>
+    </div>
+  </div>
+
+  <div class="subinfo container">
+    <div *ngIf="selectedSeason">
+      <h2>Season {{ selectedSeason.Season }}<span style="font-size: .9rem;"> ({{selectedSeasonYear}})</span></h2>
+      <div class="grid">
+        <section class="episodes" *ngFor="let episode of selectedSeason.Episodes">
+            <div>
+              <h4>Episode {{ episode.Episode }} - {{ episode.Title }}</h4>
+              <img [src]='episode.Poster' alt="Poster of episode {{ episode.Episode }}">
+            </div>
+            <div class="flex episodeinfo">
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="yellow" d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327l4.898.696c.441.062.612.636.282.95l-3.522 3.356l.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+                {{ episode.imdbRating }} <span>/10 IMDB</span>
+              </p>
+              <p><span>Director:</span> {{ episode.Director }}</p>
+              <p>{{ episode.Plot }}</p>
+            </div>
+          </section>
+      </div>
+    </div>
+  </div>
