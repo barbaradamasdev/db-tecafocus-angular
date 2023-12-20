@@ -47,7 +47,7 @@ export class GenreComponent {
     this.movieGenre = parts[parts.length - 1].replace('%20', ' ');
 
     this.category = this.categories.find((category: Category) => category.title === this.movieGenre);
-    console.log(this.category)
+    //console.log(this.category)
   }
 
 

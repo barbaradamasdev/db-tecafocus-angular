@@ -45,9 +45,27 @@ p span {
   color: rgba(128, 128, 128, 0.678);
 }
 
-.subcategory {
-  gap: 60px;
+.subinfo + .subinfo {
+  flex-direction: column;
 }
+
+.subcategory {
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 420px) {
+  .subinfo + .subinfo , .subcategory {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+
+  .subcategory {
+    gap: 60px;
+  }
+}
+
 
 @media screen and (min-width: 750px) {
   img {

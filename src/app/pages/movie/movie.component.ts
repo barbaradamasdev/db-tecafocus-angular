@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { MoviedbService } from '../../services/moviedb.service';
 import { TempoDeFilmePipe } from "../../pipes/tempo-de-filme.pipe";
 import { Season } from '../../models/Season';
@@ -38,6 +38,7 @@ export class MovieComponent {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private moviedbService: MoviedbService) {}
 
   ngOnInit() {
@@ -46,12 +47,16 @@ export class MovieComponent {
       this.loadMovieDetails();
     });
 
-    if (this.seasons.length > 0) {
+    if (this.seasons.length > 0 && !this.selectedSeason) {
       this.selectedSeason = this.seasons[0];
       this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
       this.selectedSeason.active = true;
     }
+    //this.seasons.sort((a, b) => (a.Season as number) - (b.Season as number));
+
+
   }
+
 
   selectSeason(season: Season) {
     this.selectedSeason = season;
@@ -85,7 +90,7 @@ export class MovieComponent {
           for (let s = 1; s <= this.totalSeasons; s++) {
             this.moviedbService.getSeasonsByTitle(this.movieTitle, s).subscribe(
               (seasonData) => {
-                
+
                 const seasonInfo : Season = {
                   Title: seasonData.Title,
                   Season: seasonData.Season,

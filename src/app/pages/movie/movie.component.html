@@ -67,8 +67,8 @@
   </div>
 </article>
 
-<section  class="flex container seasonsinfo">
-<!-- <section *ngIf="movieType !== 'movie'" class="flex container seasonsinfo"> -->
+<!-- series -->
+<section *ngIf="movieType === 'addFeature'" class="flex container seasonsinfo">
   <div class="seasonsselect flex container">
     <p>Seasons:</p>
     <div *ngFor="let season of seasons">
