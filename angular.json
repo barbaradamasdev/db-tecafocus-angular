@@ -93,6 +93,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/tecafocus-db",
+            "netlifyToken": "nfp_EjynpCM9BiTR871CQpsXnw9dQxqST2vNf6bb",
+            "siteId": "9d2fc987-1255-4467-8a2e-f354ce178c18"
+          }
         }
       }
     }
