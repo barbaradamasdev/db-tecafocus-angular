@@ -11,7 +11,7 @@ export class CategoryService {
     },
     {
       title: 'Drama',
-      movies: ['This is us', 'YellowJackets', 'Oldboy', 'Sounds of freedom', 'life is beautiful', 'Sound of Metal', 'Spotlight']
+      movies: ['This is us', 'YellowJackets', 'Oldboy', 'Sound of freedom', 'life is beautiful', 'Sound of Metal', 'Spotlight']
     },
     {
       title: 'Comedy',
