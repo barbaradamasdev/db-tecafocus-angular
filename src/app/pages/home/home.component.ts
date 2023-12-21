@@ -4,6 +4,7 @@ import { CardComponent } from "../../components/card/card.component";
 import { BannerComponent } from "../../components/banner/banner.component";
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CategoryService } from '../../services/category.service';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
     selector: 'app-home',
@@ -17,11 +18,13 @@ export class HomeComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private scrollService: ScrollService
   ) {}
 
   ngOnInit() {
     this.categories = this.categoryService.categories;
+    this.scrollService.scrollToTopOnRouteChange();
   }
 
 }

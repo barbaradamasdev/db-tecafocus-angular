@@ -33,7 +33,7 @@ export class CardComponent implements OnInit  {
         this.movieimdbRating = data.imdbRating;
       },
       (error) => {
-        console.error('Erro ao obter detalhes do filme:', error);
+        //console.error('Erro ao obter detalhes do filme:', error);
       }
     );
   }

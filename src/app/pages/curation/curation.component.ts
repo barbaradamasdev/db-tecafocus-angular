@@ -5,6 +5,7 @@ import { CardComponent } from "../../components/card/card.component";
 import { BannerComponent } from "../../components/banner/banner.component";
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from '../home/home.component';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
     selector: 'app-curation',
@@ -18,10 +19,12 @@ export class CurationComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private scrollService: ScrollService
   ) {}
 
   ngOnInit() {
+    this.scrollService.scrollToTopOnRouteChange()
     this.categories = this.categoryService.categories;
   }
 

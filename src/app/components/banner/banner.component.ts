@@ -44,7 +44,7 @@ export class BannerComponent {
         this.movieimdbRating = data.imdbRating;
       },
       (error) => {
-        console.error('Erro ao obter detalhes do filme:', error);
+        //console.error('Erro ao obter detalhes do filme:', error);
       }
     );
   }
