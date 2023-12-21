@@ -5,6 +5,7 @@ import { CardComponent } from "../../components/card/card.component";
 import { Category } from '../../models/Category';
 import { CategoryService } from '../../services/category.service';
 import { MoviedbService } from '../../services/moviedb.service';
+import { ScrollService } from '../../services/scroll.service';
 import { HomeComponent } from '../home/home.component';
 
 @Component({
@@ -38,9 +39,11 @@ export class GenreComponent {
   constructor(
     private route: ActivatedRoute,
     private categoryService: CategoryService,
-    private moviedbService: MoviedbService) {}
+    private moviedbService: MoviedbService,
+    private scrollService: ScrollService) {}
 
   ngOnInit() {
+    this.scrollService.scrollToTopOnRouteChange();
     this.categories = this.categoryService.categories;
 
     const parts = window.location.href.split('/');
@@ -74,7 +77,7 @@ export class GenreComponent {
         this.totalSeasons = data.totalSeasons;
       },
       (error) => {
-        console.error('Erro ao obter detalhes do filme:', error);
+        //console.error('Erro ao obter detalhes do filme:', error);
       }
     );
   }
