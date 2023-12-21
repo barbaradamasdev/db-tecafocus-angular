@@ -1,28 +1,79 @@
-# TecafocusDb
+# API + Angular v.17
+### Tecafocus - Curadoria de cinema
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+Este projeto tem como objetivo criar um site inovador que ofereça uma experiência de curadoria única para entusiastas de filmes e séries. Utilizando uma API da OMDB com informações de filmes e séries, o sistema proporcionará aos usuários uma plataforma onde poderão descobrir recomendações personalizadas, avaliações, e informações detalhadas sobre suas obras favoritas. Utilizei o Angular na sua última versão até o momento (v 17) e a API OMDB.
 
-## Development server
+![wireframe](https://raw.githubusercontent.com/barbaradamasdev/db-tecafocus-angular/8d6a95b72ecb8d71b50416e16f91130bd5c67822/src/assets/teca-img1.jpg)
+[Live View do Projeto](http://db-tecafocus-angular.vercel.app/home)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 🎯 Principais tecnologias utilizadas
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  ![Angular Badge](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
-## Code scaffolding
+### 🎯 Recursos Planejados:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Pesquisa Avançada**: Implementação de uma pesquisa avançada para ajudar os usuários a encontrar filmes e séries com base em:
+- Título
+- Gênero [Em Andamento - Próxima Feature]
+- Diretor [Em Andamento - Próxima Feature]
+- Ator [Em Andamento - Próxima Feature]
 
-## Build
+**Páginas de Detalhes:** Explore páginas detalhadas para cada filme ou série, revelando informações abrangentes, tais como:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Gênero:** Gêneros nos quais a obra se encaixa.
+- **Data de Lançamento:** A data em que o filme ou série foi lançado.
+- **Sinopse:** Uma breve descrição do enredo.
+- **Diretor:** O responsável pela direção da obra.
+- **Escritor:** Quem contribuiu para a elaboração do roteiro.
+- **Elenco:** Os atores e atrizes envolvidos na produção.
+- **Avaliações do IMDB:** Pontuações provenientes do popular banco de dados de cinema.
+- **Língua de Origem:** O idioma principal da obra.
+- **País:** O país de origem do filme ou série.
+- **Prêmios:** Possíveis reconhecimentos e honrarias.
+- **Para Séries - Temporadas:** Detalhes sobre as diferentes temporadas disponíveis.
+- **Para Filmes - Duração:** A extensão temporal da obra cinematográfica.
 
-## Running unit tests
+**Design Responsivo:** Garantia de que o site seja acessível e funcional em diferentes dispositivos, incluindo smartphones, tablets e computadores.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 🎯 Dependências Externas
 
-## Running end-to-end tests
+O projeto faz uso da API OMDB (Open Movie Database) para obter informações sobre filmes e séries. Certifique-se de obter uma chave de API válida em [OMDB API](https://www.omdbapi.com/) caso queira configurar seu projeto.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
+#### ❤️ Tela Final
+| ![Tela Final](https://github.com/barbaradamasdev/db-tecafocus-angular/blob/main/src/assets/teca-img2.png?raw=true)  Desktop| ![wireframe](https://github.com/barbaradamasdev/db-tecafocus-angular/blob/main/src/assets/teca-img5.png?raw=true) Mobile |
+| --- | --- |
 
-## Further help
+| ![Tela Final](https://github.com/barbaradamasdev/db-tecafocus-angular/blob/main/src/assets/teca-img3.png?raw=true) Detalhamento do filme| ![wireframe](https://github.com/barbaradamasdev/db-tecafocus-angular/blob/main/src/assets/teca-img4.png?raw=true) Curadoria |
+| --- | --- |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# db-tecafocus-angular
+#### ✍🏻️ Próximas Implementações:
+
+Estou empenhado em incorporar as seguintes funcionalidades ao projeto:
+
+- **Pesquisa por Ator ou Gênero:** Estamos explorando opções para integrar uma nova API que viabilize a pesquisa por ator ou gênero
+
+- **Detalhamento de Episódios e Temporadas:** Atualmente em fase de implementação direta. Em breve, os usuários poderão explorar detalhes mais profundos sobre episódios específicos e obter informações abrangentes sobre cada temporada de suas séries preferidas.
+
+
+---
+## 📌 Tecnologias auxiliares
+
+| Tecnologia | Uso | Site |
+| ------ | ------ | ------ |
+| Notion | Documentação do projeto | www.notion.so/
+| ChatGPT | Criação da marca | chat.openai.com/
+| Bing | Criação da logo  |www.bing.com/
+| Photoshop | Edição da logo |www.adobe.com/
+| VSCode | Edição de código |code.visualstudio.com/
+| Vercel | Deploy | https://vercel.com/
+| OMDB | API gratuita | https://www.omdbapi.com/
+
+
+### 🚀 Deploy
+O projeto está disponível para visualização [aqui](https://db-tecafocus-angular.vercel.app/home)
+
+### 🐼 Autora
+Bárbara Damasceno
+barbaradamas.dev@gmail.com
+[Linkedin](https://www.linkedin.com/in/barbaradamascenodev)
+[Portfolio](https://barbaradamasdev.github.io/portfolio/)
