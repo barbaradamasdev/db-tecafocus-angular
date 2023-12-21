@@ -1,7 +1,7 @@
 # API + Angular v.17
 ### Tecafocus - Curadoria de cinema
 
-Este projeto tem como objetivo criar um site que ofereça uma experiência de curadoria única para entusiastas de filmes e séries. Utilizando uma API da OMDB com informações de filmes e séries, o sistema proporcionará aos usuários uma plataforma onde poderão descobrir recomendações personalizadas, avaliações, e informações detalhadas sobre suas obras favoritas. Utilizei o Angular na sua última versão até o momento (v 17) e a API OMDB.
+Este projeto tem como objetivo criar um site que ofereça uma experiência de curadoria única para entusiastas de filmes e séries. Utilizando uma API da OMDB com informações de filmes e séries, o sistema proporcionará aos usuários uma plataforma onde poderão descobrir recomendações personalizadas, avaliações, e informações detalhadas sobre suas obras favoritas.
 
 ![wireframe](https://raw.githubusercontent.com/barbaradamasdev/db-tecafocus-angular/8d6a95b72ecb8d71b50416e16f91130bd5c67822/src/assets/teca-img1.jpg)
 [Live View do Projeto](http://db-tecafocus-angular.vercel.app/home)
