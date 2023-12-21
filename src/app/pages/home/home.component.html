@@ -1,6 +1,6 @@
  <app-banner movieTitle="Interstellar" movieBgPoster="https://images.alphacoders.com/616/616438.jpg"></app-banner>
 
- <section *ngFor="let category of categories.slice(0, 4)" class="container">
+ <section *ngFor="let category of categories.slice(0, 2)" class="container">
   <div class="flex titles">
     <h2><span class="category">The best of </span>{{ category.title }}</h2>
     <a [routerLink]="['/genre', category.title]"><h4>Show more +</h4></a>
@@ -12,7 +12,7 @@
 
 <app-banner movieTitle="Bulgasal" movieBgPoster="https://artworks.thetvdb.com/banners/v4/series/398825/backgrounds/61c7663f939b9.jpg"></app-banner>
 
-<section *ngFor="let category of categories.slice(4, 7)" class="container">
+<section *ngFor="let category of categories.slice(4, 6)" class="container">
   <div class="flex titles">
     <h2><span class="category">The best of </span>{{ category.title }}</h2>
     <a [routerLink]="['/genre', category.title]"><h4>Show more +</h4></a>
@@ -36,7 +36,7 @@
 
 <app-banner movieTitle="Knock at the cabin" movieBgPoster="https://www.themoviedb.org/t/p/original/zWDMQX0sPaW2u0N2pJaYA8bVVaJ.jpg"></app-banner>
 
-<section *ngFor="let category of categories.slice(9, 12)" class="container">
+<section *ngFor="let category of categories.slice(9, 10)" class="container">
   <div class="flex titles">
     <h2><span class="category">The best of </span>{{ category.title }}</h2>
     <a [routerLink]="['/genre', category.title]"><h4>Show more +</h4></a>
