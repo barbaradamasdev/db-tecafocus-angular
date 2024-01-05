@@ -5,13 +5,14 @@ import { MoviedbService } from '../../services/moviedb.service';
 import { TempoDeFilmePipe } from "../../pipes/tempo-de-filme.pipe";
 import { Season } from '../../models/Season';
 import { Episode } from '../../models/Episode';
+import { OrderByPipe} from '../../pipes/orderby.pipe'
 
 @Component({
     selector: 'app-movie',
     standalone: true,
     templateUrl: './movie.component.html',
     styleUrls: ['./movie.component.css', '../home/home.component.css'],
-    imports: [CommonModule, RouterLink, TempoDeFilmePipe]
+    imports: [CommonModule, RouterLink, TempoDeFilmePipe, OrderByPipe ]
 })
 
 export class MovieComponent {
@@ -38,7 +39,6 @@ export class MovieComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private moviedbService: MoviedbService) {}
 
   ngOnInit() {
@@ -52,11 +52,7 @@ export class MovieComponent {
       this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
       this.selectedSeason.active = true;
     }
-    //this.seasons.sort((a, b) => (a.Season as number) - (b.Season as number));
-
-
   }
-
 
   selectSeason(season: Season) {
     this.selectedSeason = season;
@@ -130,6 +126,7 @@ export class MovieComponent {
                   );
                 }
                 this.seasons.push(seasonInfo);
+                this.seasons = this.seasons.sort((a, b) => a.Season - b.Season);
               },
               (error) => {
                 console.error('Erro ao obter detalhes da temporada:', error);
