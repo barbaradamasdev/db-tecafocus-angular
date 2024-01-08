@@ -6,8 +6,8 @@
 
 <section *ngIf="category" class="container">
   <h2><span class="category">The best of </span>{{ movieGenre }}</h2>
-  <div class="grid fullpage">
-    <app-card *ngFor="let movieTitle of category.movies" [movieTitle]="movieTitle"></app-card>
+  <div class="grid fullpage" >
+    <app-card *ngFor="let movie of movies" [movieTitle]="movie.Title"></app-card>
   </div>
 </section>
 

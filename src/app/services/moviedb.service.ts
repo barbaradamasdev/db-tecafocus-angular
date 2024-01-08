@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MoviedbService {
-  private _key:string = '1b649b2b';
+  //private _key:string = '1b649b2b';
+  private _key:string = '1fc23959';
+  //private _key:string = '1b649dasd';
 
   constructor(private http:HttpClient) { }
 

@@ -2,6 +2,10 @@
   <a [routerLink]="['/movie', movieTitle]">
     <img [src]=[moviePoster] alt="Poster do filme">
     <div>
+      <div *ngIf="notaTeca !== null && notaTeca !== undefined" class="nota-teca flex">
+        <p>Review</p>
+        <h4>{{notaTeca}}</h4>
+      </div>
       <h3>{{ movieTitle }}</h3>
       <!-- <p>{{ movieDirector }}</p> -->
       <p>

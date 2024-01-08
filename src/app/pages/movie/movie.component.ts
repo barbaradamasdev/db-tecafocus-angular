@@ -5,14 +5,14 @@ import { MoviedbService } from '../../services/moviedb.service';
 import { TempoDeFilmePipe } from "../../pipes/tempo-de-filme.pipe";
 import { Season } from '../../models/Season';
 import { Episode } from '../../models/Episode';
-import { OrderByPipe} from '../../pipes/orderby.pipe'
+import { CategoryService } from '../../services/category.service';
 
 @Component({
     selector: 'app-movie',
     standalone: true,
     templateUrl: './movie.component.html',
     styleUrls: ['./movie.component.css', '../home/home.component.css'],
-    imports: [CommonModule, RouterLink, TempoDeFilmePipe, OrderByPipe ]
+    imports: [CommonModule, RouterLink, TempoDeFilmePipe ]
 })
 
 export class MovieComponent {
@@ -31,6 +31,7 @@ export class MovieComponent {
   movieAwards: string = '';
   movieType: string = '';
   totalSeasons: number = 0;
+  notaTeca: string = '';
   movieRatings:  string[] = [];
 
   seasons: Season [] = [];
@@ -39,6 +40,7 @@ export class MovieComponent {
 
   constructor(
     private route: ActivatedRoute,
+    private CategoryService: CategoryService,
     private moviedbService: MoviedbService) {}
 
   ngOnInit() {
@@ -62,82 +64,86 @@ export class MovieComponent {
   }
 
   private loadMovieDetails() {
-    this.moviedbService.getMovieByTitle(this.movieTitle).subscribe(
-      (data) => {
-          this.movieDirector = data.Director;
-          this.movieYear = data.Year;
-          this.movieGenre = data.Genre.split(',');
-          this.moviePoster = data.Poster;
-          this.movieimdbRating = data.imdbRating;
-          this.movieRunTime = data.Runtime;
-          this.movieWriter = data.Writer.split(',');
-          this.movieActors = data.Actors.split(',');
-          for (const rating of data.Ratings) {
-            this.movieRatings.push(rating.Source + ': ' + rating.Value);
-          }
-          this.moviePlot = data.Plot;
-          this.movieLanguage = data.Language;
-          this.movieCountry = data.Country;
-          this.movieAwards = data.Awards;
-          this.movieType = data.Type;
-          this.totalSeasons = data.totalSeasons;
+    let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
 
-        if (this.movieType === 'series') {
-          for (let s = 1; s <= this.totalSeasons; s++) {
-            this.moviedbService.getSeasonsByTitle(this.movieTitle, s).subscribe(
-              (seasonData) => {
+    if (!movieDetails) {
+      this.moviedbService.getMovieByTitle(this.movieTitle).subscribe((data) => {
+        movieDetails = data;
+      });
+    }
 
-                const seasonInfo : Season = {
-                  Title: seasonData.Title,
-                  Season: seasonData.Season,
-                  Episodes: [],
-                  totalSeasons: seasonData.totalSeasons,
-                };
+    this.movieDirector = movieDetails.Director;
+    this.movieYear = movieDetails.Year;
+    this.movieGenre = movieDetails.Genre.split(',');
+    this.moviePoster = movieDetails.Poster;
+    this.movieimdbRating = movieDetails.imdbRating;
+    this.movieRunTime = movieDetails.Runtime;
+    this.movieWriter = movieDetails.Writer.split(',');
+    this.movieActors = movieDetails.Actors.split(',');
+    for (const rating of movieDetails.Ratings) {
+      this.movieRatings.push(rating.Source + ': ' + rating.Value);
+    }
+    this.moviePlot = movieDetails.Plot;
+    this.movieLanguage = movieDetails.Language;
+    this.movieCountry = movieDetails.Country;
+    this.movieAwards = movieDetails.Awards;
+    this.movieType = movieDetails.Type;
+    this.notaTeca = movieDetails.NotaTeca ? movieDetails.NotaTeca : '';
+    console.log(this.notaTeca)
+    this.totalSeasons = movieDetails.totalSeasons;
 
-                for (let episode = 1; episode <= seasonData.Episodes.length; episode++) {
-                  this.moviedbService.getEpisodeBySeason(this.movieTitle, s, episode).subscribe(
-                    (episodeData) => {
-                      const episodeInfo: Episode = {
-                        Type: episodeData.Type,
-                        Title: episodeData.Title,
-                        Year: episodeData.Year,
-                        Rated: episodeData.Rated,
-                        Released: episodeData.Released,
-                        Season: episodeData.Season,
-                        Episode: episodeData.Episode,
-                        Runtime: episodeData.Runtime,
-                        Genre: episodeData.Genre,
-                        Director: episodeData.Director,
-                        Writer: episodeData.Writer,
-                        Actors: episodeData.Actors,
-                        Plot: episodeData.Plot,
-                        Language: episodeData.Language,
-                        Country: episodeData.Country,
-                        Poster: episodeData.Poster,
-                        Ratings: episodeData.Ratings,
-                        imdbRating: episodeData.imdbRating,
-                      };
+    if (this.movieType === 'series') {
+      for (let s = 1; s <= this.totalSeasons; s++) {
+        this.moviedbService.getSeasonsByTitle(this.movieTitle, s).subscribe(
+          (seasonData) => {
 
-                      seasonInfo.Episodes.push(episodeInfo);
-                    },
-                    (error) => {
-                      console.error('Erro ao obter detalhes do episódio:', error);
-                    }
-                  );
+            const seasonInfo : Season = {
+              Title: seasonData.Title,
+              Season: seasonData.Season,
+              Episodes: [],
+              totalSeasons: seasonData.totalSeasons,
+            };
+
+            for (let episode = 1; episode <= seasonData.Episodes.length; episode++) {
+              this.moviedbService.getEpisodeBySeason(this.movieTitle, s, episode).subscribe(
+                (episodeData) => {
+                  const episodeInfo: Episode = {
+                    Type: episodeData.Type,
+                    Title: episodeData.Title,
+                    Year: episodeData.Year,
+                    Rated: episodeData.Rated,
+                    Released: episodeData.Released,
+                    Season: episodeData.Season,
+                    Episode: episodeData.Episode,
+                    Runtime: episodeData.Runtime,
+                    Genre: episodeData.Genre,
+                    Director: episodeData.Director,
+                    Writer: episodeData.Writer,
+                    Actors: episodeData.Actors,
+                    Plot: episodeData.Plot,
+                    Language: episodeData.Language,
+                    Country: episodeData.Country,
+                    Poster: episodeData.Poster,
+                    Ratings: episodeData.Ratings,
+                    imdbRating: episodeData.imdbRating,
+                  };
+
+                  seasonInfo.Episodes.push(episodeInfo);
+                },
+                (error) => {
+                  //console.error('Erro ao obter detalhes do episódio:', error);
                 }
-                this.seasons.push(seasonInfo);
-                this.seasons = this.seasons.sort((a, b) => a.Season - b.Season);
-              },
-              (error) => {
-                console.error('Erro ao obter detalhes da temporada:', error);
-              }
-            );
+              );
+            }
+            this.seasons.push(seasonInfo);
+            this.seasons = this.seasons.sort((a, b) => a.Season - b.Season);
+          },
+          (error) => {
+            //console.error('Erro ao obter detalhes da temporada:', error);
           }
-        }
-      },
-      (error) => {
-        console.error('Erro ao obter detalhes do filme ou serie:', error);
+        );
       }
-    );
+    }
   }
+
 }

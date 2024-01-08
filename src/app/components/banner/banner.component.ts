@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TempoDeFilmePipe } from '../../pipes/tempo-de-filme.pipe';
+import { CategoryService } from '../../services/category.service';
 import { MoviedbService } from '../../services/moviedb.service';
 
 @Component({
@@ -21,7 +22,9 @@ export class BannerComponent {
   @Input() movieimdbRating: string = '';
   @Input() movieBgPoster:string = '';
 
-  constructor(private moviedbService: MoviedbService) {}
+  constructor(
+    private moviedbService: MoviedbService,
+    private CategoryService: CategoryService) {}
 
   ngOnInit() {
     this.loadMovieDetails();
@@ -33,19 +36,13 @@ export class BannerComponent {
     };
   }
 
-  private loadMovieDetails() {
-    this.moviedbService.getMovieByTitle(this.movieTitle).subscribe(
-      (data) => {
-        //console.log('Detalhes do Filme:', data);
-        this.movieYear = data.Year;
-        this.moviePlot = data.Plot;
-        this.moviePoster = data.Poster;
-        this.movieRuntime = data.Runtime;
-        this.movieimdbRating = data.imdbRating;
-      },
-      (error) => {
-        //console.error('Erro ao obter detalhes do filme:', error);
-      }
-    );
+   private loadMovieDetails() {
+    const movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
+    this.movieYear = movieDetails.Year;
+    this.moviePlot = movieDetails.Plot;
+    this.moviePoster = movieDetails.Poster;
+    this.movieRuntime = movieDetails.Runtime;
+    this.movieimdbRating = movieDetails.imdbRating;
   }
+
 }

@@ -18,14 +18,14 @@ export class CurationComponent {
   categories : any[] = [];
 
   constructor(
-    private route: ActivatedRoute,
-    private categoryService: CategoryService,
+    private CategoryService: CategoryService,
     private scrollService: ScrollService
   ) {}
 
   ngOnInit() {
-    this.scrollService.scrollToTopOnRouteChange()
-    this.categories = this.categoryService.categories;
+    this.categories = this.CategoryService.categories;
+    this.scrollService.scrollToTopOnRouteChange();
   }
+
 
 }

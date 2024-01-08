@@ -1,4 +1,4 @@
-<app-banner movieTitle="Knock at the cabin" movieBgPoster="https://www.themoviedb.org/t/p/original/zWDMQX0sPaW2u0N2pJaYA8bVVaJ.jpg"></app-banner>
+<app-banner movieTitle="Knock at the Cabin" movieBgPoster="https://www.themoviedb.org/t/p/original/zWDMQX0sPaW2u0N2pJaYA8bVVaJ.jpg"></app-banner>
 
 <section *ngFor="let category of categories" class="container">
  <div class="flex titles">
@@ -6,6 +6,6 @@
    <a [routerLink]="['/genre', category.title]"><h4>Show more +</h4></a>
  </div>
  <div class="grid carousel">
-   <app-card *ngFor="let movieTitle of category.movies.slice(0, 7)" [movieTitle]="movieTitle"></app-card>
+   <app-card *ngFor="let movie of category.movies.slice(0, 7)" [movieTitle]="movie.Title"></app-card>
  </div>
 </section>

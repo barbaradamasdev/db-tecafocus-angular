@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Database } from '../../models/Database.model';
 import { MoviedbService } from '../../services/moviedb.service';
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +20,10 @@ export class HeaderComponent implements OnInit {
   database?:Database;
   isCheckboxChecked: boolean = false;
 
-  constructor(private serviceDB:MoviedbService, private router: Router){}
+  constructor(
+    private CategoryService:CategoryService,
+    private MoviedbService:MoviedbService,
+    private router: Router){}
 
   @ViewChild('openSidebarMenu', { static: false })
   openSidebarMenu!: ElementRef<HTMLInputElement>;
@@ -43,10 +47,16 @@ export class HeaderComponent implements OnInit {
   }
 
   search() {
-    this.serviceDB.getMovieByTitle(this.title).subscribe((data) => {
-      this.movie = data;
-      this.router.navigate(['/movie', this.title]);
-      this.title = '';
-    });
+    const categoryMovie = this.CategoryService.getMovieDetailsByTitle(this.title);
+
+    if (categoryMovie) {
+      this.movie = categoryMovie;
+    } else {
+      this.MoviedbService.getMovieByTitle(this.title).subscribe((data) => {
+        this.movie = data;
+      });
+    }
+    this.router.navigate(['/movie', this.title]);
+    this.title = '';
   }
 }

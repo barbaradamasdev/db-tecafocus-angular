@@ -1,20 +1,25 @@
+export interface Rating {
+  Source: string;
+  Value: string;
+}
+
 export interface Database {
-  title:string;
-  year:string;
-  released:string;
-  runtime:string;
-  genre:string;
-  director:string;
-  writer:string;
-  actors:string;
-  plot:string;
-  language:string;
-  country:string;
-  awards:string;
-  poster:string;
-  ratings:string; //[source, value, ex 'imdb', '7.5/10']
-  imdbRating:string;
-  imdbID:string;
-  type:string;
-  totalSeasons:string;
+  Title: string;
+  Year: string;
+  Released: string;
+  Runtime: string;
+  Genre: string;
+  Director: string;
+  Writer: string;
+  Actors: string;
+  Plot: string;
+  Language: string;
+  Country: string;
+  Awards: string;
+  Poster: string;
+  Ratings: Rating[];
+  imdbRating: string;
+  imdbID: string;
+  Type: string;
+  TotalSeasons: string;
 }

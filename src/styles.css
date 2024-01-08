@@ -34,6 +34,10 @@ body {
   display: grid;
 }
 
+h1, h2, h3 {
+  text-transform: capitalize;
+}
+
 button {
   cursor: pointer;
 }
@@ -56,9 +60,15 @@ input {
   color: white !important;
 }
 
-button {
-  /* background-color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 7px 20px !important; */
+button,
+button::after {
+  font-size: 1.2rem;
+  padding: 20px 30px;
+  background: var(--gold);
+  border-radius: 35px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background: white;
 }
