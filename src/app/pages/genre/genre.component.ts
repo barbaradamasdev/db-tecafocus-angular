@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { CardComponent } from "../../components/card/card.component";
 import { Category } from '../../models/Category';
 import { CategoryService } from '../../services/category.service';
@@ -25,8 +25,8 @@ export class GenreComponent {
 
   constructor(
     private CategoryService: CategoryService,
-    private moviedbService: MoviedbService,
-    private scrollService: ScrollService) {}
+    private scrollService: ScrollService,
+    private router: Router) {}
 
   ngOnInit() {
     this.categories = this.CategoryService.categories;
@@ -43,6 +43,8 @@ export class GenreComponent {
     if (this.category) {
       const categoryTitle = this.category.title;
       this.movies = this.CategoryService.getMoviesByCategory(categoryTitle);
+    } else {
+      this.router.navigate(['/']);
     }
   }
 }

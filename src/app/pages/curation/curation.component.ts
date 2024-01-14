@@ -26,6 +26,4 @@ export class CurationComponent {
     this.categories = this.CategoryService.categories;
     this.scrollService.scrollToTopOnRouteChange();
   }
-
-
 }
