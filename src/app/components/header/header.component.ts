@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, NavigationEnd, NavigationExtras, Router, RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Database } from '../../models/Database.model';
 import { MoviedbService } from '../../services/moviedb.service';
 import { CategoryService } from '../../services/category.service';
@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
     private CategoryService:CategoryService,
     private MoviedbService:MoviedbService,
     private zone:NgZone,
-    private router: Router){}
+    private router:Router){}
 
   @ViewChild('openSidebarMenu', { static: false })
   openSidebarMenu!: ElementRef<HTMLInputElement>;
