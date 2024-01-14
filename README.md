@@ -31,6 +31,7 @@ Este projeto tem como objetivo criar um site que ofereça uma experiência de cu
 - **Prêmios:** Possíveis reconhecimentos e honrarias.
 - **Para Séries - Temporadas:** Detalhes sobre as diferentes temporadas disponíveis.
 - **Para Filmes - Duração:** A extensão temporal da obra cinematográfica.
+- **Episódios e Temporadas:** [NOVIDADE] Detalhamento de episódios e temporadas de séries.
 
 **Design Responsivo:** Garantia de que o site seja acessível e funcional em diferentes dispositivos, incluindo smartphones, tablets e computadores.
 
@@ -51,9 +52,6 @@ O projeto faz uso da API OMDB (Open Movie Database) para obter informações sob
 Estou empenhado em incorporar as seguintes funcionalidades ao projeto:
 
 - **Pesquisa por Ator ou Gênero:** Estamos explorando opções para integrar uma nova API que viabilize a pesquisa por ator ou gênero
-
-- **Detalhamento de Episódios e Temporadas:** Atualmente em fase de implementação direta. Em breve, os usuários poderão explorar detalhes mais profundos sobre episódios específicos e obter informações abrangentes sobre cada temporada de suas séries preferidas.
-
 
 ---
 ## 📌 Tecnologias auxiliares
