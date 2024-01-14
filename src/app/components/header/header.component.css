@@ -199,3 +199,12 @@ input[type="checkbox"]:checked ~ .menu-hamburguer > .diagonal.part-2 {
     text-align: left;
   }
 }
+
+
+.notFound {
+  position: absolute;
+  bottom: -25px;
+  padding: 6px;
+  color: red;
+  font-size: 0.8rem;
+}

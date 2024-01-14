@@ -31,7 +31,7 @@
     <p>{{ moviePlot }}</p>
     <hr>
     @if (movieType === 'movie'){
-      <p><span>Director:</span> {{ movieDirector }}</p>
+      <p *ngIf="movieDirector !== 'N/A'"><span>Director:</span> {{ movieDirector }}</p>
       <hr>
     }
 

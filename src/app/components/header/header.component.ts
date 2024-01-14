@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationExtras, Router, RouterLink } from '@angular/router';
 import { Database } from '../../models/Database.model';
 import { MoviedbService } from '../../services/moviedb.service';
 import { CategoryService } from '../../services/category.service';
@@ -19,10 +19,12 @@ export class HeaderComponent implements OnInit {
   movie: any;
   database?:Database;
   isCheckboxChecked: boolean = false;
+  notFoundMovie:boolean = false;
 
   constructor(
     private CategoryService:CategoryService,
     private MoviedbService:MoviedbService,
+    private zone:NgZone,
     private router: Router){}
 
   @ViewChild('openSidebarMenu', { static: false })
@@ -51,12 +53,29 @@ export class HeaderComponent implements OnInit {
 
     if (categoryMovie) {
       this.movie = categoryMovie;
+
+      this.router.navigate(['/movie', this.title]);
+      this.title = '';
     } else {
       this.MoviedbService.getMovieByTitle(this.title).subscribe((data) => {
-        this.movie = data;
+        if (data.Response !== 'False') {
+          this.movie = data;
+
+          this.router.navigate(['/movie', this.title]);
+          this.title = '';
+        } else {
+          console.log('Filme não encontrado.');
+          this.notFoundMovie = true;
+
+          setTimeout(() => {
+            this.zone.run(() => {
+              this.notFoundMovie = false;
+            });
+          }, 3000);
+
+          return;
+        }
       });
     }
-    this.router.navigate(['/movie', this.title]);
-    this.title = '';
   }
 }

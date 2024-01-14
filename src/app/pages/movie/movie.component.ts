@@ -17,7 +17,7 @@ import { CategoryService } from '../../services/category.service';
 
 export class MovieComponent {
   movieTitle: string = '';
-  movieDirector: string = '';
+  movieDirector?: string;
   movieYear: number = 0;
   movieGenre: string[] = [];
   moviePoster: string = '';
@@ -46,6 +46,7 @@ export class MovieComponent {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.movieTitle = params.get('movieTitle') ?? '';
+      console.log(this.movieTitle)
       this.loadMovieDetails();
     });
 
@@ -64,15 +65,27 @@ export class MovieComponent {
   }
 
   private loadMovieDetails() {
-    let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
+    let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle);
 
     if (!movieDetails) {
-      this.moviedbService.getMovieByTitle(this.movieTitle).subscribe((data) => {
-        movieDetails = data;
-      });
+      this.moviedbService.getMovieByTitle(this.movieTitle).subscribe(
+        (data) => {
+          movieDetails = data;
+          console.warn('Esse titulo não faz parte da nossa curadoria');
+          console.warn('Informação retirada da API!');
+          this.handleMovieDetails(movieDetails);
+        },
+        (error) => {
+          console.error('Erro ao obter detalhes do filme:', error);
+        }
+      );
+    } else {
+      console.warn('Esse titulo faz parte da nossa curadoria.');
+      this.handleMovieDetails(movieDetails);
     }
+  }
 
-    this.movieDirector = movieDetails.Director;
+  private handleMovieDetails(movieDetails: any) {
     this.movieYear = movieDetails.Year;
     this.movieGenre = movieDetails.Genre.split(',');
     this.moviePoster = movieDetails.Poster;
@@ -89,15 +102,14 @@ export class MovieComponent {
     this.movieAwards = movieDetails.Awards;
     this.movieType = movieDetails.Type;
     this.notaTeca = movieDetails.NotaTeca ? movieDetails.NotaTeca : '';
-    console.log(this.notaTeca)
     this.totalSeasons = movieDetails.totalSeasons;
+    this.movieDirector = movieDetails.Director;
 
     if (this.movieType === 'series') {
       for (let s = 1; s <= this.totalSeasons; s++) {
         this.moviedbService.getSeasonsByTitle(this.movieTitle, s).subscribe(
           (seasonData) => {
-
-            const seasonInfo : Season = {
+            const seasonInfo: Season = {
               Title: seasonData.Title,
               Season: seasonData.Season,
               Episodes: [],
@@ -131,7 +143,7 @@ export class MovieComponent {
                   seasonInfo.Episodes.push(episodeInfo);
                 },
                 (error) => {
-                  //console.error('Erro ao obter detalhes do episódio:', error);
+                  console.error('Erro ao obter detalhes do episódio:', error);
                 }
               );
             }
@@ -139,11 +151,10 @@ export class MovieComponent {
             this.seasons = this.seasons.sort((a, b) => a.Season - b.Season);
           },
           (error) => {
-            //console.error('Erro ao obter detalhes da temporada:', error);
+            console.error('Erro ao obter detalhes da temporada:', error);
           }
         );
       }
     }
   }
-
 }
