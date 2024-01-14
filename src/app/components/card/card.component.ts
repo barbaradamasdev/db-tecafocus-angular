@@ -21,7 +21,7 @@ export class CardComponent implements OnInit  {
   @Input() notaTeca?: string;
 
   constructor(
-    private moviedbService: MoviedbService,
+    private MoviedbService: MoviedbService,
     private CategoryService: CategoryService) {}
 
   ngOnInit() {
@@ -29,14 +29,16 @@ export class CardComponent implements OnInit  {
   }
 
   private loadMovieDetails() {
-    const movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle);
+    let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle);
 
-    if (movieDetails) {
-      this.movieYear = movieDetails.Year;
-      this.movieDirector = movieDetails.Director;
-      this.moviePoster = movieDetails.Poster;
-      this.movieimdbRating = movieDetails.imdbRating;
-      this.notaTeca = movieDetails.NotaTeca;
+    if (!movieDetails) {
+      movieDetails = this.MoviedbService.getMovieByTitle(this.movieTitle)
     }
+
+    this.movieYear = movieDetails.Year;
+    this.movieDirector = movieDetails.Director;
+    this.moviePoster = movieDetails.Poster;
+    this.movieimdbRating = movieDetails.imdbRating;
+    this.notaTeca = movieDetails.NotaTeca;
   }
 }
