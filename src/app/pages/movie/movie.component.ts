@@ -41,12 +41,12 @@ export class MovieComponent {
   constructor(
     private route: ActivatedRoute,
     private CategoryService: CategoryService,
-    private MoviedbService: MoviedbService) {}
+    private MoviedbService: MoviedbService,
+    private router: Router) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.movieTitle = params.get('movieTitle') ?? '';
-      console.log(this.movieTitle)
       this.loadMovieDetails();
     });
 
@@ -70,10 +70,15 @@ export class MovieComponent {
     if (!movieDetails) {
       this.MoviedbService.getMovieByTitle(this.movieTitle).subscribe(
         (data) => {
-          movieDetails = data;
-          console.warn('Esse titulo não faz parte da nossa curadoria');
-          console.warn('Informação retirada da API!');
-          this.handleMovieDetails(movieDetails);
+          console.log(movieDetails)
+          if (data.Response == 'False') {
+            this.router.navigate(['/']);
+          } else {
+            movieDetails = data;
+            console.warn('Esse titulo não faz parte da nossa curadoria');
+            console.warn('Informação retirada da API!');
+            this.handleMovieDetails(movieDetails);
+          }
         },
         (error) => {
           console.error('Erro ao obter detalhes do filme:', error);
