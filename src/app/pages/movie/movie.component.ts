@@ -41,7 +41,7 @@ export class MovieComponent {
   constructor(
     private route: ActivatedRoute,
     private CategoryService: CategoryService,
-    private moviedbService: MoviedbService) {}
+    private MoviedbService: MoviedbService) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -68,7 +68,7 @@ export class MovieComponent {
     let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle);
 
     if (!movieDetails) {
-      this.moviedbService.getMovieByTitle(this.movieTitle).subscribe(
+      this.MoviedbService.getMovieByTitle(this.movieTitle).subscribe(
         (data) => {
           movieDetails = data;
           console.warn('Esse titulo não faz parte da nossa curadoria');
@@ -107,7 +107,7 @@ export class MovieComponent {
 
     if (this.movieType === 'series') {
       for (let s = 1; s <= this.totalSeasons; s++) {
-        this.moviedbService.getSeasonsByTitle(this.movieTitle, s).subscribe(
+        this.MoviedbService.getSeasonsByTitle(this.movieTitle, s).subscribe(
           (seasonData) => {
             const seasonInfo: Season = {
               Title: seasonData.Title,
@@ -117,7 +117,7 @@ export class MovieComponent {
             };
 
             for (let episode = 1; episode <= seasonData.Episodes.length; episode++) {
-              this.moviedbService.getEpisodeBySeason(this.movieTitle, s, episode).subscribe(
+              this.MoviedbService.getEpisodeBySeason(this.movieTitle, s, episode).subscribe(
                 (episodeData) => {
                   const episodeInfo: Episode = {
                     Type: episodeData.Type,
