@@ -23,7 +23,7 @@ export class BannerComponent {
   @Input() movieBgPoster:string = '';
 
   constructor(
-    private moviedbService: MoviedbService,
+    private MoviedbService: MoviedbService,
     private CategoryService: CategoryService) {}
 
   ngOnInit() {
@@ -37,7 +37,12 @@ export class BannerComponent {
   }
 
    private loadMovieDetails() {
-    const movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
+    let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
+
+    if (!movieDetails) {
+      movieDetails = this.MoviedbService.getMovieByTitle(this.movieTitle)
+    }
+    
     this.movieYear = movieDetails.Year;
     this.moviePlot = movieDetails.Plot;
     this.moviePoster = movieDetails.Poster;
