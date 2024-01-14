@@ -57,13 +57,6 @@ export class MovieComponent {
     }
   }
 
-  selectSeason(season: Season) {
-    this.selectedSeason = season;
-    this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
-    this.seasons.forEach(s => s.active = false);
-    season.active = true;
-  }
-
   private loadMovieDetails() {
     let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle);
 
@@ -161,5 +154,12 @@ export class MovieComponent {
         );
       }
     }
+  }
+
+  selectSeason(season: Season) {
+    this.selectedSeason = season;
+    this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
+    this.seasons.forEach(s => s.active = false);
+    season.active = true;
   }
 }
