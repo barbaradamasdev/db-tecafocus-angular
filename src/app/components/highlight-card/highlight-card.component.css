@@ -1,0 +1,40 @@
+section {
+    min-height: 400px;
+    height: 25vw;
+    color: white;
+  }
+  
+  section .container {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .category {
+    color: #c48d33;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+  
+  button {
+    font-size: 1rem;
+    max-width: 150px;
+    padding: 10px 15px;
+  }
+  
+
+  @media screen and (max-width: 650px) {
+    h1, .category {
+      font-size: 1rem;
+    }
+    
+    button {
+      font-size: 14px;
+      padding: 8px 4px;
+    }
+
+    .container {
+      padding: 12px;
+    }
+  }
