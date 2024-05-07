@@ -1,4 +1,4 @@
-# API + Angular v.17
+# API + Angular v.17 
 ### Tecafocus - Curadoria de cinema
 
 Este projeto tem como objetivo criar um site que ofereça uma experiência de curadoria única para entusiastas de filmes e séries. Utilizando uma API da OMDB com informações de filmes e séries, a curadoria proporciona aos usuários uma plataforma onde poderão descobrir recomendações personalizadas, avaliações, e informações detalhadas sobre suas obras favoritas.
