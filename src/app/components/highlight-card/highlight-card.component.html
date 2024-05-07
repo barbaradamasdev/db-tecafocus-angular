@@ -1,0 +1,10 @@
+<section [style.background]="curationBgPoster" [style]="backgroundStyle">
+    <div class="container flex">
+        <div>
+            <p class="category">The best of</p>
+            <h1>{{curationTitle}}</h1>
+        </div>
+        
+        <button [routerLink]="['/genre', curationTitle]">See more</button>
+    </div>
+  </section>

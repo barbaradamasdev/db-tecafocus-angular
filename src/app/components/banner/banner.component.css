@@ -1,0 +1,35 @@
+.banner {
+  min-height: 400px;
+  height: 25vw;
+  color: white;
+}
+
+.banner .container {
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  text-transform: capitalize;
+}
+
+button {
+  font-size: 1rem;
+  max-width: 150px;
+  padding: 10px 15px;
+}
+
+
+@media screen and (min-width: 600px) {
+  .banner p {
+    max-width: 40%;
+  }
+}

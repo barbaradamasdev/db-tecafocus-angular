@@ -1,0 +1,40 @@
+img, img:after {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  transition: all 0.3s;
+}
+
+img:hover {
+  box-shadow: 3px 3px 3px 2px #c48d33;
+}
+
+article {
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+h3,
+p {
+  text-transform: capitalize;
+}
+
+
+.nota-teca {
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 10%;
+  top: 0;
+  background-color: #c48d33;
+  color: black;
+  font-size: 1.4rem;
+  padding: 8px;
+}
+
+.nota-teca p {
+  font-size: 1rem;
+}
