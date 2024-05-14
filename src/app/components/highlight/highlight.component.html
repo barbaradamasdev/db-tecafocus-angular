@@ -1,6 +1,3 @@
 <div class="flex container">
-    <!-- <app-highlight-card curationTitle="Sci-fi" curationBgPoster="https://www.rollingstone.com/wp-content/uploads/2018/06/rs-202131-maxresdefault.jpg"></app-highlight-card>
-    <app-highlight-card curationTitle="Zombie" curationBgPoster="https://images.lifestyleasia.com/wp-content/uploads/sites/2/2022/10/13155003/train-to-busan-final-1600x900.jpeg"></app-highlight-card>
-    <app-highlight-card curationTitle="Alien" curationBgPoster="https://variety.com/wp-content/uploads/2020/12/alien-1.jpg"></app-highlight-card> -->
     <app-highlight-card *ngFor="let curationTitle of highlightTitles" [curation]="curationTitle"></app-highlight-card>
 </div>
