@@ -1,7 +1,7 @@
 <app-banner movieTitle="shogun" movieBgPoster="../../../assets/shogun.jpg"></app-banner>
 <!-- <app-banner movieTitle="Interstellar" movieBgPoster="https://images.alphacoders.com/616/616438.jpg"></app-banner> -->
 
-<section *ngFor="let category of categories.slice(0, 2)" class="container">
+<section *ngFor="let category of categories.slice(0, 3)" class="container">
   <div class="flex titles">
     <h2><span class="category">The best of </span>{{ category.title }}</h2>
     <a [routerLink]="['/genre', category.title]"><h4>Show more +</h4></a>
