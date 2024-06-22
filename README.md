@@ -4,7 +4,7 @@
 Este projeto tem como objetivo criar um site que ofereça uma experiência de curadoria única para entusiastas de filmes e séries. Utilizando uma API da OMDB com informações de filmes e séries, a curadoria proporciona aos usuários uma plataforma onde poderão descobrir recomendações personalizadas, avaliações, e informações detalhadas sobre suas obras favoritas.
 
 ![wireframe](https://raw.githubusercontent.com/barbaradamasdev/db-tecafocus-angular/8d6a95b72ecb8d71b50416e16f91130bd5c67822/src/assets/teca-img1.jpg)
-[Live View do Projeto](http://db-tecafocus-angular.vercel.app/home)
+[Live View do Projeto](https://tecafocus.vercel.app/home)
 
 ### 🎯 Principais tecnologias utilizadas
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  ![Angular Badge](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
