@@ -38,6 +38,8 @@ export class MovieComponent {
   selectedSeason: Season | null = null;
   selectedSeasonYear: number = 0;
 
+  filteredMovies: any[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private CategoryService: CategoryService,
@@ -57,6 +59,21 @@ export class MovieComponent {
     }
   }
 
+  filterByGenre(genre: string): void {
+    const genreToFilter = genre.toLowerCase().trim();
+    this.router.navigate(['/genre', genreToFilter]);
+  }
+
+  filterByDirector(director: string): void {
+    const directorToFilter = director.toLowerCase().trim();
+    this.router.navigate(['/director', directorToFilter]);
+  }
+
+  filterByActor(actor: string): void {
+    const actorToFilter = actor.toLowerCase().trim();
+    this.router.navigate(['/actor', actorToFilter]);
+  }
+
   private loadMovieDetails() {
     let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle);
 
@@ -68,8 +85,7 @@ export class MovieComponent {
             this.router.navigate(['/']);
           } else {
             movieDetails = data;
-            console.warn('Esse titulo não faz parte da nossa curadoria');
-            console.warn('Informação retirada da API!');
+            console.warn('Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
             this.handleMovieDetails(movieDetails);
           }
         },
@@ -78,7 +94,7 @@ export class MovieComponent {
         }
       );
     } else {
-      console.warn('Esse titulo faz parte da nossa curadoria.');
+      console.warn('Esse titulo faz parte da nossa curadoria. Provavelmente ele deve ser excelente!');
       this.handleMovieDetails(movieDetails);
     }
   }

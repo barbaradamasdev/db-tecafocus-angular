@@ -1,0 +1,12 @@
+<div class="container flex breadcrumb">
+  <a routerLink="/home">Home</a>
+  <p>></p>
+  <p>The best of {{movieGenre}}</p>
+</div>
+
+<section *ngIf="filteredMovies" class="container">
+  <h2><span class="category">The best of </span>{{ movieGenre }}</h2>
+  <div class="grid fullpage" >
+    <app-card *ngFor="let movie of filteredMovies" [movieTitle]="movie.Title"></app-card>
+  </div>
+</section>
