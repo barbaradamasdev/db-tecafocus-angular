@@ -80,7 +80,6 @@ export class MovieComponent {
     if (!movieDetails) {
       this.MoviedbService.getMovieByTitle(this.movieTitle).subscribe(
         (data) => {
-          console.log(movieDetails)
           if (data.Response == 'False') {
             this.router.navigate(['/']);
           } else {
@@ -117,7 +116,7 @@ export class MovieComponent {
     this.movieType = movieDetails.Type;
     this.notaTeca = movieDetails.NotaTeca ? movieDetails.NotaTeca : '';
     this.totalSeasons = movieDetails.totalSeasons;
-    this.movieDirector = movieDetails.Director;
+    this.movieDirector = movieDetails.Director.split(',').map((director: string) => director.trim());
 
     if (this.movieType === 'series') {
       for (let s = 1; s <= this.totalSeasons; s++) {
@@ -174,6 +173,7 @@ export class MovieComponent {
 
   selectSeason(season: Season) {
     this.selectedSeason = season;
+    this.selectedSeason.Episodes = this.selectedSeason.Episodes.sort((a, b) => a.Episode - b.Episode);
     this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
     this.seasons.forEach(s => s.active = false);
     season.active = true;

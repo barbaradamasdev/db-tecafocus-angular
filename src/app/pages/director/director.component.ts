@@ -42,8 +42,8 @@ export class DirectorComponent {
 
     this.CategoryService.categories.forEach(category => {
       const filtered = category.movies.filter(movie => {
-        const director = movie?.Director.split(',').map(g => g.toLowerCase().trim());
-        return director?.includes(directorToFilter);
+        const directors = movie?.Director.split(',').map(d => d.toLowerCase().trim());
+        return directors?.includes(directorToFilter);
       });
 
       filtered.forEach(movie => {

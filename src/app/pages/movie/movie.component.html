@@ -33,7 +33,10 @@
     <hr>
     @if (movieType === 'movie'){
       <div *ngIf="movieDirector !== 'N/A'">
-        <p (click)="filterByDirector(movieDirector ?? '')" style="cursor: pointer;"><span>Director:</span> {{ movieDirector }}</p>
+        <p><span>Director: </span></p>
+        <div *ngFor="let director of movieDirector" (click)="filterByDirector(director)" style="cursor: pointer;">
+          <span>{{ director }}</span>
+        </div>
       </div>
       <hr>
     }
