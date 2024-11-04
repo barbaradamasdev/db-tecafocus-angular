@@ -13,9 +13,9 @@ Este projeto tem como objetivo criar um site que ofereça uma experiência de cu
 
 **Pesquisa Avançada**: Implementação de uma pesquisa avançada para ajudar os usuários a encontrar filmes e séries com base em:
 - Título
-- Gênero [Em Andamento - Próxima Feature]
-- Diretor [Em Andamento - Próxima Feature]
-- Ator [Em Andamento - Próxima Feature]
+- Gênero
+- Diretor
+- Ator
 
 **Páginas de Detalhes:** Explore páginas detalhadas para cada filme ou série, revelando informações abrangentes, tais como:
 
