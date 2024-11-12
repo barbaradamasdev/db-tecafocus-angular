@@ -12,9 +12,10 @@ img:hover {
 }
 
 article {
-  margin-bottom: 20px;
+  margin: 20px auto;
   text-align: center;
   position: relative;
+  max-width: 250px;
 }
 
 h3,
