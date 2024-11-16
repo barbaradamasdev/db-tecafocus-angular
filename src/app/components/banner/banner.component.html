@@ -1,5 +1,10 @@
-<section class="banner" [style.background]="movieBgPoster" [style]="backgroundStyle">
-  <div class="container flex">
+<section
+  [ngClass]="{'main-banner': isMainBanner, 'banner': true}"
+  [style.background]="movieBgPoster"
+  [style]="backgroundStyle">
+
+  <div
+    class="container flex">
     <h1>{{movieTitle}}</h1>
     <p>{{moviePlot}}</p>
     <ul class="flex">
@@ -9,4 +14,5 @@
     </ul>
     <button [routerLink]="['/movie', movieTitle]">See more</button>
   </div>
+
 </section>

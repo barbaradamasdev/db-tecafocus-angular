@@ -1,8 +1,8 @@
 img, img:after {
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 5px;
   transition: all 0.3s;
 }
@@ -15,12 +15,18 @@ article {
   margin: 20px auto;
   text-align: center;
   position: relative;
-  max-width: 250px;
+  max-width: 200px;
 }
 
 h3,
 p {
   text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+p {
+  font-size: 0.8rem;
+  margin-top: 5px;
 }
 
 
@@ -28,14 +34,10 @@ p {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  right: 10%;
-  top: 0;
+  top: -5%;
   background-color: #c48d33;
   color: black;
-  font-size: 1.4rem;
   padding: 8px;
-}
-
-.nota-teca p {
-  font-size: 1rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
 }

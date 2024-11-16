@@ -51,12 +51,6 @@ export class MovieComponent {
       this.movieTitle = params.get('movieTitle') ?? '';
       this.loadMovieDetails();
     });
-
-    if (this.seasons.length > 0 && !this.selectedSeason) {
-      this.selectedSeason = this.seasons[0];
-      this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
-      this.selectedSeason.active = true;
-    }
   }
 
   filterByGenre(genre: string): void {
@@ -129,39 +123,9 @@ export class MovieComponent {
               totalSeasons: seasonData.totalSeasons,
             };
 
-            for (let episode = 1; episode <= seasonData.Episodes.length; episode++) {
-              this.MoviedbService.getEpisodeBySeason(this.movieTitle, s, episode).subscribe(
-                (episodeData) => {
-                  const episodeInfo: Episode = {
-                    Type: episodeData.Type,
-                    Title: episodeData.Title,
-                    Year: episodeData.Year,
-                    Rated: episodeData.Rated,
-                    Released: episodeData.Released,
-                    Season: episodeData.Season,
-                    Episode: episodeData.Episode,
-                    Runtime: episodeData.Runtime,
-                    Genre: episodeData.Genre,
-                    Director: episodeData.Director,
-                    Writer: episodeData.Writer,
-                    Actors: episodeData.Actors,
-                    Plot: episodeData.Plot,
-                    Language: episodeData.Language,
-                    Country: episodeData.Country,
-                    Poster: episodeData.Poster,
-                    Ratings: episodeData.Ratings,
-                    imdbRating: episodeData.imdbRating,
-                  };
-
-                  seasonInfo.Episodes.push(episodeInfo);
-                },
-                (error) => {
-                  console.error('Erro ao obter detalhes do episódio:', error);
-                }
-              );
-            }
             this.seasons.push(seasonInfo);
             this.seasons = this.seasons.sort((a, b) => a.Season - b.Season);
+
           },
           (error) => {
             console.error('Erro ao obter detalhes da temporada:', error);
@@ -173,9 +137,58 @@ export class MovieComponent {
 
   selectSeason(season: Season) {
     this.selectedSeason = season;
-    this.selectedSeason.Episodes = this.selectedSeason.Episodes.sort((a, b) => a.Episode - b.Episode);
-    this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
     this.seasons.forEach(s => s.active = false);
     season.active = true;
+
+    if (season.Episodes.length === 0) {
+        this.MoviedbService.getSeasonsByTitle(this.movieTitle, season.Season).subscribe(
+            (seasonData) => {
+                for (let episode = 1; episode <= seasonData.Episodes.length; episode++) {
+                    this.MoviedbService.getEpisodeBySeason(this.movieTitle, season.Season, episode).subscribe(
+                        (episodeData) => {
+                            const episodeInfo: Episode = {
+                                Type: episodeData.Type,
+                                Title: episodeData.Title,
+                                Year: episodeData.Year,
+                                Rated: episodeData.Rated,
+                                Released: episodeData.Released,
+                                Season: episodeData.Season,
+                                Episode: episodeData.Episode,
+                                Runtime: episodeData.Runtime,
+                                Genre: episodeData.Genre,
+                                Director: episodeData.Director,
+                                Writer: episodeData.Writer,
+                                Actors: episodeData.Actors,
+                                Plot: episodeData.Plot,
+                                Language: episodeData.Language,
+                                Country: episodeData.Country,
+                                Poster: episodeData.Poster,
+                                Ratings: episodeData.Ratings,
+                                imdbRating: episodeData.imdbRating,
+                            };
+
+                            if (this.selectedSeason?.Episodes) {
+                              this.selectedSeason.Episodes.push(episodeInfo);
+                              this.selectedSeason.Episodes.sort((a, b) => a.Episode - b.Episode);
+
+                              if (this.selectedSeason.Episodes.length > 0) {
+                                  this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
+                              }
+                          }
+                        },
+                        (error) => {
+                            console.error('Erro ao obter detalhes do episódio:', error);
+                        }
+                    );
+                }
+            },
+            (error) => {
+                console.error('Erro ao carregar episódios da temporada selecionada:', error);
+            }
+        );
+    } else {
+        this.selectedSeason.Episodes.sort((a, b) => a.Episode - b.Episode);
+        this.selectedSeasonYear = this.selectedSeason.Episodes[0].Year;
+    }
   }
 }

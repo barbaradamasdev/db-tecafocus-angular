@@ -17,3 +17,17 @@ export const routes: Routes = [
   {path: 'director/:directorName', component: DirectorComponent },
   {path:'', redirectTo:'/home', pathMatch:'full'}
 ];
+
+/*
+
+ator, diretor, genero e curadoria, todos tem o mesmo estilo, pode ser uma tela so
+
+dessa forma fica:
+
+home
+curadorias
+list especifica (ator, diretor, genero, tipo curadoria)
+movie
+
+
+*/

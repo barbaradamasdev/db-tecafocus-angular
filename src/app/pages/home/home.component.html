@@ -1,4 +1,4 @@
-<app-banner movieTitle="shogun" movieBgPoster="../../../assets/shogun.jpg"></app-banner>
+<app-banner movieTitle="shogun" [isMainBanner]="true" movieBgPoster="../../../assets/shogun.jpg"></app-banner>
 <!-- <app-banner movieTitle="Interstellar" movieBgPoster="https://images.alphacoders.com/616/616438.jpg"></app-banner> -->
 
 <section *ngFor="let category of categories.slice(0, 3)" class="container">

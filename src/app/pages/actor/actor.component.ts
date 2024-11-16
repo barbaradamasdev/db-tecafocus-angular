@@ -12,7 +12,7 @@ import { Database } from '../../models/Database.model'
     selector: 'app-actor',
     standalone: true,
     templateUrl: './actor.component.html',
-    styleUrl: '../home/home.component.css',
+    styleUrls: ['../home/home.component.css', '../genre/genre.component.css'],
     imports: [CommonModule, CardComponent, RouterLink]
 })
 export class ActorComponent {

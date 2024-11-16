@@ -4,7 +4,17 @@
   color: white;
 }
 
+.main-banner {
+  min-height: 500px !important;
+}
+
+.main-banner > .container {
+  align-items: end;
+  text-align: right;
+}
+
 .banner .container {
+  text-shadow: 1px 1px 2px black;
   height: 100%;
   flex-direction: column;
   justify-content: center;

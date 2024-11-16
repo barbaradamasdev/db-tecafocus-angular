@@ -14,6 +14,7 @@ import { MoviedbService } from '../../services/moviedb.service';
 })
 export class BannerComponent {
 
+  @Input() isMainBanner: boolean = false;
   @Input() movieTitle: string = '';
   @Input() movieYear: number = 0;
   @Input() moviePlot: number = 0;
@@ -42,7 +43,7 @@ export class BannerComponent {
     if (!movieDetails) {
       movieDetails = this.MoviedbService.getMovieByTitle(this.movieTitle)
     }
-    
+
     this.movieYear = movieDetails.Year;
     this.moviePlot = movieDetails.Plot;
     this.moviePoster = movieDetails.Poster;

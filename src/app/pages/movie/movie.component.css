@@ -1,5 +1,9 @@
-* {
-  color: white;
+h1, p {
+  color: rgba(255, 255, 255, 0.781);
+}
+
+p, span {
+  font-size: 0.8rem !important;
 }
 
 article {
@@ -14,7 +18,7 @@ p::first-letter {
 }
 
 p span {
-  color: #c48d33;
+  color: #c48d33 !important;
 }
 
 .movieinfo {
@@ -33,11 +37,11 @@ p span {
   border-radius: 20px;
   padding: 3px 12px;
 }
+
 .border {
-  font-size: 1rem;
   border: 1px solid gray;
-  border-radius: 20px;
-  padding: 3px 12px;
+  border-radius: 0;
+  padding: 8px 10px !important;
   background: rgba(255, 192, 203, 0);
 }
 
@@ -51,6 +55,7 @@ p span {
 
 .subcategory {
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
 }
 
@@ -60,10 +65,14 @@ p span {
     gap: 20px;
   }
 
-
   .subcategory {
-    gap: 60px;
+    gap: 20px;
   }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #3434345b;
 }
 
 
@@ -88,7 +97,7 @@ p span {
 .episodes img {
   width: 400px;
   max-width: 100%;
-  max-height: 250px;
+  max-height: 170px;
   padding: 10px 0;
 }
 

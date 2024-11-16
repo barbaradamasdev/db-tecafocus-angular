@@ -1,0 +1,50 @@
+@media screen and (max-width: 406px ) {
+  .fullpage {
+    grid-template-columns: repeat(auto-fit, 137px);
+    gap: 0;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  app-card {
+    transform: scale(0.9);
+    margin: -15px;
+  }
+
+  app-card ::ng-deep .nota-teca {
+    left: 20px;
+  }
+  app-card ::ng-deep .nota-teca > p {
+    display: none;
+  }
+
+  app-card ::ng-deep article img,
+  app-card ::ng-deep article img::after {
+    width: 100px !important;
+    height: 178px !important;
+    margin-bottom: 3px !important;
+  }
+
+  app-card ::ng-deep h3 {
+    font-size: 12px;
+  }
+
+  app-card ::ng-deep p {
+    font-size: 10px;
+  }
+
+  .carousel {
+    gap: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 352px ) {
+  .fullpage {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    padding: 20px 10px !important;
+  }
+}

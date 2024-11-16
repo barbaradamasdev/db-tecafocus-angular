@@ -11,7 +11,7 @@ import { ScrollService } from '../../services/scroll.service';
     selector: 'app-curation',
     standalone: true,
     templateUrl: './curation.component.html',
-    styleUrl: '../home/home.component.css',
+    styleUrls: ['../home/home.component.css', '../genre/genre.component.css'],
     imports: [CardComponent, BannerComponent, RouterLink, CommonModule]
 })
 export class CurationComponent {
