@@ -26,7 +26,8 @@ export class GenreComponent {
   constructor(
     private CategoryService: CategoryService,
     private scrollService: ScrollService,
-    private router: Router) {}
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.categories = this.CategoryService.categories;

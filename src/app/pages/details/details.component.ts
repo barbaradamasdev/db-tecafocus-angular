@@ -17,6 +17,10 @@ import { Database } from '../../models/Database.model'
 })
 export class DetailsComponent {
   movieGenre: string = '';
+  actor: string = '';
+  director: string = '';
+  breadcrumbName: string = '';
+
   categories : any[] = [];
   category : Category | undefined;
   movies: Database[] = [];
@@ -30,22 +34,89 @@ export class DetailsComponent {
   ngOnInit() {
     this.scrollService.scrollToTopOnRouteChange();
     const parts = window.location.href.split('/');
-    this.movieGenre = parts[parts.length - 1].replace('%20', ' ');
-    this.filterByGenre(this.movieGenre);
+    const routeName = parts[parts.length - 2];
+    const routeValue = decodeURIComponent(parts[parts.length - 1]);
+
+    switch (routeName) {
+      case 'genre':
+        this.breadcrumbName = routeValue;
+        this.filterByGenre(this.breadcrumbName);
+        break;
+      case 'actor':
+        this.breadcrumbName = routeValue;
+        this.filterByActor(this.breadcrumbName);
+        break;
+      case 'director':
+        this.breadcrumbName = routeValue;
+        this.filterByDirector(this.breadcrumbName);
+        break;
+    }
   }
 
   filterByGenre(genre: string): void {
-    this.movieGenre = genre;
+    this.breadcrumbName = genre;
     this.filteredMovies = [];
-    const genreToFilter = this.movieGenre.toLowerCase().trim();
+    const genreToFilter = this.breadcrumbName.toLowerCase().trim();
+    const movieIds = new Set();
 
     this.CategoryService.categories.forEach(category => {
       const filtered = category.movies.filter(movie => {
-        const genres = movie?.Genre.split(',').map(g => g.toLowerCase().trim());
-        return genres?.includes(genreToFilter);
+        const list = movie?.Genre.split(',').map(g => g.toLowerCase().trim());
+        return list?.includes(genreToFilter);
       });
 
-      this.filteredMovies.push(...filtered);
+      filtered.forEach(movie => {
+        if (!movieIds.has(movie?.imdbID)) {
+          movieIds.add(movie?.imdbID);
+          this.filteredMovies.push(movie);
+        }
+      });
+
+    });
+  }
+
+  filterByActor(actor: string): void {
+    this.breadcrumbName = actor;
+    this.filteredMovies = [];
+    const actorToFilter = this.breadcrumbName.toLowerCase().trim();
+    const movieIds = new Set();
+
+
+    this.CategoryService.categories.forEach(category => {
+      const filtered = category.movies.filter(movie => {
+        const list = movie?.Actors.split(',').map(g => g.toLowerCase().trim());
+        return list?.includes(actorToFilter);
+      });
+
+      filtered.forEach(movie => {
+        if (!movieIds.has(movie?.imdbID)) {
+          movieIds.add(movie?.imdbID);
+          this.filteredMovies.push(movie);
+        }
+      });
+
+    });
+  }
+
+  filterByDirector(director: string): void {
+    this.breadcrumbName = director;
+    this.filteredMovies = [];
+    const directorToFilter = this.breadcrumbName.toLowerCase().trim();
+    const movieIds = new Set();
+
+    this.CategoryService.categories.forEach(category => {
+      const filtered = category.movies.filter(movie => {
+        const list = movie?.Director.split(',').map(d => d.toLowerCase().trim());
+        return list?.includes(directorToFilter);
+      });
+
+      filtered.forEach(movie => {
+        if (!movieIds.has(movie?.imdbID)) {
+          movieIds.add(movie?.imdbID);
+          this.filteredMovies.push(movie);
+        }
+      });
+
     });
   }
 }

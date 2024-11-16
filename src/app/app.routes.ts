@@ -4,23 +4,22 @@ import { GenreComponent } from './pages/genre/genre.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { DetailsComponent } from './pages/details/details.component';
-import { ActorComponent } from './pages/actor/actor.component';
-import { DirectorComponent } from './pages/director/director.component';
 
 export const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'thebest', component:CurationComponent},
   {path: 'thebest/:categoryTitle', component: GenreComponent },
-  {path: 'genre/:genreTitle', component: DetailsComponent },
   {path: 'movie/:movieTitle', component: MovieComponent },
-  {path: 'actor/:actorName', component: ActorComponent },
-  {path: 'director/:directorName', component: DirectorComponent },
+  // {path: 'genre/:genreTitle', component: DetailsComponent },
+  {path: 'genre/:genreTitle', component: DetailsComponent },
+  {path: 'actor/:actorName', component: DetailsComponent },
+  {path: 'director/:directorName', component: DetailsComponent },
   {path:'', redirectTo:'/home', pathMatch:'full'}
 ];
 
 /*
 
-ator, diretor, genero e curadoria, todos tem o mesmo estilo, pode ser uma tela so
+ator, diretor, genero, todos tem o mesmo estilo, pode ser uma tela so
 
 dessa forma fica:
 
