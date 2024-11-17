@@ -48,3 +48,10 @@
     padding: 20px 10px !important;
   }
 }
+
+.total-movies {
+  padding-top: 10px;
+  padding-left: 10px;
+  color: grey;
+  font-size: 12px;
+}

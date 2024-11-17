@@ -68,6 +68,37 @@ export class MovieComponent {
     this.router.navigate(['/actor', actorToFilter]);
   }
 
+  filterByLanguage(language: string): void {
+    const languageToFilter = language.toLowerCase().trim();
+    this.router.navigate(['/language', languageToFilter]);
+  }
+
+  filterByCountry(country: string): void {
+    const countryToFilter = country.toLowerCase().trim();
+    this.router.navigate(['/country', countryToFilter]);
+  }
+
+  filterByWriter(writer: string): void {
+    const writerToFilter = writer.toLowerCase().trim();
+    this.router.navigate(['/writer', writerToFilter]);
+  }
+
+  filterByYear(year: number): void {
+    const yearString = String(year)
+    const firstYeartoFilter: string = yearString.split('–')[0];
+    console.log(firstYeartoFilter)
+    this.router.navigate(['/year', firstYeartoFilter]);
+  }
+
+  filterByType(type: string): void {
+    const typeToFilter = type.toLowerCase().trim();
+    this.router.navigate(['/type', typeToFilter]);
+  }
+
+  filterByRating(): void {
+    this.router.navigate(['/imdb']);
+  }
+
   private loadMovieDetails() {
     let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle);
 

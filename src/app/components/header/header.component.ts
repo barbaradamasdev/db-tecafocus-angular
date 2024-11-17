@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   database?:Database;
   isCheckboxChecked: boolean = false;
   notFoundMovie:boolean = false;
+  categories : any[] = [];
 
   constructor(
     private CategoryService:CategoryService,
@@ -46,6 +47,8 @@ export class HeaderComponent implements OnInit {
         this.checkCheckboxState();
       }
     });
+
+    this.categories = this.CategoryService.categories;
   }
 
   search() {
@@ -78,4 +81,11 @@ export class HeaderComponent implements OnInit {
       });
     }
   }
+
+  navigateToCategory(categoryName: string): void {
+    this.isCheckboxChecked = false;
+
+    this.router.navigate(['/thebest', categoryName]);
+  }
+
 }

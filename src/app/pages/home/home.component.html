@@ -1,6 +1,25 @@
 <app-banner movieTitle="shogun" [isMainBanner]="true" movieBgPoster="../../../assets/shogun.jpg"></app-banner>
 <!-- <app-banner movieTitle="Interstellar" movieBgPoster="https://images.alphacoders.com/616/616438.jpg"></app-banner> -->
 
+<section class="categories">
+  <div class="category-wrapper">
+    <div class="category-inner">
+      <div *ngFor="let category of categories">
+        <button routerLink="/thebest/{{category.title}}">
+          {{ category.title }}
+        </button>
+      </div>
+    </div>
+    <div class="category-inner"> <!-- Duplicação do conteúdo -->
+      <div *ngFor="let category of categories">
+        <button routerLink="/thebest/{{category.title}}">
+          {{ category.title }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section *ngFor="let category of categories.slice(0, 3)" class="container">
   <div class="flex titles">
     <h2><span class="category">The best of </span>{{ category.title }}</h2>

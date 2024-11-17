@@ -68,3 +68,45 @@ section {
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
 }
+.categories {
+  margin: 15px 15px 0;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.category-wrapper {
+  display: flex;
+  animation: scrollButtons 120s linear infinite;
+  width: max-content;
+}
+
+.category-inner {
+  display: flex;
+}
+
+.categories button {
+  opacity: 0.6;
+  background-color: black;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  margin: 0 5px;
+  transition: all 0.4s;
+  scroll-snap-align: start;
+  white-space: nowrap;
+}
+
+.categories button:hover {
+  opacity: 1;
+  background-color: #d4af37;
+  color: black;
+}
+
+@keyframes scrollButtons {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
