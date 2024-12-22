@@ -77,32 +77,39 @@ export class ListComponent {
   }
 
   filterMoviesByProperty(
-    property: 'Genre' | 'Actors' | 'Director' | 'Language' | 'Country' | 'Writer' | 'Year' | 'Type', value: string): void {
+    property: 'Genre' | 'Actors' | 'Director' | 'Language' | 'Country' | 'Writer' | 'Year' | 'Type',
+    value: string
+  ): void {
     this.breadcrumbName = value;
     this.filteredMovies = [];
     const filterValue = this.breadcrumbName.toLowerCase().trim();
     const movieIds = new Set();
 
     this.CategoryService.categories.forEach(category => {
-      const filtered = category.movies.filter(movie => {
-        if (property === 'Year' || property === 'Type') {
-          return movie?.[property]?.toLowerCase().trim() === filterValue;
+      category.movies.forEach(movieRef => {
+        const movie = this.CategoryService.movies.find(m => m?.imdbID === movieRef.imdbID);
+        if (!movie || movieIds.has(movie.imdbID)) {
+          return;
         }
 
-        const list = movie?.[property]?.split(',').map(item => item.toLowerCase().trim());
-        return list?.includes(filterValue);
-      });
-
-      filtered.forEach(movie => {
-        if (!movieIds.has(movie?.imdbID)) {
-          movieIds.add(movie?.imdbID);
-          this.filteredMovies.push(movie);
+        if (property === 'Year' || property === 'Type') {
+          if (movie[property]?.toLowerCase().trim() === filterValue) {
+            movieIds.add(movie.imdbID);
+            this.filteredMovies.push(movie);
+          }
+        } else {
+          const list = movie[property]?.split(',').map(item => item.toLowerCase().trim());
+          if (list?.includes(filterValue)) {
+            movieIds.add(movie.imdbID);
+            this.filteredMovies.push(movie);
+          }
         }
       });
     });
 
     this.totalFilteredMovies = this.filteredMovies.length;
   }
+
 
   sortByRating(routeName : string): void {
     this.breadcrumbName = routeName.toUpperCase();

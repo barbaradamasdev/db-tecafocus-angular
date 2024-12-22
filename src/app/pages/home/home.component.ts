@@ -7,6 +7,7 @@ import { CategoryService } from '../../services/category.service';
 import { ScrollService } from '../../services/scroll.service';
 import { BannerButtonComponent } from "../../components/banner-button/banner-button.component";
 import { HighlightComponent } from "../../components/highlight/highlight.component";
+import { BestCharactersComponent } from "../../components/best-characters/best-characters.component";
 
 
 @Component({
@@ -14,7 +15,7 @@ import { HighlightComponent } from "../../components/highlight/highlight.compone
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CardComponent, CommonModule, BannerComponent, RouterLink, BannerButtonComponent, HighlightComponent]
+    imports: [CardComponent, CommonModule, BannerComponent, RouterLink, BannerButtonComponent, HighlightComponent, BestCharactersComponent]
 })
 export class HomeComponent {
   highlightTitles1: any[] = [

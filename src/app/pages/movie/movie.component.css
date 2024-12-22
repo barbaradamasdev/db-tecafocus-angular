@@ -33,9 +33,9 @@ p span {
 
 .subinfo > * {
   font-size: 0.9rem;
-  border: 1px solid gray;
-  border-radius: 20px;
-  padding: 3px 12px;
+  border: 1px solid rgba(128, 128, 128, 0.567);
+  border-radius: 15px;
+  padding: 5px 20px;
 }
 
 .border {
@@ -87,8 +87,14 @@ hr {
   article {
     flex-direction: row;
   }
-}
 
+}
+@media screen and (min-width: 1000px) {
+  .subcategory {
+    gap: 80px;
+    justify-content: start;
+  }
+}
 .episodes {
   gap: 20px;
   justify-content: space-between;

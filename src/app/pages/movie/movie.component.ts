@@ -6,6 +6,7 @@ import { TempoDeFilmePipe } from "../../pipes/tempo-de-filme.pipe";
 import { Season } from '../../models/Season';
 import { Episode } from '../../models/Episode';
 import { CategoryService } from '../../services/category.service';
+import { PosterdbService } from '../../services/posterdb.service';
 
 @Component({
     selector: 'app-movie',
@@ -44,6 +45,7 @@ export class MovieComponent {
     private route: ActivatedRoute,
     private CategoryService: CategoryService,
     private MoviedbService: MoviedbService,
+    private PosterdbService: PosterdbService,
     private router: Router) {}
 
   ngOnInit() {
