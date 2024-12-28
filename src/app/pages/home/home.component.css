@@ -15,6 +15,7 @@ section .titles {
   overflow-y: auto;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
+  justify-content: flex-start;
 }
 
 h2 {

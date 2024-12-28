@@ -28,6 +28,11 @@ export class HomeComponent {
     { title: "Cosmic horror", bg: "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2019/04/annihilation-bear-2.png" },
     { title: "Cults", bg: "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABcyAvPrc5uifNXmTJh0kXQag928uKcMaRbvjWcmN1qMDbDzdbf_hxf2m6FU1xErT_dQIlrIJTsNYPxRzgaGEQSMWheetz2SIKTRH.jpg" }
   ];
+  highlightTitles3: any[] = [
+    { title: "Johnny Depp", bg: "https://deepanddepp.files.wordpress.com/2008/02/johnnydepp.jpg" },
+    { title: "Nicolas Cage", bg: "https://sm.ign.com/t/ign_br/feature/t/the-15-bes/the-15-best-nicolas-cage-movies_q32j.1280.jpg" },
+    { title: "M. Night Shyamalan", bg: "https://ogimg.infoglobo.com.br/in/21019514-9f4-adc/FT1086A/8809478_SC-Rio-de-Janeiro-RJ-25-02-2015Entrevista-com-o-diretor-M-Night-S.jpg" }
+  ];
 
   categories : any[] = [];
 

@@ -85,7 +85,16 @@ export class HeaderComponent implements OnInit {
   navigateToCategory(categoryName: string): void {
     this.isCheckboxChecked = false;
 
-    this.router.navigate(['/thebest', categoryName]);
+    this.router.navigate(['/thebest', categoryName]).then(() => {
+      this.closeMenu();
+    });
   }
 
+  closeMenu(): void {
+    this.isCheckboxChecked = false;
+    const checkbox = document.getElementById('openSidebarMenu') as HTMLInputElement;
+    if (checkbox) {
+      checkbox.checked = false;
+    }
+  }
 }
