@@ -1,8 +1,12 @@
-section {
-    min-height: 280px;
+ section {
     height: 25vw;
-    color: white;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   }
 
   section .container {
@@ -10,10 +14,13 @@ section {
     flex-direction: column;
     justify-content: flex-end;
     gap: 20px;
+    align-items: center;
+    text-align: center;
   }
 
   .category {
-    color: #c48d33;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-transform: uppercase;
     font-size: 1.2rem;
   }
@@ -22,8 +29,16 @@ section {
     font-size: 1rem;
     max-width: 150px;
     padding: 10px 15px;
+    color: white;
+    transition: transform 0.2s, background-color 0.2s;
   }
 
+  button:hover {
+    background-color: #ecdfa9;
+    color: black;
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
   @media screen and (max-width: 650px) {
     h1, .category {
