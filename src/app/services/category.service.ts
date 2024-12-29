@@ -13,19 +13,6 @@ export class CategoryService {
     this.loadData();
   }
 
-  // loadData(): Observable<void> {
-  //   return forkJoin({
-  //     movies: this.http.get<any[]>('assets/data/movies.json'),
-  //     categories: this.http.get<any[]>('assets/data/categories.json'),
-  //   }).pipe(
-  //     tap((data) => {
-  //       this.movies = data.movies;
-  //       this.categories = data.categories;
-  //     }),
-  //     map(() => { })
-  //   );
-  // }
-
   loadData(): void {
     forkJoin({
       movies: this.http.get<any[]>('assets/data/movies.json'),

@@ -37,13 +37,14 @@ export class SearchComponent {
     const routeValue = decodeURIComponent(parts[4]);
     this.breadcrumbName = routeValue;
 
-    // if (!this.CategoryService.categories.length || !this.CategoryService.movies.length) {
-    //   this.CategoryService.loadData().subscribe(() => {
-    //     this.initializeFilteredMovies(routeValue);
-    //   });
-    // } else {
-    //   this.initializeFilteredMovies(routeValue);
-    // }
+    this.CategoryService.loadData();
+
+    const checkDataLoaded = setInterval(() => {
+      if (this.CategoryService.categories.length && this.CategoryService.movies.length) {
+        clearInterval(checkDataLoaded);
+        this.initializeFilteredMovies(routeValue);
+      }
+    }, 50);
   }
 
   private initializeFilteredMovies(routeValue: string): void {
@@ -52,7 +53,6 @@ export class SearchComponent {
     if (matchingMovies.length > 0) {
       this.filteredMovies = matchingMovies;
       this.totalFilteredMovies = matchingMovies.length;
-      console.log('Filmes filtrados:', this.filteredMovies);
     } else {
       console.log('Nenhum filme encontrado para:', routeValue);
       this.filteredMovies = [];
