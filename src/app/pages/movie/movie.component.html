@@ -83,6 +83,20 @@
   </div>
 </article>
 
+<!-- If have comments and review-->
+<article class="container">
+  <div *ngIf="tecaNota != ''"
+      class="comments"
+      [ngClass]="{'low-score': +tecaNota <= 5}">
+    <h3>Teca Review:</h3>
+    <p>{{tecaNota}}</p>
+  </div>
+  <div *ngIf="tecaComments != ''" class="comments">
+    <h3>Teca comments:</h3>
+    <p>{{ tecaComments }}</p>
+  </div>
+</article>
+
 
 <!-- series -->
 <section *ngIf="movieType === 'series' && seasons.length >= 1" class="flex container seasonsinfo">
@@ -114,3 +128,4 @@
       </div>
     </div>
   </div>
+</section>

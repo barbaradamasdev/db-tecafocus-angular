@@ -7,15 +7,34 @@ img, img:after {
   transition: all 0.3s;
 }
 
-img:hover {
-  box-shadow: 3px 3px 3px 2px #c48d33;
-}
-
 article {
   margin: 20px auto;
   text-align: center;
   position: relative;
   max-width: 200px;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+article:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid #c48d33;
+  background: rgba(139, 69, 19, 0.3);
+}
+
+article:hover img {
+  transform: scale(1.06);
+  padding-bottom: 5px;
+}
+
+article h3, article p {
+  transition: color 0.3s ease;
+}
+
+article:hover h3 {
+  color: var(--gold);
 }
 
 h3,
@@ -29,6 +48,13 @@ p {
   margin-top: 5px;
 }
 
+.info {
+  padding-bottom: 10px;
+}
+
+.info h3 {
+  margin: 0 3px;
+}
 
 .nota-teca {
   flex-direction: column;
@@ -40,4 +66,10 @@ p {
   padding: 8px;
   border-radius: 10px;
   font-size: 0.8rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.63);
+}
+
+.low-score {
+  background: rgb(145, 32, 32);
+  color: rgb(197, 197, 197);
 }

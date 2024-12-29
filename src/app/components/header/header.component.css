@@ -67,12 +67,12 @@ nav .logo {
 
 .search .btn-icon {
   position: absolute;
-  right: -6px;
+  right: -40px;
   top: -2px;
   margin: 0;
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.432);
+  color: rgba(255, 255, 255, 0.593);
 }
 .search input {
   border-radius: 15px;

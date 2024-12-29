@@ -81,7 +81,7 @@ hr {
     object-fit: cover;
     width: 350px;
     max-width: 40vw;
-    height: 450px;
+    height: 480px;
   }
 
   article {
@@ -137,4 +137,31 @@ section, h2 {
 
  .active {
   background: #755420;
+}
+
+.comments {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.comments h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gold);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.comments p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.low-score {
+  background: rgb(70, 14, 14);
 }

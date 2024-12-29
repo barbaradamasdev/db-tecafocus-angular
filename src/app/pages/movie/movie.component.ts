@@ -32,8 +32,9 @@ export class MovieComponent {
   movieAwards: string = '';
   movieType: string = '';
   totalSeasons: number = 0;
-  notaTeca: string = '';
+  tecaNota: string = '';
   movieRatings:  string[] = [];
+  tecaComments:  string = '';
 
   seasons: Season [] = [];
   selectedSeason: Season | null = null;
@@ -88,7 +89,6 @@ export class MovieComponent {
   filterByYear(year: number): void {
     const yearString = String(year)
     const firstYeartoFilter: string = yearString.split('–')[0];
-    console.log(firstYeartoFilter)
     this.router.navigate(['/year', firstYeartoFilter]);
   }
 
@@ -111,7 +111,8 @@ export class MovieComponent {
             this.router.navigate(['/']);
           } else {
             movieDetails = data;
-            console.warn('Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
+            alert('Esse titulo NÃO faz parte da nossa curadoria, será que é bom mesmo?')
+            console.error('Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
             this.handleMovieDetails(movieDetails);
           }
         },
@@ -141,7 +142,8 @@ export class MovieComponent {
     this.movieCountry = movieDetails.Country;
     this.movieAwards = movieDetails.Awards;
     this.movieType = movieDetails.Type;
-    this.notaTeca = movieDetails.NotaTeca ? movieDetails.NotaTeca : '';
+    this.tecaNota = movieDetails.TecaNota ? movieDetails.TecaNota : '';
+    this.tecaComments = movieDetails.TecaComments ? movieDetails.TecaComments : '';
     this.totalSeasons = movieDetails.totalSeasons;
     this.movieDirector = movieDetails.Director.split(',').map((director: string) => director.trim());
 

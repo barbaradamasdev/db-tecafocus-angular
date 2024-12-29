@@ -18,7 +18,7 @@ export class CardComponent implements OnInit  {
   @Input() movieGenre: string = '';
   @Input() moviePoster: string = '';
   @Input() movieimdbRating: string = '';
-  @Input() notaTeca?: string;
+  @Input() tecaNota?: string;
 
   constructor(
     private MoviedbService: MoviedbService,
@@ -39,6 +39,6 @@ export class CardComponent implements OnInit  {
     this.movieDirector = movieDetails.Director;
     this.moviePoster = movieDetails.Poster;
     this.movieimdbRating = movieDetails.imdbRating;
-    this.notaTeca = movieDetails.NotaTeca;
+    this.tecaNota = movieDetails.TecaNota;
   }
 }

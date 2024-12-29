@@ -15,7 +15,7 @@ import { BestCharactersComponent } from "../../components/best-characters/best-c
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CardComponent, CommonModule, BannerComponent, RouterLink, BannerButtonComponent, HighlightComponent, BestCharactersComponent]
+    imports: [CardComponent, CommonModule, BannerComponent, RouterLink, BannerButtonComponent, HighlightComponent]
 })
 export class HomeComponent {
   highlightTitles1: any[] = [

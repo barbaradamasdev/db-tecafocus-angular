@@ -28,7 +28,7 @@
     <a [routerLink]="['/thebest', category.title]"><h4>Show more +</h4></a>
   </div>
   <div class="grid carousel">
-    <app-card *ngFor="let movie of category.movies.slice(0, 7)" [movieTitle]="movie.Title" [notaTeca]="movie.notaTeca"></app-card>
+    <app-card *ngFor="let movie of category.movies.slice(0, 7)" [movieTitle]="movie.Title" [tecaNota]="movie.tecaNota"></app-card>
   </div>
 </section>
 
@@ -42,7 +42,7 @@
       <a [routerLink]="['/genre', category.title]"><h4>Show more +</h4></a>
     </div>
     <div class="grid carousel">
-      <app-card *ngFor="let movie of category.movies.slice(0, 7)" [movieTitle]="movie.Title" [notaTeca]="movie.notaTeca"></app-card>
+      <app-card *ngFor="let movie of category.movies.slice(0, 7)" [movieTitle]="movie.Title" [tecaNota]="movie.tecaNota"></app-card>
     </div>
   </section>
 
@@ -58,7 +58,7 @@
     <a [routerLink]="['/genre', category.title]"><h4>Show more +</h4></a>
   </div>
   <div class="grid carousel">
-    <app-card *ngFor="let movie of category.movies.slice(0, 7)" [movieTitle]="movie.Title" [notaTeca]="movie.notaTeca"></app-card>
+    <app-card *ngFor="let movie of category.movies.slice(0, 7)" [movieTitle]="movie.Title" [tecaNota]="movie.tecaNota"></app-card>
   </div>
 </section>
 
