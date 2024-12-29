@@ -1465,7 +1465,7 @@ export class CategoryService {
       ]
     },
     {
-      title: 'Bad movies so you do not have to watch them',
+      title: "Bad movies, so you don't have to watch them",
       movies : [
         {"Title":"Furiosa: A Mad Max Saga","Year":"2024","Rated":"R","Released":"24 May 2024","Runtime":"148 min","Genre":"Action, Adventure, Sci-Fi","Director":"George Miller","Writer":"George Miller, Nick Lathouris","Actors":"Anya Taylor-Joy, Chris Hemsworth, Tom Burke","Plot":"The origin story of renegade warrior Furiosa before her encounter and teamup with Mad Max.","Language":"English","Country":"Australia, United States","Awards":"12 wins & 73 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BNTcwYWE1NTYtOWNiYy00NzY3LWIwY2MtNjJmZDkxNDNmOWE1XkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.5/10"},{"Source":"Rotten Tomatoes","Value":"90%"},{"Source":"Metacritic","Value":"79/100"}],"Metascore":"79","imdbRating":"7.5","imdbVotes":"243,377","imdbID":"tt12037194","Type":"movie","DVD":"N/A","BoxOffice":"$67,475,791","Production":"N/A","Website":"N/A","Response":"True", "TecaNota": 4, "TecaComments": "Que filme fraco, tudo acontece magicamente, todas as soluções acontecem do jeito que Furiosa quer. Fotografia do filme é muito bonita, os efeitos são muito bem feitos, mas o roteiro em si é muito fraco."},
         {"Title":"A Quiet Place: Day One","Year":"2024","Rated":"PG-13","Released":"28 Jun 2024","Runtime":"99 min","Genre":"Drama, Horror, Sci-Fi","Director":"Michael Sarnoski","Writer":"Michael Sarnoski, John Krasinski, Bryan Woods","Actors":"Lupita Nyong'o, Joseph Quinn, Alex Wolff","Plot":"A young woman named Sam finds herself trapped in New York City during the early stages of an invasion by alien creatures with ultra-sensitive hearing.","Language":"American Sign , English","Country":"United States, United Kingdom, Canada","Awards":"1 win & 4 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BMDdjZTljZWMtMDIwNi00MTA5LTkxZmItNmY0NDA3ZDM0N2M2XkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.3/10"},{"Source":"Rotten Tomatoes","Value":"87%"}],"Metascore":"N/A","imdbRating":"6.3","imdbVotes":"117,879","imdbID":"tt13433802","Type":"movie","DVD":"N/A","BoxOffice":"$138,930,553","Production":"N/A","Website":"N/A","Response":"True", "TecaNota": 3, "TecaComments": "Olhe que eu aceito quase qualquer filme que tenha alienígenas, mas esse só pela misericórdia. Que flime ruim, que roteiro fraco, que falta de carisma da personagem, a única coisa legal do filme é ver ET matando gente."},
@@ -1491,15 +1491,10 @@ export class CategoryService {
     const movie = this.movies.find(m => m?.Title.toUpperCase() === titleUpperCase);
 
     if (movie) {
-      // return movie;
-      return {
-        ...movie,
-        TecaNota: movie.TecaNota || "Nota indisponível",
-        TecaComments: movie.TecaComments || "Comentários não disponíveis"
-      };
+      return movie;
     }
 
-    const badMoviesCategory = this.categories.find(cat => cat.title.toUpperCase() === "BAD MOVIES SO YOU DO NOT HAVE TO WATCH THEM");
+    const badMoviesCategory = this.categories.find(cat => cat.title.toUpperCase() === "BAD MOVIES, SO YOU DON'T HAVE TO WATCH THEM");
     if (badMoviesCategory) {
       const badMovie = badMoviesCategory.movies.find(m => m?.Title.toUpperCase() === titleUpperCase);
       return badMovie || null;
@@ -1519,7 +1514,7 @@ export class CategoryService {
     return category.movies.map(movieRef => {
       const movie = this.movies.find(m => m?.imdbID === movieRef.imdbID);
 
-      if (!movie && category.title.toUpperCase() === "BAD MOVIES SO YOU DO NOT HAVE TO WATCH THEM") {
+      if (!movie && category.title.toUpperCase() === "BAD MOVIES, SO YOU DON'T HAVE TO WATCH THEM") {
         return movieRef;
       }
 
