@@ -3,12 +3,14 @@ import { CurationComponent } from './pages/curation/curation.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { ListComponent } from './pages/list/list.component';
+import { SearchComponent } from './pages/search/search.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'movie/:movieTitle', component: MovieComponent },
   {path: 'thebest', component: CurationComponent},
 
+  {path: 'search/:searchTitle', component: SearchComponent },
   {path: 'thebest/:categoryTitle', component: ListComponent },
   {path: 'genre/:genreTitle', component: ListComponent },
   {path: 'actor/:actorName', component: ListComponent },

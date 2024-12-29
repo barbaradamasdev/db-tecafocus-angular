@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
 
   title:string ='';
   movie: any;
+  movies : any[] = [];
   database?:Database;
   isCheckboxChecked: boolean = false;
   notFoundMovie:boolean = false;
@@ -52,33 +53,31 @@ export class HeaderComponent implements OnInit {
   }
 
   search() {
-    const categoryMovie = this.CategoryService.getMovieDetailsByTitle(this.title);
+    const movie = this.CategoryService.getMovieDetailsByTitle(this.title);
 
-    if (categoryMovie) {
-      this.movie = categoryMovie;
-
+    if (movie) {
+      this.movie = movie;
       this.router.navigate(['/movie', this.title]);
       this.title = '';
     } else {
-      this.MoviedbService.getMovieByTitle(this.title).subscribe((data) => {
-        if (data.Response !== 'False') {
-          this.movie = data;
+      const partialMovies = this.CategoryService.searchMoviesByPartialTitle(this.title);
+      if (partialMovies.length > 0) {
+        this.movies = partialMovies;
 
-          this.router.navigate(['/movie', this.title]);
-          this.title = '';
-        } else {
-          console.log('Filme não encontrado.');
-          this.notFoundMovie = true;
+        this.router.navigate(['/search', this.title]).then(() => {
+          this.closeMenu();
+        });
 
-          setTimeout(() => {
-            this.zone.run(() => {
-              this.notFoundMovie = false;
-            });
-          }, 3000);
+      } else {
+        console.log('Filme não encontrado.');
+        this.notFoundMovie = true;
 
-          return;
-        }
-      });
+        setTimeout(() => {
+          this.zone.run(() => {
+            this.notFoundMovie = false;
+          });
+        }, 3000);
+      }
     }
   }
 
