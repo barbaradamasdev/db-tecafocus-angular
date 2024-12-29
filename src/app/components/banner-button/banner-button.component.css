@@ -8,10 +8,29 @@ section {
   justify-content: center;
 }
 
-button {
-  font-size: 1rem;
-}
-
 button a {
   color: black !important;
+}
+
+button {
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: 2px solid #a3a3a3;
+  box-shadow: 5px 5px 0 0 #ffffff;
+  position: relative;
+  inset: 0;
+  transform: rotateX(0), rotateY(0) rotateZ(0);
+  transition: all 600ms ease;
+  cursor: pointer;
+  font-size: 0.8rem !important;
+  padding: 10px 20px !important;
+  background: var(--gold);
+  max-width: fit-content !important;
+}
+
+button:hover {
+  background: white;
+  inset: 3px 0 3px 0;
+  transform: rotateX(5deg) rotateY(3deg) rotateZ(.25deg);
+  box-shadow: none;
 }

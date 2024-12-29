@@ -121,7 +121,11 @@ export class MovieComponent {
         }
       );
     } else {
-      console.warn('Esse titulo faz parte da nossa curadoria. Provavelmente ele deve ser excelente!');
+      if (movieDetails.TecaNota <= 5) {
+        console.error('Não indicamos esse filme. Esse titulo faz parte da nossa curadoria na categoria de piores filmes!');
+      } else {
+        console.warn('Esse titulo faz parte da nossa curadoria. Provavelmente ele deve ser excelente!');
+      }
       this.handleMovieDetails(movieDetails);
     }
   }

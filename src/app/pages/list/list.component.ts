@@ -86,7 +86,7 @@ export class ListComponent {
     const movieIds = new Set();
 
     this.CategoryService.categories.forEach(category => {
-      category.movies.forEach(movieRef => {
+      category.movies.forEach((movieRef: { imdbID: any; }) => {
         const movie = this.CategoryService.movies.find(m => m?.imdbID === movieRef.imdbID);
         if (!movie || movieIds.has(movie.imdbID)) {
           return;
@@ -98,7 +98,7 @@ export class ListComponent {
             this.filteredMovies.push(movie);
           }
         } else {
-          const list = movie[property]?.split(',').map(item => item.toLowerCase().trim());
+          const list = movie[property]?.split(',').map((item: string) => item.toLowerCase().trim());
           if (list?.includes(filterValue)) {
             movieIds.add(movie.imdbID);
             this.filteredMovies.push(movie);
@@ -117,7 +117,7 @@ export class ListComponent {
     this.filteredMovies = [];
 
     this.CategoryService.categories.forEach(category => {
-      category.movies.forEach(movie => {
+      category.movies.forEach((movie: { imdbID: string; }) => {
         if (movie?.imdbID && !movieIds.has(movie.imdbID)) {
           movieIds.add(movie.imdbID);
           this.filteredMovies.push(movie);

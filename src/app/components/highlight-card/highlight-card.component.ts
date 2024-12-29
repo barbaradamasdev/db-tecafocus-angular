@@ -26,7 +26,7 @@ export class HighlightCardComponent {
 
   get backgroundStyle() {
     return {
-      'background': `linear-gradient(to left, rgba(245, 246, 252, 0.025), rgba(10, 10, 10, 0.847)), url(${this.curationBgPoster}) center/cover no-repeat`
+      'background': `linear-gradient(to left, rgba(245, 246, 252, 0.025), rgba(10, 10, 10, 0.38)), url(${this.curationBgPoster}) center/cover no-repeat`
     };
   }
 

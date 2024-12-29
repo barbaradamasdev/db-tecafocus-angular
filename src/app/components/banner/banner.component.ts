@@ -33,7 +33,7 @@ export class BannerComponent {
 
   get backgroundStyle() {
     return {
-      'background': `linear-gradient(to left, rgba(245, 246, 252, 0.025), rgba(10, 10, 10, 0.847)), url(${this.movieBgPoster}) center/cover no-repeat`
+      'background': `linear-gradient(to left, rgba(245, 246, 252, 0.06), rgba(10, 10, 10, 0.38)), url(${this.movieBgPoster}) center/cover no-repeat`
     };
   }
 
