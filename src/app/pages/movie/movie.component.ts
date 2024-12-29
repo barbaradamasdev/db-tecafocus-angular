@@ -111,7 +111,7 @@ export class MovieComponent {
             this.router.navigate(['/']);
           } else {
             movieDetails = data;
-            console.error('Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
+            console.error('✅✅✅ Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
             this.handleMovieDetails(movieDetails);
           }
         },
@@ -121,9 +121,9 @@ export class MovieComponent {
       );
     } else {
       if (movieDetails.TecaNota <= 5) {
-        console.error('Não indicamos esse filme. Esse titulo faz parte da nossa curadoria na categoria de piores filmes!');
+        console.error('🚫🚫🚫Não indicamos esse filme. Esse titulo faz parte da nossa curadoria na categoria de piores filmes!');
       } else {
-        console.warn('Esse titulo faz parte da nossa curadoria. Provavelmente ele deve ser excelente!');
+        console.warn('🚫🚫🚫Esse titulo faz parte da nossa curadoria. Provavelmente ele deve ser excelente!');
       }
       this.handleMovieDetails(movieDetails);
     }
