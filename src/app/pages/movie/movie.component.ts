@@ -111,7 +111,6 @@ export class MovieComponent {
             this.router.navigate(['/']);
           } else {
             movieDetails = data;
-            alert('Esse titulo NÃO faz parte da nossa curadoria, será que é bom mesmo?')
             console.error('Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
             this.handleMovieDetails(movieDetails);
           }

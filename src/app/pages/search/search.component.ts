@@ -37,13 +37,13 @@ export class SearchComponent {
     const routeValue = decodeURIComponent(parts[4]);
     this.breadcrumbName = routeValue;
 
-    if (!this.CategoryService.categories.length || !this.CategoryService.movies.length) {
-      this.CategoryService.loadData().subscribe(() => {
-        this.initializeFilteredMovies(routeValue);
-      });
-    } else {
-      this.initializeFilteredMovies(routeValue);
-    }
+    // if (!this.CategoryService.categories.length || !this.CategoryService.movies.length) {
+    //   this.CategoryService.loadData().subscribe(() => {
+    //     this.initializeFilteredMovies(routeValue);
+    //   });
+    // } else {
+    //   this.initializeFilteredMovies(routeValue);
+    // }
   }
 
   private initializeFilteredMovies(routeValue: string): void {
