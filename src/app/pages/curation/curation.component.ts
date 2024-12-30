@@ -23,7 +23,14 @@ export class CurationComponent {
   ) {}
 
   ngOnInit() {
-    this.categories = this.CategoryService.categories;
     this.scrollService.scrollToTopOnRouteChange();
+
+    if (this.CategoryService.categories.length > 0) {
+      this.categories = this.CategoryService.categories;
+    } else {
+      this.CategoryService.loadData().subscribe(() => {
+        this.categories = this.CategoryService.categories;
+      });
+    }
   }
 }

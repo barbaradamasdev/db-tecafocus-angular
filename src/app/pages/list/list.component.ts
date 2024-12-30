@@ -32,8 +32,8 @@ export class ListComponent {
   ) {}
 
   ngOnInit() {
-    this.categories = this.CategoryService.categories;
     this.scrollService.scrollToTopOnRouteChange();
+
     const parts = window.location.href.split('/');
     const routeName = parts[3] as string;
     const routeValue = decodeURIComponent(parts[4]);

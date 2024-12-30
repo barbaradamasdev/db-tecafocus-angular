@@ -37,14 +37,9 @@ export class SearchComponent {
     const routeValue = decodeURIComponent(parts[4]);
     this.breadcrumbName = routeValue;
 
-    this.CategoryService.loadData();
-
-    const checkDataLoaded = setInterval(() => {
-      if (this.CategoryService.categories.length && this.CategoryService.movies.length) {
-        clearInterval(checkDataLoaded);
-        this.initializeFilteredMovies(routeValue);
-      }
-    }, 50);
+    this.CategoryService.loadData().subscribe(() => {
+      this.initializeFilteredMovies(routeValue);
+    });
   }
 
   private initializeFilteredMovies(routeValue: string): void {

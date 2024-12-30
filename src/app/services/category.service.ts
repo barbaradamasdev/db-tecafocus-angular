@@ -13,14 +13,17 @@ export class CategoryService {
     this.loadData();
   }
 
-  loadData(): void {
-    forkJoin({
+  loadData(): Observable<void> {
+    return forkJoin({
       movies: this.http.get<any[]>('assets/data/movies.json'),
       categories: this.http.get<any[]>('assets/data/categories.json'),
-    }).subscribe((data) => {
-      this.movies = data.movies;
-      this.categories = data.categories;
-    });
+    }).pipe(
+      tap((data) => {
+        this.movies = data.movies || [];
+        this.categories = data.categories || [];
+      }),
+      map(() => { })
+    );
   }
 
   getDados(): Observable<any> {
