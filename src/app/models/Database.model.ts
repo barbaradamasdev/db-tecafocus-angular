@@ -22,4 +22,6 @@ export interface Database {
   imdbID: string;
   Type: string;
   TotalSeasons: string;
+  TecaNota: string;
+  TecaComments: string;
 }

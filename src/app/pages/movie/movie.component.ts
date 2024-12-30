@@ -40,13 +40,15 @@ export class MovieComponent {
   selectedSeason: Season | null = null;
   selectedSeasonYear: number = 0;
 
+  categories : any[] = [];
   filteredMovies: any[] = [];
+
+  private defaultPoster: string = 'assets/default.png';
 
   constructor(
     private route: ActivatedRoute,
     private CategoryService: CategoryService,
     private MoviedbService: MoviedbService,
-    private PosterdbService: PosterdbService,
     private router: Router) {}
 
   ngOnInit() {
@@ -111,7 +113,7 @@ export class MovieComponent {
             this.router.navigate(['/']);
           } else {
             movieDetails = data;
-            console.error('✅✅✅ Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
+            console.warn('✅✅✅✅✅✅✅✅✅ Esse titulo faz parte da nossa curadoria. Provavelmente ele deve ser excelente!');
             this.handleMovieDetails(movieDetails);
           }
         },
@@ -121,9 +123,9 @@ export class MovieComponent {
       );
     } else {
       if (movieDetails.TecaNota <= 5) {
-        console.error('🚫🚫🚫Não indicamos esse filme. Esse titulo faz parte da nossa curadoria na categoria de piores filmes!');
+        console.error('🚫🚫🚫🚫🚫🚫🚫🚫🚫Não indicamos esse filme. Esse titulo faz parte da nossa curadoria na categoria de piores filmes!');
       } else {
-        console.warn('🚫🚫🚫Esse titulo faz parte da nossa curadoria. Provavelmente ele deve ser excelente!');
+        console.error('🚫🚫🚫🚫🚫🚫🚫🚫🚫Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
       }
       this.handleMovieDetails(movieDetails);
     }
@@ -132,7 +134,9 @@ export class MovieComponent {
   private handleMovieDetails(movieDetails: any) {
     this.movieYear = movieDetails.Year;
     this.movieGenre = movieDetails.Genre.split(',');
-    this.moviePoster = movieDetails.Poster;
+    this.moviePoster = (movieDetails?.Poster && movieDetails.Poster !== 'N/A')
+    ? movieDetails.Poster
+    : this.defaultPoster;
     this.movieimdbRating = movieDetails.imdbRating;
     this.movieRunTime = movieDetails.Runtime;
     this.movieWriter = movieDetails.Writer.split(',');

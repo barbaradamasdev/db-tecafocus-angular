@@ -20,6 +20,8 @@ export class CardComponent implements OnInit  {
   @Input() movieimdbRating: string = '';
   @Input() tecaNota?: string;
 
+  private defaultPoster: string = 'assets/default.png';
+
   constructor(
     private MoviedbService: MoviedbService,
     private CategoryService: CategoryService) {}
@@ -37,7 +39,9 @@ export class CardComponent implements OnInit  {
 
     this.movieYear = movieDetails.Year;
     this.movieDirector = movieDetails.Director;
-    this.moviePoster = movieDetails.Poster;
+    this.moviePoster = (movieDetails?.Poster && movieDetails.Poster !== 'N/A')
+    ? movieDetails.Poster
+    : this.defaultPoster;
     this.movieimdbRating = movieDetails.imdbRating;
     this.tecaNota = movieDetails.TecaNota;
   }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink } from '@angular/router';
 import { CardComponent } from "../../components/card/card.component";
 import { Category } from '../../models/Category';
@@ -25,41 +25,63 @@ export class ListComponent {
   category : Category | undefined;
   filteredMovies: any[] = [];
 
+  routeMap: Record<string, 'Genre' | 'Actors' | 'Director' | 'Language' | 'Country' | 'Writer' | 'Year' | 'Type'> = {
+    genre: 'Genre',
+    actor: 'Actors',
+    director: 'Director',
+    language: 'Language',
+    country: 'Country',
+    writer: 'Writer',
+    year: 'Year',
+    type: 'Type'
+  };
+
   constructor(
     private CategoryService: CategoryService,
     private scrollService: ScrollService,
-    private router: Router
-  ) {}
+  ) {
+  }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.scrollService.scrollToTopOnRouteChange();
 
+    const [routeName, routeValue] = this.extractRouteParts();
+    this.breadcrumbName = routeValue;
+
+    this.CategoryService.loadData().subscribe(() => {
+      this.categories = this.CategoryService.categories;
+      this.category = this.categories.find((category: Category) => category.title === routeValue);
+
+      if (routeName === 'imdb') {
+        this.sortByRating(routeName);
+      } else if (this.routeMap[routeName]) {
+        this.filterMoviesByProperty(this.routeMap[routeName], routeValue);
+      } else if (this.category) {
+        this.loadCategoryMovies(routeValue);
+      }
+    });
+  }
+
+  private extractRouteParts(): [string, string] {
     const parts = window.location.href.split('/');
-    const routeName = parts[3] as string;
-    const routeValue = decodeURIComponent(parts[4]);
+    const routeName = parts[3] || '';
+    const routeValue = decodeURIComponent(parts[4] || '');
+    return [routeName, routeValue];
+  }
 
-    const routeMap: Record<string, 'Genre' | 'Actors' | 'Director' | 'Language' | 'Country' | 'Writer' | 'Year' | 'Type'> = {
-      genre: 'Genre',
-      actor: 'Actors',
-      director: 'Director',
-      language: 'Language',
-      country: 'Country',
-      writer: 'Writer',
-      year: 'Year',
-      type: 'Type'
-    };
+  private loadCategoryMovies(routeValue: string): void {
+    this.breadcrumbName = routeValue;
+    this.loadMovieDetails();
+    this.initializeFilteredMovies(routeValue);
+  }
 
-    this.category = this.categories.find((category: Category) => category.title === routeValue);
 
-    if (routeName == 'imdb') {
-      this.sortByRating(routeName);
-    } else if (routeMap[routeName]) {
-      this.breadcrumbName = routeValue;
-      this.filterMoviesByProperty(routeMap[routeName], this.breadcrumbName);
-    } else if (this.category) {
-      this.breadcrumbName = routeValue;
-      this.loadMovieDetails();
-    } else {
+  private initializeFilteredMovies(routeValue: string): void {
+    const matchingMovies = this.CategoryService.getMoviesByCategory(routeValue);
+
+    if (matchingMovies.length > 0) {
+      this.filteredMovies = matchingMovies;
+      this.totalFilteredMovies = matchingMovies.length;
     }
   }
 
@@ -111,18 +133,16 @@ export class ListComponent {
   }
 
 
-  sortByRating(routeName : string): void {
+  sortByRating(routeName: string): void {
     this.breadcrumbName = routeName.toUpperCase();
     const movieIds = new Set<string>();
     this.filteredMovies = [];
 
-    this.CategoryService.categories.forEach(category => {
-      category.movies.forEach((movie: { imdbID: string; }) => {
-        if (movie?.imdbID && !movieIds.has(movie.imdbID)) {
-          movieIds.add(movie.imdbID);
-          this.filteredMovies.push(movie);
-        }
-      });
+    this.CategoryService.movies.forEach((movie: { imdbID: string; imdbRating: string; }) => {
+      if (movie?.imdbID && !movieIds.has(movie.imdbID)) {
+        movieIds.add(movie.imdbID);
+        this.filteredMovies.push(movie);
+      }
     });
 
     this.filteredMovies.sort((a, b) => {
@@ -133,4 +153,5 @@ export class ListComponent {
 
     this.totalFilteredMovies = this.filteredMovies.length;
   }
+
 }
