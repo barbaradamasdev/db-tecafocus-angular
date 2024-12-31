@@ -84,7 +84,6 @@
       {"Title":"Dandadan","imdbID":"tt30217403"}
    ]
   },
-
   {
     "title": "Sci-fi",
     "movies": [
@@ -358,7 +357,8 @@
       { "Title": "The Fly", "imdbID": "tt0091064" },
       { "Title": "Stranger Things", "imdbID": "tt4574334" },
       { "Title": "A Mother's Embrace", "imdbID": "tt23848264" },
-      {"Title":"The Ritual","imdbID":"tt5638642"}
+      {"Title":"The Ritual","imdbID":"tt5638642"},
+      {"Title":"In the Mouth of Madness","imdbID":"tt0113409"}
     ]
   },
   {
@@ -459,7 +459,8 @@
       {"Title":"Godzilla Minus One", "imdbID":"tt23289160"},
       {"Title":"The Blob", "imdbID":"tt0094761"},
       {"Title":"Kong: Skull Island", "imdbID":"tt3731562"},
-      {"Title":"Tremors", "imdbID":"tt0100814"}
+      {"Title":"Tremors", "imdbID":"tt0100814"},
+      {"Title":"Interview with the Vampire","imdbID":"tt0110148"}
     ]
   },
   {

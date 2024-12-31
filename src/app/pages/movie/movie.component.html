@@ -86,12 +86,12 @@
 <!-- If have comments and review-->
 <article class="container">
   <div *ngIf="tecaNota != ''"
-      class="comments"
+      class="comments bounce-animation"
       [ngClass]="{'low-score': +tecaNota <= 5}">
     <h3>Teca Review:</h3>
     <p>{{tecaNota}}</p>
   </div>
-  <div *ngIf="tecaComments != ''" class="comments">
+  <div *ngIf="tecaComments != ''" class="comments bounce-animation">
     <h3>Teca comments:</h3>
     <p>{{ tecaComments }}</p>
   </div>

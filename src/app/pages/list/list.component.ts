@@ -21,6 +21,7 @@ export class ListComponent {
   breadcrumbName: string = '';
   totalFilteredMovies: number = 0;
 
+  movies : any[] = [];
   categories : any[] = [];
   category : Category | undefined;
   filteredMovies: any[] = [];
@@ -49,6 +50,7 @@ export class ListComponent {
     this.breadcrumbName = routeValue;
 
     this.CategoryService.loadData().subscribe(() => {
+      this.movies = this.CategoryService.movies;
       this.categories = this.CategoryService.categories;
       this.category = this.categories.find((category: Category) => category.title === routeValue);
 
@@ -129,6 +131,7 @@ export class ListComponent {
       });
     });
 
+    this.filteredMovies = this.sortMoviesByTitle(this.filteredMovies);
     this.totalFilteredMovies = this.filteredMovies.length;
   }
 
@@ -154,4 +157,7 @@ export class ListComponent {
     this.totalFilteredMovies = this.filteredMovies.length;
   }
 
+  sortMoviesByTitle(movies: Array<{ Title: string }>): Array<{ Title: string }> {
+    return movies.sort((a, b) => a.Title.localeCompare(b.Title));
+  }
 }

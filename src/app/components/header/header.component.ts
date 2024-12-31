@@ -3,7 +3,6 @@ import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core'
 import { FormsModule } from '@angular/forms';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Database } from '../../models/Database.model';
-import { MoviedbService } from '../../services/moviedb.service';
 import { CategoryService } from '../../services/category.service';
 
 @Component({
@@ -25,9 +24,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private CategoryService:CategoryService,
-    private MoviedbService:MoviedbService,
     private zone:NgZone,
-    private router:Router){}
+    private router:Router){
+    }
 
   @ViewChild('openSidebarMenu', { static: false })
   openSidebarMenu!: ElementRef<HTMLInputElement>;
@@ -65,6 +64,7 @@ export class HeaderComponent implements OnInit {
         this.movies = partialMovies;
 
         this.router.navigate(['/search', this.title]).then(() => {
+          this.clearSearchField();
           this.closeMenu();
         });
 
@@ -79,6 +79,10 @@ export class HeaderComponent implements OnInit {
         }, 3000);
       }
     }
+  }
+
+  private clearSearchField() {
+    this.title = '';
   }
 
   navigateToCategory(categoryName: string): void {

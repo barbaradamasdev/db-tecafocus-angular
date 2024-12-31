@@ -29,16 +29,19 @@ export class SearchComponent {
   constructor(
     private CategoryService: CategoryService,
     private scrollService: ScrollService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
     this.scrollService.scrollToTopOnRouteChange();
-    const parts = window.location.href.split('/');
-    const routeValue = decodeURIComponent(parts[4]);
-    this.breadcrumbName = routeValue;
 
-    this.CategoryService.loadData().subscribe(() => {
-      this.initializeFilteredMovies(routeValue);
+    this.route.paramMap.subscribe((params) => {
+      const routeValue = decodeURIComponent(params.get('searchTitle') || '');
+      this.breadcrumbName = routeValue;
+
+      this.CategoryService.loadData().subscribe(() => {
+        this.initializeFilteredMovies(routeValue);
+      });
     });
   }
 
@@ -46,7 +49,7 @@ export class SearchComponent {
     const matchingMovies = this.CategoryService.searchMoviesByPartialTitle(routeValue);
 
     if (matchingMovies.length > 0) {
-      this.filteredMovies = matchingMovies;
+      this.filteredMovies = this.sortMoviesByTitle(matchingMovies);
       this.totalFilteredMovies = matchingMovies.length;
     } else {
       console.log('Nenhum filme encontrado para:', routeValue);
@@ -59,6 +62,10 @@ export class SearchComponent {
     return str.split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
+  }
+
+  private sortMoviesByTitle(movies: Array<{ Title: string }>): Array<{ Title: string }> {
+    return movies.sort((a, b) => a.Title.localeCompare(b.Title));
   }
 
 }

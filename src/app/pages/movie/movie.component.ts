@@ -6,7 +6,6 @@ import { TempoDeFilmePipe } from "../../pipes/tempo-de-filme.pipe";
 import { Season } from '../../models/Season';
 import { Episode } from '../../models/Episode';
 import { CategoryService } from '../../services/category.service';
-import { PosterdbService } from '../../services/posterdb.service';
 
 @Component({
     selector: 'app-movie',
@@ -124,8 +123,6 @@ export class MovieComponent {
     } else {
       if (movieDetails.TecaNota <= 5) {
         console.error('🚫🚫🚫🚫🚫🚫🚫🚫🚫Não indicamos esse filme. Esse titulo faz parte da nossa curadoria na categoria de piores filmes!');
-      } else {
-        console.error('🚫🚫🚫🚫🚫🚫🚫🚫🚫Informação retirada da API! Esse titulo não faz parte da nossa curadoria, será que é bom mesmo?');
       }
       this.handleMovieDetails(movieDetails);
     }
