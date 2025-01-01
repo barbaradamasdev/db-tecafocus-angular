@@ -1,33 +1,33 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CardComponent } from "../../components/card/card.component";
-import { BooksService } from '../../services/books.service';
+import { GamesService } from '../../services/games.service';
 import { BannerComponent } from '../../components/banner/banner.component';
 
 @Component({
     selector: 'app-list',
     standalone: true,
-    templateUrl: './books.component.html',
+    templateUrl: './games.component.html',
     styleUrls: ['../home/home.component.css', '../list/list.component.css'],
     imports: [CommonModule, CardComponent, BannerComponent]
 })
-export class BooksComponent {
-  books : any[] = [];
-  totalBooks: number = 0;
+export class GamesComponent {
+  games : any[] = [];
+  totalGames: number = 0;
 
   constructor(
-    private booksService: BooksService,
+    private GamesService: GamesService,
   ) {}
 
   ngOnInit(): void {
-    this.booksService.loadData().subscribe(() => {
-      this.books = this.booksService.books;
+    this.GamesService.loadData().subscribe(() => {
+      this.games = this.GamesService.games;
 
-      if (this.books.length > 0) {
-        this.totalBooks = this.books.length;
+      if (this.games.length > 0) {
+        this.totalGames = this.games.length;
       } else {
-        this.books = [];
-        this.totalBooks = 0;
+        this.games = [];
+        this.totalGames = 0;
       }
     });
   }

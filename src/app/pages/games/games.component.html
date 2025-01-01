@@ -1,0 +1,12 @@
+<!-- <app-banner movieBgPoster="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/05/helldivers-2-characters-wallpaper.jpg"></app-banner> -->
+<app-banner movieBgPoster="https://4kwallpapers.com/images/wallpapers/helldivers-2-2024-2560x1080-18365.jpg"></app-banner>
+
+<section class="container">
+  <div class="flex">
+    <h2><span class="category">The best of </span>Games</h2>
+    <p class="total-movies">({{ totalGames }})</p>
+  </div>
+  <div class="grid fullpage" >
+    <app-card *ngFor="let games of games" [gameTitle]="games?.title"></app-card>
+  </div>
+</section>

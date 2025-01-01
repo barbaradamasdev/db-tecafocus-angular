@@ -23,6 +23,8 @@ export class BannerComponent {
   @Input() movieimdbRating: string = '';
   @Input() movieBgPoster:string = '';
 
+  IsBooksSectionBanner:boolean = false;
+
   constructor(
     private MoviedbService: MoviedbService,
     private CategoryService: CategoryService) {}
@@ -30,7 +32,12 @@ export class BannerComponent {
   ngOnInit() {
     this.CategoryService.loadData().subscribe(() => {
       let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
-      this.loadMovieDetails(movieDetails);
+
+      if (this.movieTitle == "BooksSection") {
+        this.loadBookBanner();
+      } else {
+        this.loadMovieDetails(movieDetails);
+      }
     });
   }
 
@@ -40,7 +47,7 @@ export class BannerComponent {
     };
   }
 
-   private loadMovieDetails(movieDetails: any) {
+   loadMovieDetails(movieDetails: any) {
 
     if (!movieDetails) {
       movieDetails = this.MoviedbService.getMovieByTitle(this.movieTitle)
@@ -51,6 +58,10 @@ export class BannerComponent {
     this.moviePoster = movieDetails.Poster;
     this.movieRuntime = movieDetails.Runtime;
     this.movieimdbRating = movieDetails.imdbRating;
+  }
+
+  loadBookBanner() {
+    this.IsBooksSectionBanner = true;
   }
 
 }

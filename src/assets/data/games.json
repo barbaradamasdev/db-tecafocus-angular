@@ -1,0 +1,407 @@
+[
+  {
+    "title": "Tom Clancy's The Division",
+    "developer": "Massive Entertainment",
+    "genre": "Action RPG / Shooter",
+    "release_year": 2016,
+    "awards": ["Excellence in Multiplayer - SXSW Gaming Awards 2017"],
+    "description": "An action RPG set in a post-apocalyptic New York City where players fight to restore order.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_UvlaBeNuHAycGd6bmYsWTRJfNgqEaLSFw&s"
+  },
+  {
+    "title": "Tom Clancy's The Division 2",
+    "developer": "Massive Entertainment",
+    "genre": "Action RPG / Shooter",
+    "release_year": 2019,
+    "awards": [],
+    "description": "A sequel set in Washington D.C., offering enhanced gameplay and cooperative missions.",
+    "image_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7b3mChftpfSJFyYvrwXIAj/212ec191018559d4d6137899e83e7e43/the-division-2.jpg"
+  },
+  {
+    "title": "World of Warcraft",
+    "developer": "Blizzard Entertainment",
+    "genre": "MMORPG",
+    "release_year": 2004,
+    "awards": ["Game of the Year - Game Developers Choice Awards 2005"],
+    "description": "A massively multiplayer online role-playing game set in the expansive world of Azeroth.",
+    "image_url": "https://m.media-amazon.com/images/I/81feWhChfIL.jpg"
+  },
+  {
+    "title": "Diablo III",
+    "developer": "Blizzard Entertainment",
+    "genre": "Action RPG",
+    "release_year": 2012,
+    "awards": ["Best PC Game - Spike Video Game Awards 2012"],
+    "description": "A hack-and-slash RPG where players battle the forces of Hell in an epic dark fantasy world.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/1/12/DiabloIIIcover.jpg"
+  },
+  {
+    "title": "Baldur's Gate 3",
+    "developer": "Larian Studios",
+    "genre": "RPG",
+    "release_year": 2023,
+    "awards": ["Best RPG - The Game Awards 2023"],
+    "description": "An immersive RPG based on Dungeons & Dragons, offering rich storytelling and strategic combat.",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BN2I0N2Y3MWUtNjJiNy00NjRjLWE4ZTctOTQ2YWVhM2VhMTM4XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "title": "Dead by Daylight",
+    "developer": "Behaviour Interactive",
+    "genre": "Survival Horror",
+    "release_year": 2016,
+    "awards": ["Best Multiplayer Game - Golden Joystick Awards 2017"],
+    "description": "An asymmetric multiplayer horror game where one player takes the role of a killer and others are survivors.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwS3XdKZhb5SCEphFTgVlQKMWIlgmH0JELMQ&s"
+  },
+  {
+    "title": "Watch Dogs",
+    "developer": "Ubisoft Montreal",
+    "genre": "Action-Adventure",
+    "release_year": 2014,
+    "awards": [],
+    "description": "A hacking-focused action game set in a futuristic Chicago controlled by a central operating system.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/1/1b/Watch_dogs_cover.jpg"
+  },
+  {
+    "title": "Bastion",
+    "developer": "Supergiant Games",
+    "genre": "Action RPG",
+    "release_year": 2011,
+    "awards": ["Best Downloadable Game - Spike Video Game Awards 2011"],
+    "description": "An indie action RPG known for its stunning art, rich narrative, and dynamic soundtrack.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/f4/Bastion_Boxart.jpg"
+  },
+  {
+    "title": "Euro Truck Simulator 2",
+    "developer": "SCS Software",
+    "genre": "Simulation",
+    "release_year": 2012,
+    "awards": ["Best Simulation Game - Deutscher Computerspielpreis 2013"],
+    "description": "A truck driving simulation game with expansive maps and realistic logistics gameplay.",
+    "image_url": "https://products.eneba.games/resized-products/V8fK6Td_350x200_3x-0.jpg"
+  },
+  {
+    "title": "Helldivers 2",
+    "developer": "Arrowhead Game Studios",
+    "genre": "Third-Person Shooter",
+    "release_year": 2023,
+    "awards": [],
+    "description": "A cooperative third-person shooter where players defend humanity in intergalactic battles.",
+    "image_url": "https://products.eneba.games/resized-products/bXRUUblXKR-BlXnSIsUVR-jrJ1lnCSGA9qgbLh5L10Y_1920x1080_1x-0.jpg"
+  },
+  {
+    "title": "Divinity: Original Sin 2",
+    "developer": "Larian Studios",
+    "genre": "RPG",
+    "release_year": 2017,
+    "awards": ["Best RPG - BAFTA Games Awards 2018"],
+    "description": "A critically acclaimed RPG with deep storytelling, customizable characters, and tactical combat.",
+    "image_url": "https://image.api.playstation.com/cdn/UP3526/CUSA12611_00/A2Mt96jRTqaw5EtIwCHkUZXGpvqIZmSF.png"
+  },
+  {
+    "title": "Watch Dogs 2",
+    "developer": "Ubisoft Montreal",
+    "genre": "Action-Adventure",
+    "release_year": 2016,
+    "awards": [],
+    "description": "A sequel to Watch Dogs, set in San Francisco, featuring a new protagonist and enhanced hacking mechanics.",
+    "image_url": "https://hype.games/_next/image?url=https%3A%2F%2Fimg.hype.games%2Fcdn%2Fad1e01a2-039f-44dd-b670-8826cba62dc1Cover.jpg&w=3840&q=75"
+  },
+  {
+    "title": "Castle of Illusion Starring Mickey Mouse",
+    "developer": "Sega",
+    "genre": "Platformer",
+    "release_year": 1990,
+    "awards": [],
+    "description": "A classic platformer where players control Mickey Mouse on a quest to rescue Minnie from the evil witch Mizrabel.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/a/a6/CastleOfIllusion2013.jpg"
+  },
+  {
+    "title": "Duke Nukem 3D",
+    "developer": "3D Realms",
+    "genre": "First-Person Shooter",
+    "release_year": 1996,
+    "awards": ["Best Action Game - PC Gamer 1996"],
+    "description": "A legendary first-person shooter featuring the iconic action hero Duke Nukem fighting alien invaders.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxnMJ7cMyX9NTIUeFaagaySYHGnmr5TlX6fOZLbFO6keEhIkqcg95uIldpc_3yQ3tIeUM&usqp=CAU"
+  },
+  {
+    "title": "Duke Nukem Forever",
+    "developer": "Gearbox Software",
+    "genre": "First-Person Shooter",
+    "release_year": 2011,
+    "awards": [],
+    "description": "The long-awaited sequel to Duke Nukem 3D, featuring over-the-top action and Duke's signature humor.",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BMTFjYTk2YzUtYTRmZC00MjcwLWJkM2MtN2EwNTMyNThjNjY5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "title": "The Elder Scrolls V: Skyrim",
+    "developer": "Bethesda Game Studios",
+    "genre": "RPG",
+    "release_year": 2011,
+    "awards": ["Game of the Year - The Game Awards 2011"],
+    "description": "An open-world RPG set in the vast fantasy world of Skyrim, filled with dragons, dungeons, and epic quests.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0flS8mqTvcrBAHiPEoElJpVAwwJfzd06srw&s"
+  },
+  {
+    "title": "Grand Theft Auto V",
+    "developer": "Rockstar North",
+    "genre": "Action-Adventure",
+    "release_year": 2013,
+    "awards": ["Game of the Year - Golden Joystick Awards 2013"],
+    "description": "An action-packed open-world game featuring a dynamic story with three protagonists in Los Santos.",
+    "image_url": "https://cdn.awsli.com.br/2500x2500/53/53761/produto/31278293/7b4ddcdb37.jpg"
+  },
+  {
+    "title": "Gris",
+    "developer": "Nomada Studio",
+    "genre": "Platformer / Puzzle",
+    "release_year": 2018,
+    "awards": ["Best Indie Game - The Game Awards 2019"],
+    "description": "A stunning indie game with beautiful visuals and emotional storytelling centered on grief and loss.",
+    "image_url": "https://image.api.playstation.com/vulcan/ap/rnd/202211/1801/PMjvy3y1p6gkPsBwCUuaFnfv.jpg"
+  },
+  {
+    "title": "Lara Croft and the Guardian of Light",
+    "developer": "Crystal Dynamics",
+    "genre": "Action / Puzzle",
+    "release_year": 2010,
+    "awards": [],
+    "description": "A cooperative action-adventure game where players solve puzzles and fight enemies in the tombs.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/1/11/Lara_croft_guardian_of_light.jpg"
+  },
+  {
+    "title": "Lara Croft and the Temple of Osiris",
+    "developer": "Crystal Dynamics",
+    "genre": "Action / Puzzle",
+    "release_year": 2014,
+    "awards": [],
+    "description": "A sequel to Guardian of Light, featuring cooperative gameplay and new puzzles in Egyptian temples.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/11/Lara_croft_and_the_temple_of_osiris_art.jpg"
+  },
+  {
+    "title": "Inside",
+    "developer": "Playdead",
+    "genre": "Platformer / Puzzle",
+    "release_year": 2016,
+    "awards": ["Best Independent Game - The Game Awards 2016"],
+    "description": "A dark, narrative-driven platformer with striking visuals and atmospheric puzzles.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN7QpXjDASOmDpFvn1hPK0nKQ8Z33HVWHJiQ&s"
+  },
+  {
+    "title": "Limbo",
+    "developer": "Playdead",
+    "genre": "Platformer / Puzzle",
+    "release_year": 2010,
+    "awards": ["Excellence in Visual Art - Independent Games Festival 2010"],
+    "description": "A haunting platformer where players guide a boy through a mysterious and dangerous world.",
+    "image_url": "https://assetsio.gnwcdn.com/co1qrs.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+  },
+  {
+    "title": "Mutant Year Zero: Road to Eden",
+    "developer": "The Bearded Ladies",
+    "genre": "Strategy / RPG",
+    "release_year": 2018,
+    "awards": [],
+    "description": "A tactical adventure game combining turn-based combat with exploration in a post-apocalyptic world.",
+    "image_url": "https://image.api.playstation.com/vulcan/ap/rnd/202010/2010/ixfDFwKeS7TOyfrZ3lFWzhKU.png"
+  },
+  {
+    "title": "Little Nightmares",
+    "developer": "Tarsier Studios",
+    "genre": "Horror / Puzzle-Platformer",
+    "release_year": 2017,
+    "awards": ["Best Audio - Develop Awards 2018"],
+    "description": "A dark and whimsical tale where players guide a young girl named Six through a nightmarish world.",
+    "image_url": "https://image.api.playstation.com/cdn/UP0700/CUSA05929_00/BCXhBnr9X5jjilzuc5tyv7GOcBukog6V.png"
+  },
+  {
+    "title": "Oddworld: Abe's Oddysee",
+    "developer": "Oddworld Inhabitants",
+    "genre": "Platformer / Puzzle",
+    "release_year": 1997,
+    "awards": ["Best Console Game - E3 1997"],
+    "description": "A classic platformer where players help Abe escape a meat-processing factory and save his fellow Mudokons.",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BMDIwZjliMWUtNmIxNS00YTlhLTg2N2QtNzZjNTZkZTBkZGIzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+  },
+  {
+    "title": "Oddworld: New 'n' Tasty",
+    "developer": "Oddworld Inhabitants",
+    "genre": "Platformer / Puzzle",
+    "release_year": 2014,
+    "awards": [],
+    "description": "A remake of the classic Abe's Oddysee with modern visuals and reimagined gameplay.",
+    "image_url": "https://m.media-amazon.com/images/I/71TGrqA0UGL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Ori and the Blind Forest",
+    "developer": "Moon Studios",
+    "genre": "Platformer / Metroidvania",
+    "release_year": 2015,
+    "awards": ["Artistic Achievement - BAFTA Games Awards 2016"],
+    "description": "A visually stunning platformer with heartfelt storytelling and challenging gameplay.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoQlilM6GkbEab-b_EA3vi1Bj07gOTwZ-j9A&s"
+  },
+  {
+    "title": "Ori and the Will of the Wisps",
+    "developer": "Moon Studios",
+    "genre": "Platformer / Metroidvania",
+    "release_year": 2020,
+    "awards": ["Outstanding Achievement in Animation - D.I.C.E. Awards 2021"],
+    "description": "A sequel to Ori and the Blind Forest, with refined gameplay and an emotional story.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/9/94/Ori_and_the_Will_of_the_Wisps.jpg"
+  },
+  {
+    "title": "Papo & Yo",
+    "developer": "Minority Media",
+    "genre": "Adventure / Puzzle",
+    "release_year": 2012,
+    "awards": [],
+    "description": "A personal and emotional adventure game that explores themes of family and addiction.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA4j0CXu2VdkSJ6NI1Iwlz7vChZDeoe6MatKywVVQZmVHyFgeLLuObQqPT4sAGJf3kxdE&usqp=CAU"
+  },
+  {
+    "title": "Rise of the Tomb Raider",
+    "developer": "Crystal Dynamics",
+    "genre": "Action-Adventure",
+    "release_year": 2015,
+    "awards": ["Outstanding Achievement in Animation - D.I.C.E. Awards 2016"],
+    "description": "A sequel to the Tomb Raider reboot, featuring Lara Croft's journey to uncover a lost city.",
+    "image_url": ""
+  },
+  {
+    "title": "Shadow of the Tomb Raider",
+    "developer": "Eidos-Montréal",
+    "genre": "Action-Adventure",
+    "release_year": 2018,
+    "awards": [],
+    "description": "The conclusion to Lara Croft's origin trilogy, set in the jungles of Central America.",
+    "image_url": ""
+  },
+  {
+    "title": "Superliminal",
+    "developer": "Pillow Castle",
+    "genre": "Puzzle / First-Person",
+    "release_year": 2019,
+    "awards": [],
+    "description": "A mind-bending puzzle game where perception is the key to solving challenges.",
+    "image_url": ""
+  },
+  {
+    "title": "Tomb Raider",
+    "developer": "Crystal Dynamics",
+    "genre": "Action-Adventure",
+    "release_year": 2009,
+    "awards": [],
+    "description": "A reboot of the Tomb Raider series, exploring the origin story of Lara Croft as a survivor.",
+    "image_url": ""
+  },
+  {
+    "title": "Trine",
+    "developer": "Frozenbyte",
+    "genre": "Puzzle / Platformer",
+    "release_year": 2009,
+    "awards": [],
+    "description": "A physics-based platformer where players control three heroes with unique abilities to solve puzzles.",
+    "image_url": ""
+  },
+  {
+    "title": "Trine 2",
+    "developer": "Frozenbyte",
+    "genre": "Puzzle / Platformer",
+    "release_year": 2011,
+    "awards": [],
+    "description": "A sequel to Trine with enhanced visuals, co-op multiplayer, and new puzzles.",
+    "image_url": ""
+  },
+  {
+    "title": "Trine 3: The Artifacts of Power",
+    "developer": "Frozenbyte",
+    "genre": "Puzzle / Platformer",
+    "release_year": 2015,
+    "awards": [],
+    "description": "The third installment in the Trine series, introducing 3D gameplay mechanics.",
+    "image_url": ""
+  },
+  {
+    "title": "The Walking Dead",
+    "developer": "Telltale Games",
+    "genre": "Adventure / Narrative",
+    "release_year": 2012,
+    "awards": ["Game of the Year - BAFTA Games Awards 2013"],
+    "description": "A narrative-driven game set in the Walking Dead universe, focusing on choices and survival.",
+    "image_url": ""
+  },
+  {
+    "title": "The Walking Dead: Season 2",
+    "developer": "Telltale Games",
+    "genre": "Adventure / Narrative",
+    "release_year": 2013,
+    "awards": [],
+    "description": "The sequel to The Walking Dead, continuing the story of Clementine and her struggle to survive.",
+    "image_url": ""
+  },
+  {
+    "title": "Sonic Generations",
+    "developer": "Sega",
+    "genre": "Platformer",
+    "release_year": 2011,
+    "awards": [],
+    "description": "A celebration of Sonic's legacy, featuring classic and modern Sonic gameplay styles.",
+    "image_url": ""
+  },
+  {
+    "title": "World War Z",
+    "developer": "Saber Interactive",
+    "genre": "Shooter / Survival",
+    "release_year": 2019,
+    "awards": [],
+    "description": "A co-op shooter inspired by the movie World War Z, featuring intense zombie hordes.",
+    "image_url": ""
+  },
+  {
+    "title": "Fallout 4",
+    "developer": "Bethesda Game Studios",
+    "genre": "RPG",
+    "release_year": 2015,
+    "awards": ["Game of the Year - D.I.C.E. Awards 2016"],
+    "description": "An open-world RPG set in a post-apocalyptic Boston, filled with exploration and survival mechanics.",
+    "image_url": ""
+  },
+  {
+    "title": "Portal",
+    "developer": "Valve",
+    "genre": "Puzzle / First-Person",
+    "release_year": 2007,
+    "awards": ["Game of the Year - BAFTA Games Awards 2008"],
+    "description": "A mind-bending puzzle game where players use a portal gun to solve challenges.",
+    "image_url": ""
+  },
+  {
+    "title": "Portal 2",
+    "developer": "Valve",
+    "genre": "Puzzle / First-Person",
+    "release_year": 2011,
+    "awards": ["Best Narrative - The Game Awards 2011"],
+    "description": "A sequel to Portal with expanded mechanics, cooperative play, and a deeper story.",
+    "image_url": ""
+  },
+  {
+    "title": "Spore",
+    "developer": "Maxis",
+    "genre": "Simulation",
+    "release_year": 2008,
+    "awards": [],
+    "description": "A life simulation game where players guide a species from a single-cell organism to a space-faring civilization.",
+    "image_url": ""
+  },
+  {
+    "title": "Giants: Citizen Kabuto",
+    "developer": "Planet Moon Studios",
+    "genre": "Action / Strategy",
+    "release_year": 2000,
+    "awards": [],
+    "description": "A hybrid action-strategy game where players control unique characters in a humorous sci-fi world.",
+    "image_url": ""
+  }
+]

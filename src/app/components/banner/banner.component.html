@@ -1,9 +1,10 @@
 <section
+  *ngIf="!IsBooksSectionBanner; else bookTemplate"
   [ngClass]="{'main-banner': isMainBanner, 'banner': true}"
   [style.background]="movieBgPoster"
   [style]="backgroundStyle">
 
-  <div
+  <div *ngIf="movieTitle != ''"
     class="container flex">
     <h1>{{movieTitle}}</h1>
     <p>{{moviePlot}}</p>
@@ -14,5 +15,19 @@
     </ul>
     <button [routerLink]="['/movie', movieTitle]">See more</button>
   </div>
-
 </section>
+
+<ng-template #bookTemplate>
+  <section
+    [ngClass]="{'main-banner': isMainBanner, 'banner': true}"
+    [style.background]="movieBgPoster"
+    [style]="backgroundStyle">
+
+    <div
+      class="container flex">
+      <h1>See the book section</h1>
+      <p>The best book curation (of the few I've read)</p>
+      <button [routerLink]="['/books']">See more</button>
+    </div>
+  </section>
+</ng-template>

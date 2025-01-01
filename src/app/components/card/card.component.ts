@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { CategoryService } from '../../services/category.service';
 import { MoviedbService } from '../../services/moviedb.service';
 import { BooksService } from '../../services/books.service';
+import { GamesService } from '../../services/games.service';
 
 @Component({
   selector: 'app-card',
@@ -29,11 +30,26 @@ export class CardComponent implements OnInit  {
   @Input() bookPageCount: number = 0;
   @Input() bookSynopsis: string = '';
 
+  @Input() gameTitle: string = '';
+  @Input() gameDeveloper: string = '';
+  @Input() gameGenre: string = '';
+  @Input() gameReleaseYear: string = '';
+  @Input() gameSynopsis: number = 0;
+  @Input() gameImageUrl: number = 0;
+  @Input() gameAwards: string[] = [];
+  @Input() gameRating: string = '';
+  @Input() gameYear: string = '';
+
+  isMovie: boolean = false;
+  isBook: boolean = false;
+  isGame: boolean = false;
+
   private defaultPoster: string = 'assets/default.png';
 
   constructor(
     private MoviedbService: MoviedbService,
     private BooksService: BooksService,
+    private GamesService: GamesService,
     private CategoryService: CategoryService) {}
 
   ngOnInit() {
@@ -41,10 +57,16 @@ export class CardComponent implements OnInit  {
   }
 
   loadDetails() {
-    if (this.movieTitle && this.movieTitle.trim() !== '' && (!this.bookTitle || this.bookTitle.trim() === '')) {
+    this.isMovie = !!this.movieTitle && this.movieTitle.trim() !== '' && (!this.bookTitle || this.bookTitle.trim() === '');
+    this.isBook = !!this.bookTitle && this.bookTitle.trim() !== '';
+    this.isGame = !this.isMovie && !this.isBook;
+
+    if (this.isMovie) {
       this.loadMovieDetails();
-    } else if (this.bookTitle && this.bookTitle.trim() !== '') {
+    } else if (this.isBook) {
       this.loadBookDetails();
+    } else {
+      this.loadGamesDetails();
     }
   }
 
@@ -66,11 +88,9 @@ export class CardComponent implements OnInit  {
 
   loadBookDetails() {
     let bookDetails = this.BooksService.getBooksDetailsByTitle(this.bookTitle);
-    console.log(bookDetails)
 
     this.bookAuthor = bookDetails.author;
     this.bookGenre = bookDetails.genre;
-    console.log(bookDetails.image_url)
     this.bookImageUrl = (bookDetails?.image_url && bookDetails.image_url !== 'N/A')
       ? bookDetails.image_url
       : this.defaultPoster;
@@ -78,5 +98,23 @@ export class CardComponent implements OnInit  {
     this.bookPageCount = bookDetails.page_count;
     this.bookSynopsis = bookDetails.synopsis;
     this.tecaNota = bookDetails.TecaNota;
+  }
+
+  loadGamesDetails() {
+    let gameDetails = this.GamesService.getGamesDetailsByTitle(this.gameTitle);
+    console.log(gameDetails)
+
+    this.gameDeveloper = gameDetails.developer;
+    this.gameGenre = gameDetails.genre;
+    this.gameReleaseYear = gameDetails.release_year;
+    this.gameSynopsis = gameDetails.description;
+
+    this.gameImageUrl = (gameDetails?.image_url && gameDetails.image_url !== 'N/A')
+      ? gameDetails.image_url
+      : this.defaultPoster;
+
+    this.gameAwards = gameDetails.awards;
+    this.gameRating = gameDetails.rating;
+    this.gameYear = gameDetails.gameYear;
   }
 }
