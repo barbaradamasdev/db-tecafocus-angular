@@ -99,3 +99,11 @@ p {
   visibility: visible;
   opacity: 1;
 }
+
+.highlight {
+  color: gray;
+}
+
+article:hover .highlight {
+  color: var(--gold);
+}

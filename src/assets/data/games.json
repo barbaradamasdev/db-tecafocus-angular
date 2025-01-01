@@ -267,7 +267,7 @@
     "release_year": 2015,
     "awards": ["Outstanding Achievement in Animation - D.I.C.E. Awards 2016"],
     "description": "A sequel to the Tomb Raider reboot, featuring Lara Croft's journey to uncover a lost city.",
-    "image_url": ""
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/3/3f/RotTR_boxart.jpg"
   },
   {
     "title": "Shadow of the Tomb Raider",
@@ -276,7 +276,7 @@
     "release_year": 2018,
     "awards": [],
     "description": "The conclusion to Lara Croft's origin trilogy, set in the jungles of Central America.",
-    "image_url": ""
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLthmlCv7KGQPGOXYW6gc6Yb60wFwq32bqrQ&s"
   },
   {
     "title": "Superliminal",
@@ -285,16 +285,16 @@
     "release_year": 2019,
     "awards": [],
     "description": "A mind-bending puzzle game where perception is the key to solving challenges.",
-    "image_url": ""
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqNU1p_5NftuRGvquYvJhKvMOi4RqfXISWlg&s"
   },
   {
     "title": "Tomb Raider",
     "developer": "Crystal Dynamics",
     "genre": "Action-Adventure",
-    "release_year": 2009,
-    "awards": [],
-    "description": "A reboot of the Tomb Raider series, exploring the origin story of Lara Croft as a survivor.",
-    "image_url": ""
+    "release_year": 2013,
+    "awards": ["Best Action Game - D.I.C.E. Awards 2014"],
+    "description": "A reboot of the Tomb Raider series, exploring the origin story of Lara Croft as a survivor in a harsh environment.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/0/03/Tr2012cover.jpg"
   },
   {
     "title": "Trine",
@@ -303,7 +303,7 @@
     "release_year": 2009,
     "awards": [],
     "description": "A physics-based platformer where players control three heroes with unique abilities to solve puzzles.",
-    "image_url": ""
+    "image_url": "https://m.media-amazon.com/images/M/MV5BYjljM2Q0ZTQtZDE4My00ZDM1LTlhZWItNmQ1MDdjOTNjNjQ4XkEyXkFqcGc@._V1_.jpg"
   },
   {
     "title": "Trine 2",
@@ -312,7 +312,7 @@
     "release_year": 2011,
     "awards": [],
     "description": "A sequel to Trine with enhanced visuals, co-op multiplayer, and new puzzles.",
-    "image_url": ""
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/3/39/Trine2_cover.jpg"
   },
   {
     "title": "Trine 3: The Artifacts of Power",
@@ -321,7 +321,7 @@
     "release_year": 2015,
     "awards": [],
     "description": "The third installment in the Trine series, introducing 3D gameplay mechanics.",
-    "image_url": ""
+    "image_url": "https://image.api.playstation.com/cdn/UP4029/CUSA03082_00/MBnCHzmMPb7KCsz1B4NNKbuhYfwsPPGo.png"
   },
   {
     "title": "The Walking Dead",
@@ -330,7 +330,7 @@
     "release_year": 2012,
     "awards": ["Game of the Year - BAFTA Games Awards 2013"],
     "description": "A narrative-driven game set in the Walking Dead universe, focusing on choices and survival.",
-    "image_url": ""
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/3/31/The_Walking_Dead%2C_Season_One_cover.jpeg"
   },
   {
     "title": "The Walking Dead: Season 2",
@@ -338,8 +338,36 @@
     "genre": "Adventure / Narrative",
     "release_year": 2013,
     "awards": [],
-    "description": "The sequel to The Walking Dead, continuing the story of Clementine and her struggle to survive.",
-    "image_url": ""
+    "description": "The second season of The Walking Dead, continuing Clementine's story as she faces new challenges and tough decisions.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/d/dd/The_Walking_Dead_-_Season_Two_Capa.jpg"
+  },
+  {
+    "title": "The Walking Dead: Michonne",
+    "developer": "Telltale Games",
+    "genre": "Adventure / Narrative",
+    "release_year": 2016,
+    "awards": [],
+    "description": "A standalone miniseries focusing on Michonne, a popular character from The Walking Dead comics and TV series.",
+    "image_url": "https://image.api.playstation.com/cdn/UP2026/CUSA04173_00/16okRf4q1QzWjbS5iSiFufPvWj4vUhBL.png?w=440"
+  },
+  {
+    "title": "The Walking Dead: A New Frontier",
+    "developer": "Telltale Games",
+    "genre": "Adventure / Narrative",
+    "release_year": 2016,
+    "awards": [],
+    "description": "The third season of The Walking Dead, introducing new protagonist Javier while continuing Clementine's story.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/7/7b/The_Walking_Dead_A_New_Frontier_cover_art.jpg"
+  },
+  {
+    "title": "The Walking Dead: The Final Season",
+    "developer": "Telltale Games",
+    "genre": "Adventure / Narrative",
+    "release_year": 2018,
+    "awards": ["Best Performance (Melissa Hutchison as Clementine) - NAVGTR Awards 2019"],
+    "description": "The final season of The Walking Dead, concluding Clementine's emotional and gripping journey.",
+    "episodes": 4,
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/0/0e/The_Walking_Dead_The_Final_Season_cover.jpg"
   },
   {
     "title": "Sonic Generations",
@@ -348,7 +376,7 @@
     "release_year": 2011,
     "awards": [],
     "description": "A celebration of Sonic's legacy, featuring classic and modern Sonic gameplay styles.",
-    "image_url": ""
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/2/2f/Sonic_Generations_capa.png"
   },
   {
     "title": "World War Z",
@@ -357,7 +385,7 @@
     "release_year": 2019,
     "awards": [],
     "description": "A co-op shooter inspired by the movie World War Z, featuring intense zombie hordes.",
-    "image_url": ""
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/4/44/World_War_Z_cover_art.jpg"
   },
   {
     "title": "Fallout 4",
@@ -366,7 +394,7 @@
     "release_year": 2015,
     "awards": ["Game of the Year - D.I.C.E. Awards 2016"],
     "description": "An open-world RPG set in a post-apocalyptic Boston, filled with exploration and survival mechanics.",
-    "image_url": ""
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8vlpC64rcOX_5qKuD_0MJP2fiqHk20_rIJA&s"
   },
   {
     "title": "Portal",
@@ -375,7 +403,7 @@
     "release_year": 2007,
     "awards": ["Game of the Year - BAFTA Games Awards 2008"],
     "description": "A mind-bending puzzle game where players use a portal gun to solve challenges.",
-    "image_url": ""
+    "image_url": "https://assetsio.gnwcdn.com/co1x7d.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
   },
   {
     "title": "Portal 2",
@@ -384,7 +412,7 @@
     "release_year": 2011,
     "awards": ["Best Narrative - The Game Awards 2011"],
     "description": "A sequel to Portal with expanded mechanics, cooperative play, and a deeper story.",
-    "image_url": ""
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/f/f9/Portal2cover.jpg"
   },
   {
     "title": "Spore",
@@ -393,7 +421,7 @@
     "release_year": 2008,
     "awards": [],
     "description": "A life simulation game where players guide a species from a single-cell organism to a space-faring civilization.",
-    "image_url": ""
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/thumb/3/3e/Spore_capa.jpg/250px-Spore_capa.jpg"
   },
   {
     "title": "Giants: Citizen Kabuto",
@@ -402,6 +430,6 @@
     "release_year": 2000,
     "awards": [],
     "description": "A hybrid action-strategy game where players control unique characters in a humorous sci-fi world.",
-    "image_url": ""
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/9/9b/Giants_Citizen_Kabuto_Box_Cover.jpg"
   }
 ]

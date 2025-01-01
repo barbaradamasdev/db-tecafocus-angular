@@ -115,6 +115,6 @@ export class CardComponent implements OnInit  {
 
     this.gameAwards = gameDetails.awards;
     this.gameRating = gameDetails.rating;
-    this.gameYear = gameDetails.gameYear;
+    this.gameYear = gameDetails.release_year;
   }
 }
