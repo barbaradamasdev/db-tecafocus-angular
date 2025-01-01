@@ -2,14 +2,14 @@
     justify-content: space-between;
     gap: 30px;
   }
-  
+
   .flex > * {
     width: 400px;
     margin-bottom: 20px;
   }
-  
+
   @media screen and (max-width: 650px) {
-  
+
     .flex {
       gap: 0;
     }

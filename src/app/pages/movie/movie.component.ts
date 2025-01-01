@@ -53,7 +53,11 @@ export class MovieComponent {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.movieTitle = params.get('movieTitle') ?? '';
-      this.loadMovieDetails();
+
+      this.CategoryService.loadData().subscribe(() => {
+        let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
+        this.loadMovieDetails(movieDetails);
+      });
     });
   }
 
@@ -102,9 +106,7 @@ export class MovieComponent {
     this.router.navigate(['/imdb']);
   }
 
-  private loadMovieDetails() {
-    let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle);
-
+  private loadMovieDetails(movieDetails: any) {
     if (!movieDetails) {
       this.MoviedbService.getMovieByTitle(this.movieTitle).subscribe(
         (data) => {

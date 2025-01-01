@@ -27,15 +27,6 @@ export class CategoryService {
   }
 
   getMovieDetailsByTitle(title: string): any {
-    if (!this.movies || this.movies.length === 0) {
-      console.warn('this.movies ainda não foi inicializado.');
-      return null;
-  }
-
-  if (!this.categories || this.categories.length === 0) {
-      console.warn('this.categories ainda não foi inicializado.');
-      return null;
-  }
     const titleUpperCase = title.toUpperCase();
 
     const movie = this.movies.find(m => m?.Title.toUpperCase() === titleUpperCase);

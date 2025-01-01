@@ -33,6 +33,10 @@ export class HomeComponent {
     { title: "Nicolas Cage", bg: "https://sm.ign.com/t/ign_br/feature/t/the-15-bes/the-15-best-nicolas-cage-movies_q32j.1280.jpg" },
     { title: "M. Night Shyamalan", bg: "https://ogimg.infoglobo.com.br/in/21019514-9f4-adc/FT1086A/8809478_SC-Rio-de-Janeiro-RJ-25-02-2015Entrevista-com-o-diretor-M-Night-S.jpg" }
   ];
+  highlightTitles4: any[] = [
+    { title: "Books", bg: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1534377869i/41156174.jpg" },
+    { title: "Games", bg: "https://image.api.playstation.com/vulcan/ap/rnd/202308/1519/95cce955dc59d04e2ea5ab624a823ace14e9c5f7e24dfb8f.png" },
+  ];
 
   categories : any[] = [];
 

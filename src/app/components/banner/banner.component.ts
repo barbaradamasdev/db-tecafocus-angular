@@ -28,7 +28,10 @@ export class BannerComponent {
     private CategoryService: CategoryService) {}
 
   ngOnInit() {
-    this.loadMovieDetails();
+    this.CategoryService.loadData().subscribe(() => {
+      let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
+      this.loadMovieDetails(movieDetails);
+    });
   }
 
   get backgroundStyle() {
@@ -37,8 +40,7 @@ export class BannerComponent {
     };
   }
 
-   private loadMovieDetails() {
-    let movieDetails = this.CategoryService.getMovieDetailsByTitle(this.movieTitle)
+   private loadMovieDetails(movieDetails: any) {
 
     if (!movieDetails) {
       movieDetails = this.MoviedbService.getMovieByTitle(this.movieTitle)

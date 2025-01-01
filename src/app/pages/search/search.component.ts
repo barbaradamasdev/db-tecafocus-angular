@@ -16,8 +16,6 @@ import { Database } from '../../models/Database.model'
     imports: [CommonModule, CardComponent, RouterLink]
 })
 export class SearchComponent {
-  actor: string = '';
-  director: string = '';
   breadcrumbName: string = '';
   totalFilteredMovies: number = 0;
 

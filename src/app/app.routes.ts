@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { ListComponent } from './pages/list/list.component';
 import { SearchComponent } from './pages/search/search.component';
+import { BooksComponent } from './pages/books/books.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -21,5 +22,8 @@ export const routes: Routes = [
   {path: 'year/:yearValue', component: ListComponent },
   {path: 'type/:typeName', component: ListComponent },
   {path: 'imdb', component: ListComponent },
-  {path:'', redirectTo:'/home', pathMatch:'full'}
+  {path: '', redirectTo:'/home', pathMatch:'full'},
+
+  {path: 'books', component: BooksComponent },
+  {path: 'books/:bookTitle', component: MovieComponent },
 ];
