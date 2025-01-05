@@ -7,7 +7,7 @@
     "page_count": 372,
     "year": 2003,
     "image_url": "assets/books/the-kite-runner.jpg",
-    "TecaNota": 7
+    "TecaNota": 8
   },
   {
     "title": "12 Rules for Life",
@@ -106,7 +106,8 @@
     "release_year": 1900,
     "page_count": 272,
     "synopsis": "The story of Dorothy, a young girl transported to the magical land of Oz, who embarks on a journey to meet the Wizard and find her way home.",
-    "image_url": "assets/books/oz.png"
+    "image_url": "assets/books/oz.png",
+    "TecaNota": 10
   },
   {
     "title": "Les Misérables",
@@ -115,7 +116,8 @@
     "release_year": 1862,
     "page_count": 1232,
     "synopsis": "A sweeping tale of redemption and justice, following the lives of Jean Valjean and other characters in 19th-century France.",
-    "image_url": "assets/books/miserables.jpeg"
+    "image_url": "assets/books/miserables.jpeg",
+    "TecaNota": 10
   },
   {
     "title": "Alice's Adventures in Wonderland",
@@ -124,7 +126,8 @@
     "release_year": 1865,
     "page_count": 192,
     "synopsis": "The whimsical adventure of Alice, who falls into a rabbit hole and discovers a strange world filled with peculiar characters.",
-    "image_url": "assets/books/alice.jpg"
+    "image_url": "assets/books/alice.jpg",
+    "TecaNota": 10
   },
   {
     "title": "Sem Asas ao Amanhecer",
@@ -133,6 +136,7 @@
     "release_year": 2006,
     "page_count": 144,
     "synopsis": "A touching narrative about self-discovery and resilience in the face of life's challenges.",
-    "image_url": "assets/books/semasas.jpg"
+    "image_url": "assets/books/semasas.jpg",
+    "TecaNota": 9
   }
 ]

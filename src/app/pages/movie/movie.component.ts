@@ -6,6 +6,7 @@ import { TempoDeFilmePipe } from "../../pipes/tempo-de-filme.pipe";
 import { Season } from '../../models/Season';
 import { Episode } from '../../models/Episode';
 import { CategoryService } from '../../services/category.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-movie',
@@ -31,11 +32,12 @@ export class MovieComponent {
   movieAwards: string = '';
   movieType: string = '';
   totalSeasons: number = 0;
-  tecaNota: string = '';
   movieRatings:  string[] = [];
 
+  tecaNota: string = '';
   tecaComments:  string = '';
   tecaReviewColor: string = '';
+  tecaVideo: string = '';
   isFromInternalAPI: boolean = false;
   modalMessage: string = '';
 
@@ -52,7 +54,8 @@ export class MovieComponent {
     private route: ActivatedRoute,
     private CategoryService: CategoryService,
     private MoviedbService: MoviedbService,
-    private router: Router) {}
+    private router: Router,
+    private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -146,6 +149,10 @@ export class MovieComponent {
     });
   }
 
+  getSafeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
   showModal() {
     const modalElement = document.getElementById('data-source-modal');
     if (modalElement) {
@@ -186,6 +193,7 @@ export class MovieComponent {
     this.tecaNota = movieDetails.TecaNota ? movieDetails.TecaNota : '';
     this.defineColorReview();
     this.tecaComments = movieDetails.TecaComments ? movieDetails.TecaComments : '';
+    this.tecaVideo = movieDetails.TecaVideo.replace('watch?v=', 'embed/') ? movieDetails.TecaVideo : '';
     this.totalSeasons = movieDetails.totalSeasons;
     this.movieDirector = movieDetails.Director.split(',').map((director: string) => director.trim());
 
