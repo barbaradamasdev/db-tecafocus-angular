@@ -1,12 +1,116 @@
 [
   {
+    "title": "Baldur's Gate 3",
+    "developer": "Larian Studios",
+    "genre": "RPG",
+    "release_year": 2023,
+    "awards": ["Best RPG - The Game Awards 2023"],
+    "description": "An immersive RPG based on Dungeons & Dragons, offering rich storytelling and strategic combat.",
+    "image_url": "https://m.media-amazon.com/images/M/MV5BN2I0N2Y3MWUtNjJiNy00NjRjLWE4ZTctOTQ2YWVhM2VhMTM4XkEyXkFqcGc@._V1_.jpg",
+    "TecaNota": "🥇 1st"
+  },
+  {
     "title": "Tom Clancy's The Division",
     "developer": "Massive Entertainment",
     "genre": "Action RPG / Shooter",
     "release_year": 2016,
     "awards": ["Excellence in Multiplayer - SXSW Gaming Awards 2017"],
     "description": "An action RPG set in a post-apocalyptic New York City where players fight to restore order.",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_UvlaBeNuHAycGd6bmYsWTRJfNgqEaLSFw&s"
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_UvlaBeNuHAycGd6bmYsWTRJfNgqEaLSFw&s",
+    "TecaNota": "🥈 2nd"
+  },
+  {
+    "title": "Grand Theft Auto V",
+    "developer": "Rockstar North",
+    "genre": "Action-Adventure",
+    "release_year": 2013,
+    "awards": ["Game of the Year - Golden Joystick Awards 2013"],
+    "description": "An action-packed open-world game featuring a dynamic story with three protagonists in Los Santos.",
+    "image_url": "https://cdn.awsli.com.br/2500x2500/53/53761/produto/31278293/7b4ddcdb37.jpg",
+    "TecaNota": "🥉 3rd"
+  },
+  {
+    "title": "Tomb Raider",
+    "developer": "Crystal Dynamics",
+    "genre": "Action-Adventure",
+    "release_year": 2013,
+    "awards": ["Best Action Game - D.I.C.E. Awards 2014"],
+    "description": "A reboot of the Tomb Raider series, exploring the origin story of Lara Croft as a survivor in a harsh environment.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/0/03/Tr2012cover.jpg",
+    "TecaNota": "🥉 4th"
+  },
+  {
+    "title": "The Elder Scrolls V: Skyrim",
+    "developer": "Bethesda Game Studios",
+    "genre": "RPG",
+    "release_year": 2011,
+    "awards": ["Game of the Year - The Game Awards 2011"],
+    "description": "An open-world RPG set in the vast fantasy world of Skyrim, filled with dragons, dungeons, and epic quests.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0flS8mqTvcrBAHiPEoElJpVAwwJfzd06srw&s",
+    "TecaNota": "🥉 5th"
+  },
+  {
+    "title": "Helldivers 2",
+    "developer": "Arrowhead Game Studios",
+    "genre": "Third-Person Shooter",
+    "release_year": 2023,
+    "awards": [],
+    "description": "A cooperative third-person shooter where players defend humanity in intergalactic battles.",
+    "image_url": "https://products.eneba.games/resized-products/bXRUUblXKR-BlXnSIsUVR-jrJ1lnCSGA9qgbLh5L10Y_1920x1080_1x-0.jpg"
+  },
+  {
+    "title": "Watch Dogs 2",
+    "developer": "Ubisoft Montreal",
+    "genre": "Action-Adventure",
+    "release_year": 2016,
+    "awards": [],
+    "description": "A sequel to Watch Dogs, set in San Francisco, featuring a new protagonist and enhanced hacking mechanics.",
+    "image_url": "https://hype.games/_next/image?url=https%3A%2F%2Fimg.hype.games%2Fcdn%2Fad1e01a2-039f-44dd-b670-8826cba62dc1Cover.jpg&w=3840&q=75"
+  },
+  {
+    "title": "Divinity: Original Sin 2",
+    "developer": "Larian Studios",
+    "genre": "RPG",
+    "release_year": 2017,
+    "awards": ["Best RPG - BAFTA Games Awards 2018"],
+    "description": "A critically acclaimed RPG with deep storytelling, customizable characters, and tactical combat.",
+    "image_url": "https://image.api.playstation.com/cdn/UP3526/CUSA12611_00/A2Mt96jRTqaw5EtIwCHkUZXGpvqIZmSF.png"
+  },
+  {
+    "title": "Ori and the Blind Forest",
+    "developer": "Moon Studios",
+    "genre": "Platformer / Metroidvania",
+    "release_year": 2015,
+    "awards": ["Artistic Achievement - BAFTA Games Awards 2016"],
+    "description": "A visually stunning platformer with heartfelt storytelling and challenging gameplay.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoQlilM6GkbEab-b_EA3vi1Bj07gOTwZ-j9A&s"
+  },
+  {
+    "title": "Ori and the Will of the Wisps",
+    "developer": "Moon Studios",
+    "genre": "Platformer / Metroidvania",
+    "release_year": 2020,
+    "awards": ["Outstanding Achievement in Animation - D.I.C.E. Awards 2021"],
+    "description": "A sequel to Ori and the Blind Forest, with refined gameplay and an emotional story.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/9/94/Ori_and_the_Will_of_the_Wisps.jpg"
+  },
+  {
+    "title": "Rise of the Tomb Raider",
+    "developer": "Crystal Dynamics",
+    "genre": "Action-Adventure",
+    "release_year": 2015,
+    "awards": ["Outstanding Achievement in Animation - D.I.C.E. Awards 2016"],
+    "description": "A sequel to the Tomb Raider reboot, featuring Lara Croft's journey to uncover a lost city.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/3/3f/RotTR_boxart.jpg"
+  },
+  {
+    "title": "Shadow of the Tomb Raider",
+    "developer": "Eidos-Montréal",
+    "genre": "Action-Adventure",
+    "release_year": 2018,
+    "awards": [],
+    "description": "The conclusion to Lara Croft's origin trilogy, set in the jungles of Central America.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLthmlCv7KGQPGOXYW6gc6Yb60wFwq32bqrQ&s"
   },
   {
     "title": "Tom Clancy's The Division 2",
@@ -16,6 +120,24 @@
     "awards": [],
     "description": "A sequel set in Washington D.C., offering enhanced gameplay and cooperative missions.",
     "image_url": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7b3mChftpfSJFyYvrwXIAj/212ec191018559d4d6137899e83e7e43/the-division-2.jpg"
+  },
+  {
+    "title": "Portal",
+    "developer": "Valve",
+    "genre": "Puzzle / First-Person",
+    "release_year": 2007,
+    "awards": ["Game of the Year - BAFTA Games Awards 2008"],
+    "description": "A mind-bending puzzle game where players use a portal gun to solve challenges.",
+    "image_url": "https://assetsio.gnwcdn.com/co1x7d.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+  },
+  {
+    "title": "Portal 2",
+    "developer": "Valve",
+    "genre": "Puzzle / First-Person",
+    "release_year": 2011,
+    "awards": ["Best Narrative - The Game Awards 2011"],
+    "description": "A sequel to Portal with expanded mechanics, cooperative play, and a deeper story.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/pt/f/f9/Portal2cover.jpg"
   },
   {
     "title": "World of Warcraft",
@@ -34,15 +156,6 @@
     "awards": ["Best PC Game - Spike Video Game Awards 2012"],
     "description": "A hack-and-slash RPG where players battle the forces of Hell in an epic dark fantasy world.",
     "image_url": "https://upload.wikimedia.org/wikipedia/pt/1/12/DiabloIIIcover.jpg"
-  },
-  {
-    "title": "Baldur's Gate 3",
-    "developer": "Larian Studios",
-    "genre": "RPG",
-    "release_year": 2023,
-    "awards": ["Best RPG - The Game Awards 2023"],
-    "description": "An immersive RPG based on Dungeons & Dragons, offering rich storytelling and strategic combat.",
-    "image_url": "https://m.media-amazon.com/images/M/MV5BN2I0N2Y3MWUtNjJiNy00NjRjLWE4ZTctOTQ2YWVhM2VhMTM4XkEyXkFqcGc@._V1_.jpg"
   },
   {
     "title": "Dead by Daylight",
@@ -81,33 +194,6 @@
     "image_url": "https://products.eneba.games/resized-products/V8fK6Td_350x200_3x-0.jpg"
   },
   {
-    "title": "Helldivers 2",
-    "developer": "Arrowhead Game Studios",
-    "genre": "Third-Person Shooter",
-    "release_year": 2023,
-    "awards": [],
-    "description": "A cooperative third-person shooter where players defend humanity in intergalactic battles.",
-    "image_url": "https://products.eneba.games/resized-products/bXRUUblXKR-BlXnSIsUVR-jrJ1lnCSGA9qgbLh5L10Y_1920x1080_1x-0.jpg"
-  },
-  {
-    "title": "Divinity: Original Sin 2",
-    "developer": "Larian Studios",
-    "genre": "RPG",
-    "release_year": 2017,
-    "awards": ["Best RPG - BAFTA Games Awards 2018"],
-    "description": "A critically acclaimed RPG with deep storytelling, customizable characters, and tactical combat.",
-    "image_url": "https://image.api.playstation.com/cdn/UP3526/CUSA12611_00/A2Mt96jRTqaw5EtIwCHkUZXGpvqIZmSF.png"
-  },
-  {
-    "title": "Watch Dogs 2",
-    "developer": "Ubisoft Montreal",
-    "genre": "Action-Adventure",
-    "release_year": 2016,
-    "awards": [],
-    "description": "A sequel to Watch Dogs, set in San Francisco, featuring a new protagonist and enhanced hacking mechanics.",
-    "image_url": "https://hype.games/_next/image?url=https%3A%2F%2Fimg.hype.games%2Fcdn%2Fad1e01a2-039f-44dd-b670-8826cba62dc1Cover.jpg&w=3840&q=75"
-  },
-  {
     "title": "Castle of Illusion Starring Mickey Mouse",
     "developer": "Sega",
     "genre": "Platformer",
@@ -133,24 +219,6 @@
     "awards": [],
     "description": "The long-awaited sequel to Duke Nukem 3D, featuring over-the-top action and Duke's signature humor.",
     "image_url": "https://m.media-amazon.com/images/M/MV5BMTFjYTk2YzUtYTRmZC00MjcwLWJkM2MtN2EwNTMyNThjNjY5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-  },
-  {
-    "title": "The Elder Scrolls V: Skyrim",
-    "developer": "Bethesda Game Studios",
-    "genre": "RPG",
-    "release_year": 2011,
-    "awards": ["Game of the Year - The Game Awards 2011"],
-    "description": "An open-world RPG set in the vast fantasy world of Skyrim, filled with dragons, dungeons, and epic quests.",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0flS8mqTvcrBAHiPEoElJpVAwwJfzd06srw&s"
-  },
-  {
-    "title": "Grand Theft Auto V",
-    "developer": "Rockstar North",
-    "genre": "Action-Adventure",
-    "release_year": 2013,
-    "awards": ["Game of the Year - Golden Joystick Awards 2013"],
-    "description": "An action-packed open-world game featuring a dynamic story with three protagonists in Los Santos.",
-    "image_url": "https://cdn.awsli.com.br/2500x2500/53/53761/produto/31278293/7b4ddcdb37.jpg"
   },
   {
     "title": "Gris",
@@ -234,24 +302,6 @@
     "image_url": "https://m.media-amazon.com/images/I/71TGrqA0UGL._AC_UF1000,1000_QL80_.jpg"
   },
   {
-    "title": "Ori and the Blind Forest",
-    "developer": "Moon Studios",
-    "genre": "Platformer / Metroidvania",
-    "release_year": 2015,
-    "awards": ["Artistic Achievement - BAFTA Games Awards 2016"],
-    "description": "A visually stunning platformer with heartfelt storytelling and challenging gameplay.",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoQlilM6GkbEab-b_EA3vi1Bj07gOTwZ-j9A&s"
-  },
-  {
-    "title": "Ori and the Will of the Wisps",
-    "developer": "Moon Studios",
-    "genre": "Platformer / Metroidvania",
-    "release_year": 2020,
-    "awards": ["Outstanding Achievement in Animation - D.I.C.E. Awards 2021"],
-    "description": "A sequel to Ori and the Blind Forest, with refined gameplay and an emotional story.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/pt/9/94/Ori_and_the_Will_of_the_Wisps.jpg"
-  },
-  {
     "title": "Papo & Yo",
     "developer": "Minority Media",
     "genre": "Adventure / Puzzle",
@@ -261,24 +311,6 @@
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA4j0CXu2VdkSJ6NI1Iwlz7vChZDeoe6MatKywVVQZmVHyFgeLLuObQqPT4sAGJf3kxdE&usqp=CAU"
   },
   {
-    "title": "Rise of the Tomb Raider",
-    "developer": "Crystal Dynamics",
-    "genre": "Action-Adventure",
-    "release_year": 2015,
-    "awards": ["Outstanding Achievement in Animation - D.I.C.E. Awards 2016"],
-    "description": "A sequel to the Tomb Raider reboot, featuring Lara Croft's journey to uncover a lost city.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/pt/3/3f/RotTR_boxart.jpg"
-  },
-  {
-    "title": "Shadow of the Tomb Raider",
-    "developer": "Eidos-Montréal",
-    "genre": "Action-Adventure",
-    "release_year": 2018,
-    "awards": [],
-    "description": "The conclusion to Lara Croft's origin trilogy, set in the jungles of Central America.",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLthmlCv7KGQPGOXYW6gc6Yb60wFwq32bqrQ&s"
-  },
-  {
     "title": "Superliminal",
     "developer": "Pillow Castle",
     "genre": "Puzzle / First-Person",
@@ -286,15 +318,6 @@
     "awards": [],
     "description": "A mind-bending puzzle game where perception is the key to solving challenges.",
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqNU1p_5NftuRGvquYvJhKvMOi4RqfXISWlg&s"
-  },
-  {
-    "title": "Tomb Raider",
-    "developer": "Crystal Dynamics",
-    "genre": "Action-Adventure",
-    "release_year": 2013,
-    "awards": ["Best Action Game - D.I.C.E. Awards 2014"],
-    "description": "A reboot of the Tomb Raider series, exploring the origin story of Lara Croft as a survivor in a harsh environment.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/pt/0/03/Tr2012cover.jpg"
   },
   {
     "title": "Trine",
@@ -395,24 +418,6 @@
     "awards": ["Game of the Year - D.I.C.E. Awards 2016"],
     "description": "An open-world RPG set in a post-apocalyptic Boston, filled with exploration and survival mechanics.",
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8vlpC64rcOX_5qKuD_0MJP2fiqHk20_rIJA&s"
-  },
-  {
-    "title": "Portal",
-    "developer": "Valve",
-    "genre": "Puzzle / First-Person",
-    "release_year": 2007,
-    "awards": ["Game of the Year - BAFTA Games Awards 2008"],
-    "description": "A mind-bending puzzle game where players use a portal gun to solve challenges.",
-    "image_url": "https://assetsio.gnwcdn.com/co1x7d.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
-  },
-  {
-    "title": "Portal 2",
-    "developer": "Valve",
-    "genre": "Puzzle / First-Person",
-    "release_year": 2011,
-    "awards": ["Best Narrative - The Game Awards 2011"],
-    "description": "A sequel to Portal with expanded mechanics, cooperative play, and a deeper story.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/pt/f/f9/Portal2cover.jpg"
   },
   {
     "title": "Spore",

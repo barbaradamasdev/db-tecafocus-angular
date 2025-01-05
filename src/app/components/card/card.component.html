@@ -55,15 +55,17 @@
         <div
           *ngIf="tecaNota !== null && tecaNota !== undefined"
           class="nota-teca flex">
-          <p>Review</p>
-          <h4>{{ tecaNota }}</h4>
+          <p>Top 3</p>
+          <h4>{{ tecaNota }} place</h4>
         </div>
         <div class="info">
           <h3>{{ gameTitle }}</h3>
           <p><span class="highlight">Developer: </span>{{ gameDeveloper }}</p>
           <p><span class="highlight">Genre: </span>{{ gameGenre }}</p>
           <p><span class="highlight">Release Year:</span> {{ gameYear }}</p>
-          <p><span class="highlight">Awards: </span>{{ gameAwards.join(', ') }}</p>
+          <p *ngIf="gameAwards && gameAwards.length > 0">
+            <span class="highlight">Awards: </span>{{ gameAwards.join(', ') }}
+          </p>
         </div>
       </div>
   </article>
