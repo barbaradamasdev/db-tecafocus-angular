@@ -154,7 +154,7 @@ export class MovieComponent {
       modalElement.style.display = 'flex';
       setTimeout(() => {
         modalElement.style.display = 'none';
-      }, 2000);
+      }, 3000);
     }
   }
 
@@ -216,17 +216,17 @@ export class MovieComponent {
     if (this.tecaNota) {
       const nota = +this.tecaNota;
       if (nota >= 9) {
-        this.tecaReviewColor = '#017617';
+        this.tecaReviewColor = '#145a32';
       } else if (nota >= 8) {
-        this.tecaReviewColor = '#2a983f';
+        this.tecaReviewColor = '#1e8449';
       } else if (nota >= 6) {
-        this.tecaReviewColor = '#528543';
+        this.tecaReviewColor = '#148f77';
       } else if (nota >= 5) {
-        this.tecaReviewColor = '#ad7714';
+        this.tecaReviewColor = '#873600';
       } else if (nota >= 3) {
-        this.tecaReviewColor = '#982107';
+        this.tecaReviewColor = '#922b21';
       } else {
-        this.tecaReviewColor = '#8B0000';
+        this.tecaReviewColor = '#641e16';
       }
     } else {
       this.tecaReviewColor = '';
