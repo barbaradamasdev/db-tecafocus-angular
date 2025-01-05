@@ -3,6 +3,7 @@
     "title": "2024",
     "movies": [
         {"Title":"Dandadan","imdbID":"tt30217403"},
+        {"Title":"Wicked", "imdbID":"tt1262426"},
         {"Title":"Rebel Ridge", "imdbID":"tt11301886"},
         {"Title":"Shogun", "imdbID":"tt2788316"},
         {"Title":"Fallout", "imdbID":"tt12637874"},

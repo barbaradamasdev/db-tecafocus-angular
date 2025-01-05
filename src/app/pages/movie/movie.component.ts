@@ -12,7 +12,7 @@ import { CategoryService } from '../../services/category.service';
     standalone: true,
     templateUrl: './movie.component.html',
     styleUrls: ['./movie.component.css', '../home/home.component.css'],
-    imports: [CommonModule, RouterLink, TempoDeFilmePipe ]
+    imports: [CommonModule, RouterLink, TempoDeFilmePipe ],
 })
 
 export class MovieComponent {
@@ -34,6 +34,7 @@ export class MovieComponent {
   tecaNota: string = '';
   movieRatings:  string[] = [];
   tecaComments:  string = '';
+  tecaReviewColor: string = '';
 
   seasons: Season [] = [];
   selectedSeason: Season | null = null;
@@ -149,6 +150,7 @@ export class MovieComponent {
     this.movieAwards = movieDetails.Awards;
     this.movieType = movieDetails.Type;
     this.tecaNota = movieDetails.TecaNota ? movieDetails.TecaNota : '';
+    this.defineColorReview();
     this.tecaComments = movieDetails.TecaComments ? movieDetails.TecaComments : '';
     this.totalSeasons = movieDetails.totalSeasons;
     this.movieDirector = movieDetails.Director.split(',').map((director: string) => director.trim());
@@ -173,6 +175,27 @@ export class MovieComponent {
           }
         );
       }
+    }
+  }
+
+  defineColorReview(){
+    if (this.tecaNota) {
+      const nota = +this.tecaNota;
+      if (nota >= 9) {
+        this.tecaReviewColor = '#017617';
+      } else if (nota >= 8) {
+        this.tecaReviewColor = '#2a983f';
+      } else if (nota >= 6) {
+        this.tecaReviewColor = '#528543';
+      } else if (nota >= 5) {
+        this.tecaReviewColor = '#ad7714';
+      } else if (nota >= 3) {
+        this.tecaReviewColor = '#982107';
+      } else {
+        this.tecaReviewColor = '#8B0000';
+      }
+    } else {
+      this.tecaReviewColor = '';
     }
   }
 

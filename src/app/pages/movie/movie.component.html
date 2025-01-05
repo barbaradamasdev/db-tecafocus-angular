@@ -87,7 +87,8 @@
 <article class="container">
   <div *ngIf="tecaNota != ''"
       class="comments bounce-animation"
-      [ngClass]="{'low-score': +tecaNota <= 5}">
+      [ngStyle]="{'background-color': tecaReviewColor}"
+      [ngClass]="{'low-score': +tecaNota <= 5, tecaReviewColor: !!tecaReviewColor}">
     <h3>Teca Review:</h3>
     <p>{{tecaNota}}</p>
   </div>
@@ -96,7 +97,6 @@
     <p>{{ tecaComments }}</p>
   </div>
 </article>
-
 
 <!-- series -->
 <section *ngIf="movieType === 'series' && seasons.length >= 1" class="flex container seasonsinfo">
