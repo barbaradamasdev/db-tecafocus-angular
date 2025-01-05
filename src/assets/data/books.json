@@ -98,5 +98,41 @@
     "year": 1897,
     "image_url": "assets/books/dracula.jpg",
     "TecaNota": "reading..."
+  },
+  {
+    "title": "The Wonderful Wizard of Oz",
+    "author": "L. Frank Baum",
+    "genre": "Fantasy / Children's Literature",
+    "release_year": 1900,
+    "page_count": 272,
+    "synopsis": "The story of Dorothy, a young girl transported to the magical land of Oz, who embarks on a journey to meet the Wizard and find her way home.",
+    "image_url": "assets/books/oz.png"
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "genre": "Historical Fiction",
+    "release_year": 1862,
+    "page_count": 1232,
+    "synopsis": "A sweeping tale of redemption and justice, following the lives of Jean Valjean and other characters in 19th-century France.",
+    "image_url": "assets/books/miserables.jpeg"
+  },
+  {
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll",
+    "genre": "Fantasy / Children's Literature",
+    "release_year": 1865,
+    "page_count": 192,
+    "synopsis": "The whimsical adventure of Alice, who falls into a rabbit hole and discovers a strange world filled with peculiar characters.",
+    "image_url": "assets/books/alice.jpg"
+  },
+  {
+    "title": "Sem Asas ao Amanhecer",
+    "author": "Tânia Souza",
+    "genre": "Contemporary Fiction",
+    "release_year": 2006,
+    "page_count": 144,
+    "synopsis": "A touching narrative about self-discovery and resilience in the face of life's challenges.",
+    "image_url": "assets/books/semasas.jpg"
   }
 ]
