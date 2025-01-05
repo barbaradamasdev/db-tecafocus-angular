@@ -56,7 +56,7 @@ export class HeaderComponent implements OnInit {
 
     if (movie) {
       this.movie = movie;
-      this.router.navigate(['/movie', this.title]);
+      this.router.navigate(['/movie', this.title], { queryParams: { fromSearch: true } });
       this.title = '';
     } else {
       const partialMovies = this.CategoryService.searchMoviesByPartialTitle(this.title);
@@ -69,7 +69,6 @@ export class HeaderComponent implements OnInit {
         });
 
       } else {
-        console.log('Filme não encontrado.');
         this.notFoundMovie = true;
 
         setTimeout(() => {

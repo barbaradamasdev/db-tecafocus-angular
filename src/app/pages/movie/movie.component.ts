@@ -12,7 +12,7 @@ import { CategoryService } from '../../services/category.service';
     standalone: true,
     templateUrl: './movie.component.html',
     styleUrls: ['./movie.component.css', '../home/home.component.css'],
-    imports: [CommonModule, RouterLink, TempoDeFilmePipe ],
+    imports: [CommonModule, RouterLink, TempoDeFilmePipe],
 })
 
 export class MovieComponent {
@@ -33,8 +33,11 @@ export class MovieComponent {
   totalSeasons: number = 0;
   tecaNota: string = '';
   movieRatings:  string[] = [];
+
   tecaComments:  string = '';
   tecaReviewColor: string = '';
+  isFromInternalAPI: boolean = false;
+  modalMessage: string = '';
 
   seasons: Season [] = [];
   selectedSeason: Season | null = null;
@@ -108,14 +111,24 @@ export class MovieComponent {
   }
 
   private loadMovieDetails(movieDetails: any) {
-    if (!movieDetails) {
+    if (movieDetails) {
+      this.isFromInternalAPI = true;
+      if (movieDetails.TecaNota <= 5) {
+        this.modalMessage ='🚫 Não indicamos esse filme. Esse título faz parte da nossa curadoria na categoria de PIORES filmes!';
+
+      } else {
+        this.modalMessage ='✅ Esse título faz parte da nossa curadoria. Provavelmente ele deve ser excelente!';
+      }
+      this.handleMovieDetails(movieDetails);
+    } else {
       this.MoviedbService.getMovieByTitle(this.movieTitle).subscribe(
         (data) => {
           if (data.Response == 'False') {
             this.router.navigate(['/']);
           } else {
             movieDetails = data;
-            console.warn('✅✅✅✅✅✅✅✅✅ Esse titulo faz parte da nossa curadoria. Provavelmente ele deve ser excelente!');
+            this.isFromInternalAPI = false;
+            this.modalMessage ='🚫🚫🚫🚫🚫🚫🚫🚫🚫 Esse título não faz parte da nossa curadoria, será que ele realmente é bom?';
             this.handleMovieDetails(movieDetails);
           }
         },
@@ -123,11 +136,32 @@ export class MovieComponent {
           console.error('Erro ao obter detalhes do filme:', error);
         }
       );
-    } else {
-      if (movieDetails.TecaNota <= 5) {
-        console.error('🚫🚫🚫🚫🚫🚫🚫🚫🚫Não indicamos esse filme. Esse titulo faz parte da nossa curadoria na categoria de piores filmes!');
+    }
+
+    this.route.queryParams.subscribe(queryParams => {
+      const fromSearch = queryParams['fromSearch'] === 'true';
+      if (fromSearch) {
+        this.showModal();
       }
-      this.handleMovieDetails(movieDetails);
+    });
+  }
+
+  showModal() {
+    const modalElement = document.getElementById('data-source-modal');
+    if (modalElement) {
+      console.log(this.modalMessage);
+
+      modalElement.style.display = 'flex';
+      setTimeout(() => {
+        modalElement.style.display = 'none';
+      }, 2000);
+    }
+  }
+
+  closeModal() {
+    const modalElement = document.getElementById('data-source-modal');
+    if (modalElement) {
+      modalElement.style.display = 'none';
     }
   }
 
