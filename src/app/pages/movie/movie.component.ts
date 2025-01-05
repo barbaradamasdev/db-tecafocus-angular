@@ -37,7 +37,7 @@ export class MovieComponent {
   tecaNota: string = '';
   tecaComments:  string = '';
   tecaReviewColor: string = '';
-  tecaVideo: string = '';
+  tecaVideo: string[] = [];
   isFromInternalAPI: boolean = false;
   modalMessage: string = '';
 
@@ -193,7 +193,7 @@ export class MovieComponent {
     this.tecaNota = movieDetails.TecaNota ? movieDetails.TecaNota : '';
     this.defineColorReview();
     this.tecaComments = movieDetails.TecaComments ? movieDetails.TecaComments : '';
-    this.tecaVideo = movieDetails.TecaVideo.replace('watch?v=', 'embed/') ? movieDetails.TecaVideo : '';
+    this.tecaVideo = movieDetails.TecaVideo ? movieDetails.TecaVideo : '';
     this.totalSeasons = movieDetails.totalSeasons;
     this.movieDirector = movieDetails.Director.split(',').map((director: string) => director.trim());
 
