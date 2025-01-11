@@ -96,7 +96,7 @@
     <h3>Teca comments:</h3>
     <p>{{ tecaComments }}</p>
   </div>
-  <div  class="comments bounce-animation">
+  <div *ngIf="tecaVideo.length > 0" class="comments bounce-animation">
     <h3>Teca video Recomendations:</h3>
     <iframe *ngFor="let video of tecaVideo"
       [src]="getSafeUrl(video)"
