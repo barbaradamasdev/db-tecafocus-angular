@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Database } from '../../models/Database.model';
 import { CategoryService } from '../../services/category.service';
+import { MoviedbService } from '../../services/moviedb.service';
 
 @Component({
   selector: 'app-header',
@@ -24,6 +25,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private CategoryService:CategoryService,
+    private MoviedbService:MoviedbService,
     private zone:NgZone,
     private router:Router){
     }
@@ -69,13 +71,25 @@ export class HeaderComponent implements OnInit {
         });
 
       } else {
-        this.notFoundMovie = true;
+        this.MoviedbService.getMovieByTitle(this.title).subscribe((data) => {
+          if (data.Response !== 'False') {
+            this.movie = data;
 
-        setTimeout(() => {
-          this.zone.run(() => {
-            this.notFoundMovie = false;
-          });
-        }, 3000);
+            this.router.navigate(['/movie', this.title], { queryParams: { fromSearch: true } });
+            this.title = '';
+          } else {
+            console.log('Filme não encontrado.');
+            this.notFoundMovie = true;
+
+            setTimeout(() => {
+              this.zone.run(() => {
+                this.notFoundMovie = false;
+              });
+            }, 3000);
+
+            return;
+          }
+        });
       }
     }
   }
