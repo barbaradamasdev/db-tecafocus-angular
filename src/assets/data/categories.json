@@ -1,10 +1,19 @@
 [
   {
+    "title": "2025",
+    "movies": [
+      {"Title":"American Primeval","imdbID":"tt24069848"},
+      { "Title": "Severance", "imdbID": "tt11280740" }
+    ]
+  },
+  {
     "title": "2024",
     "movies": [
         {"Title":"Dandadan","imdbID":"tt30217403"},
         {"Title":"Wicked", "imdbID":"tt1262426"},
+        {"Title":"Arcane","imdbID":"tt11126994"},
         {"Title":"Rebel Ridge", "imdbID":"tt11301886"},
+        {"Title":"Secret Level", "imdbID":"tt33204697"},
         {"Title":"Shogun", "imdbID":"tt2788316"},
         {"Title":"Fallout", "imdbID":"tt12637874"},
         {"Title":"Beetlejuice Beetlejuice", "imdbID":"tt2049403"},
@@ -21,7 +30,8 @@
         {"Title":"Trap", "imdbID":"tt26753003"},
         {"Title":"The First Omen", "imdbID":"tt5672290"},
         {"Title":"V/H/S/Beyond","imdbID":"tt32880932"},
-        {"Title":"Juror #2","imdbID":"tt27403986"}
+        {"Title":"Juror #2","imdbID":"tt27403986"},
+        {"Title":"Sonic the Hedgehog 3","imdbID":"tt18259086"}
     ]
   },
   {
@@ -527,7 +537,8 @@
       { "Title": "Squid Game", "imdbID": "tt10919420" },
       { "Title":"We Need to Talk About Kevin", "imdbID":"tt1242460"},
       {"Title":"Hanna","imdbID":"tt0993842"},
-      {"Title":"Juror #2","imdbID":"tt27403986"}
+      {"Title":"Juror #2","imdbID":"tt27403986"},
+      {"Title":"Memories of Murder","imdbID":"tt0353969"}
     ]
   },
   {
