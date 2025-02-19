@@ -3,7 +3,8 @@
     "title": "2025",
     "movies": [
       {"Title":"American Primeval","imdbID":"tt24069848"},
-      { "Title": "Severance", "imdbID": "tt11280740" }
+      { "Title": "Severance", "imdbID": "tt11280740" },
+      {"Title":"Sakamoto Days", "imdbID":"tt17069148"}
     ]
   },
   {
@@ -32,7 +33,11 @@
         {"Title":"The First Omen", "imdbID":"tt5672290"},
         {"Title":"V/H/S/Beyond","imdbID":"tt32880932"},
         {"Title":"Juror #2","imdbID":"tt27403986"},
-        {"Title":"Sonic the Hedgehog 3","imdbID":"tt18259086"}
+        {"Title":"Sonic the Hedgehog 3","imdbID":"tt18259086"},
+        {"Title":"Get Away","Year":"2024","imdbID":"tt10449276"},
+        {"Title":"Apple Cider Vinegar","Year":"2024","imdbID":"tt32122974"},
+        {"Title":"Hold Your Breath","Year":"2024","imdbID":"tt12573480"},
+        {"Title":"The White Lotus","Year":"2021–","imdbID":"tt13406094"}
     ]
   },
   {
@@ -95,7 +100,8 @@
       {"Title":"Mushi-Shi", "imdbID":"tt0807832"},
       {"Title":"Aggretsuko","imdbID":"tt8019444"},
       {"Title":"Dandadan","imdbID":"tt30217403"},
-      {"Title":"Cells at Work!","imdbID":"tt8673610"}
+      {"Title":"Cells at Work!","imdbID":"tt8673610"},
+      {"Title":"Sakamoto Days","imdbID":"tt17069148"}
    ]
   },
   {
@@ -179,7 +185,6 @@
       {"Title":"Archive 81", "imdbID":"tt13365348"},
       {"Title":"Silent Hill", "imdbID":"tt0384537"},
       {"Title":"Hellbound", "imdbID":"tt12235718"},
-      {"Title":"The Terror", "imdbID":"tt2708480"},
       {"Title":"I Am Legend", "imdbID":"tt0480249"},
       {"Title":"American Horror Story", "imdbID":"tt1844624"},
       {"Title":"Channel Zero", "imdbID":"tt4820370"},
@@ -210,7 +215,9 @@
       {"Title":"The Midnight Club","imdbID":"tt13444912"},
       {"Title":"V/H/S/Beyond","imdbID":"tt32880932"},
       {"Title":"Heretic","imdbID":"tt28015403"},
-      {"Title":"Chime", "imdbID":"tt30516366"}
+      {"Title":"Chime", "imdbID":"tt30516366"},
+      {"Title":"Brightburn", "imdbID":"tt7752126"},
+      {"Title":"Hold Your Breath","Year":"2024","imdbID":"tt12573480"}
     ]
   },
   {
@@ -322,7 +329,9 @@
       { "Title": "Under the Bridge", "imdbID": "tt1640719" },
       { "Title": "Servant", "imdbID": "tt8068860" },
       { "Title": "Peacemaker", "imdbID": "tt13146488" },
-      {"Title":"Homecoming","imdbID":"tt7008682"}
+      {"Title":"Homecoming","imdbID":"tt7008682"},
+      {"Title":"The White Lotus","Year":"2021–","imdbID":"tt13406094"},
+      {"Title":"Apple Cider Vinegar","Year":"2024","imdbID":"tt32122974"}
     ]
   },
   {
@@ -568,7 +577,8 @@
       {"Title":"Scary Movie", "imdbID":"tt0175142"},
       {"Title":"Deadstream", "imdbID":"tt12788488"},
       {"Title":"The Little Hours","imdbID":"tt5666304"},
-      {"Title":"Modern Family","imdbID":"tt1442437"}
+      {"Title":"Modern Family","imdbID":"tt1442437"},
+      {"Title":"Get Away","Year":"2024","imdbID":"tt10449276"}
     ]
   },
   {
