@@ -5,7 +5,8 @@
       {"Title":"American Primeval","imdbID":"tt24069848"},
       { "Title": "Severance", "imdbID": "tt11280740" },
       {"Title":"Sakamoto Days", "imdbID":"tt17069148"},
-      {"Title":"Apple Cider Vinegar","Year":"2025","imdbID":"tt30428143"}
+      {"Title":"Apple Cider Vinegar","Year":"2025","imdbID":"tt30428143"},
+      {"Title":"Presence","imdbID":"tt28249919"}
     ]
   },
   {
@@ -158,7 +159,8 @@
       {"Title":"X-Men: Dark Phoenix", "imdbID":"tt6565702"},
       {"Title":"Animal World","imdbID":"tt7946836"},
       {"Title":"2001: A Space Odyssey","imdbID":"tt0062622"},
-      {"Title":"2010: The Year We Make Contact", "imdbID":"tt0086837"}
+      {"Title":"2010: The Year We Make Contact", "imdbID":"tt0086837"},
+      {"Title":"Calls","imdbID":"tt9327706"}
     ]
   },
   {
@@ -217,7 +219,9 @@
       {"Title":"Heretic","imdbID":"tt28015403"},
       {"Title":"Chime", "imdbID":"tt30516366"},
       {"Title":"Brightburn", "imdbID":"tt7752126"},
-      {"Title":"Hold Your Breath","Year":"2024","imdbID":"tt12573480"}
+      {"Title":"Hold Your Breath","Year":"2024","imdbID":"tt12573480"},
+      {"Title":"Calls","imdbID":"tt9327706"},
+      {"Title":"Presence","imdbID":"tt28249919"}
     ]
   },
   {
@@ -331,7 +335,8 @@
       { "Title": "Peacemaker", "imdbID": "tt13146488" },
       {"Title":"Homecoming","imdbID":"tt7008682"},
       {"Title":"The White Lotus","Year":"2021–","imdbID":"tt13406094"},
-      {"Title":"Apple Cider Vinegar","Year":"2024","imdbID":"tt32122974"}
+      {"Title":"Apple Cider Vinegar","Year":"2024","imdbID":"tt32122974"},
+      {"Title":"Bad Sisters","imdbID":"tt15469618"}
     ]
   },
   {
@@ -548,7 +553,8 @@
       { "Title":"We Need to Talk About Kevin", "imdbID":"tt1242460"},
       {"Title":"Hanna","imdbID":"tt0993842"},
       {"Title":"Juror #2","imdbID":"tt27403986"},
-      {"Title":"Memories of Murder","imdbID":"tt0353969"}
+      {"Title":"Memories of Murder","imdbID":"tt0353969"},
+      {"Title":"Tully","imdbID":"tt5610554"}
     ]
   },
   {
@@ -578,7 +584,9 @@
       {"Title":"Deadstream", "imdbID":"tt12788488"},
       {"Title":"The Little Hours","imdbID":"tt5666304"},
       {"Title":"Modern Family","imdbID":"tt1442437"},
-      {"Title":"Get Away","Year":"2024","imdbID":"tt10449276"}
+      {"Title":"Get Away","Year":"2024","imdbID":"tt10449276"},
+      {"Title":"Companion","imdbID":"tt26584495"},
+      {"Title":"Bad Sisters","imdbID":"tt15469618"}
     ]
   },
   {
