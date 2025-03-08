@@ -8,9 +8,10 @@ import { catchError, forkJoin, map, Observable, of, tap } from 'rxjs';
 export class CategoryService {
   movies: any[] = [];
   categories: any[] = [];
+  latestReleases: any[] = [];
 
   constructor(private http: HttpClient) {
-    this.loadData();
+    this.loadData().subscribe();
   }
 
   loadData(): Observable<void> {
@@ -21,9 +22,14 @@ export class CategoryService {
       tap((data) => {
         this.movies = data.movies || [];
         this.categories = data.categories || [];
+        this.latestReleases = [...this.movies].reverse();
       }),
       map(() => { })
     );
+  }
+
+  getLatestReleases(): any[] {
+    return this.latestReleases;
   }
 
   getMovieDetailsByTitle(title: string): any {

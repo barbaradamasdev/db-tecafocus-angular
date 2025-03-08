@@ -39,6 +39,7 @@ export class HomeComponent {
   ];
 
   categories : any[] = [];
+  latestReleases : any[] = [];
 
   constructor(
     private CategoryService: CategoryService,
@@ -49,10 +50,13 @@ export class HomeComponent {
     this.scrollService.scrollToTopOnRouteChange();
     if (this.CategoryService.categories.length > 0) {
       this.categories = this.CategoryService.categories;
+      this.latestReleases = this.CategoryService.getLatestReleases();
     } else {
       this.CategoryService.loadData().subscribe(() => {
         this.categories = this.CategoryService.categories;
+        this.latestReleases = this.CategoryService.getLatestReleases();
       });
+
     }
   }
 }

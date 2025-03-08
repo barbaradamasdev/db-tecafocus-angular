@@ -6,6 +6,7 @@ import { ListComponent } from './pages/list/list.component';
 import { SearchComponent } from './pages/search/search.component';
 import { BooksComponent } from './pages/books/books.component';
 import { GamesComponent } from './pages/games/games.component.';
+import { LastedReleasesComponent } from './pages/lastedreleases/lastedreleases.component';
 
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -27,4 +28,5 @@ export const routes: Routes = [
 
   {path: 'books', component: BooksComponent },
   {path: 'games', component: GamesComponent },
+  {path: 'lastedreleases', component: LastedReleasesComponent },
 ];

@@ -1,0 +1,9 @@
+<section class="container">
+  <div class="flex">
+    <h2><span class="category"></span>⭐ Hot Picks: Latest Curations</h2>
+    <p class="total-movies">({{ total }})</p>
+  </div>
+  <div class="grid fullpage" >
+    <app-card *ngFor="let movie of latestReleases" [movieTitle]="movie?.Title"></app-card>
+  </div>
+</section>
