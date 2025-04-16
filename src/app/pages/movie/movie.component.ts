@@ -156,8 +156,6 @@ export class MovieComponent {
   showModal() {
     const modalElement = document.getElementById('data-source-modal');
     if (modalElement) {
-      console.log(this.modalMessage);
-
       modalElement.style.display = 'flex';
       setTimeout(() => {
         modalElement.style.display = 'none';
@@ -170,6 +168,17 @@ export class MovieComponent {
     if (modalElement) {
       modalElement.style.display = 'none';
     }
+  }
+
+  setDefaultPoster(event: Event) {
+    const imgElement = event.target as HTMLImageElement;
+    imgElement.src = this.defaultPoster;
+
+    this.MoviedbService.getMovieByTitle(this.movieTitle).subscribe(
+      (movie) => {
+        this.moviePoster = movie.Poster;
+      }
+    );
   }
 
   private handleMovieDetails(movieDetails: any) {

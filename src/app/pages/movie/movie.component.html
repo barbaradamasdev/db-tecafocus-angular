@@ -5,7 +5,7 @@
 </div>
 
 <article class="flex container">
-  <img [src]="moviePoster" alt="">
+  <img (error)="setDefaultPoster($event)" [src]="moviePoster" alt="">
 
   <div class="flex movieinfo">
     <h1>{{ movieTitle }}</h1>
@@ -124,7 +124,7 @@
         <section class="episodes" *ngFor="let episode of selectedSeason.Episodes">
             <div>
               <h4>Episode {{ episode.Episode }} - {{ episode.Title }}</h4>
-              <img [src]='episode.Poster' alt="Poster of episode {{ episode.Episode }}">
+              <img [src]='episode.Poster' (error)="setDefaultPoster($event)" alt="Poster of episode {{ episode.Episode }}">
             </div>
             <div class="flex episodeinfo">
               <p>

@@ -86,6 +86,17 @@ export class CardComponent implements OnInit  {
     this.tecaNota = movieDetails.TecaNota;
   }
 
+  setDefaultPoster(event: Event) {
+    const imgElement = event.target as HTMLImageElement;
+    imgElement.src = this.defaultPoster;
+
+    this.MoviedbService.getMovieByTitle(this.movieTitle).subscribe(
+      (movie) => {
+        this.moviePoster = movie.Poster;
+      }
+    );
+  }
+
   loadBookDetails() {
     let bookDetails = this.BooksService.getBooksDetailsByTitle(this.bookTitle);
 

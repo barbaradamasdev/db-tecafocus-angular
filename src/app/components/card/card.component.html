@@ -1,6 +1,6 @@
 <article *ngIf="isMovie; else bookTemplate">
   <a [routerLink]="['/movie', movieTitle]">
-    <img [src]="moviePoster" alt="Poster do filme">
+    <img (error)="setDefaultPoster($event)" [src]="moviePoster" alt="Poster do filme">
     <div>
       <div
         *ngIf="tecaNota !== null && tecaNota !== undefined"
@@ -26,7 +26,7 @@
 <ng-template #bookTemplate>
   <div class="tooltip">
   <article *ngIf="isBook; else gameTemplate">
-        <img [src]="bookImageUrl" alt="Capa do livro">
+        <img (error)="setDefaultPoster($event)" [src]="bookImageUrl" alt="Capa do livro">
         <div>
           <div
             *ngIf="tecaNota !== null && tecaNota !== undefined"
@@ -50,7 +50,7 @@
 
 <ng-template #gameTemplate>
   <article *ngIf="isGame">
-      <img [src]="gameImageUrl" alt="Capa do jogo">
+      <img (error)="setDefaultPoster($event)" [src]="gameImageUrl" alt="Capa do jogo">
       <div>
         <div
           *ngIf="tecaNota !== null && tecaNota !== undefined"
