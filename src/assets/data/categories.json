@@ -106,7 +106,8 @@
       {"Title":"Aggretsuko","imdbID":"tt8019444"},
       {"Title":"Dandadan","imdbID":"tt30217403"},
       {"Title":"Cells at Work!","imdbID":"tt8673610"},
-      {"Title":"Sakamoto Days","imdbID":"tt17069148"}
+      {"Title":"Sakamoto Days","imdbID":"tt17069148"},
+      {"Title":"Zenshû.","imdbID":"tt31863730"}
    ]
   },
   {
@@ -225,7 +226,8 @@
       {"Title":"Brightburn", "imdbID":"tt7752126"},
       {"Title":"Hold Your Breath","Year":"2024","imdbID":"tt12573480"},
       {"Title":"Calls","imdbID":"tt9327706"},
-      {"Title":"Presence","imdbID":"tt28249919"}
+      {"Title":"Presence","imdbID":"tt28249919"},
+      {"Title":"Cabin in the Woods","imdbID":"tt33343774"}
     ]
   },
   {
@@ -244,7 +246,8 @@
       { "Title": "Mowgli: Legend of the Jungle", "imdbID": "tt2388771" },
       { "Title": "Legend of the Guardians: The Owls of Ga'Hoole", "imdbID": "tt1219342" },
       {"Title":"Sonic the Hedgehog","imdbID":"tt3794354"},
-      {"Title":"Flow","imdbID":"tt4772188"}
+      {"Title":"Flow","imdbID":"tt4772188"},
+      {"Title":"Chip 'n Dale: Rescue Rangers","imdbID":"tt3513500"}
 
     ]
   },
@@ -365,7 +368,11 @@
       {"Title":"Love Village", "imdbID":"tt19106798"},
       {"Title":"Single's Inferno", "imdbID":"tt16283666"},
       {"Title":"School of Chocolate", "imdbID":"tt15172154"},
-      {"Title":"The Curious Creations of Christine McConnell", "imdbID":"tt8773080"}
+      {"Title":"The Curious Creations of Christine McConnell", "imdbID":"tt8773080"},
+      {"Title":"Beast Games","imdbID":"tt31812476"},
+      {"Title":"Squid Game: The Challenge","imdbID":"tt28104766"},
+      {"Title":"The Devil's Plan","imdbID":"tt27995115"},
+      {"Title":"The Rehearsal","imdbID":"tt10802170"}
     ]
   },
   {
@@ -443,7 +450,10 @@
       {"Title":"The Tomorrow War", "imdbID":"tt9777666"},
       {"Title":"The Silence", "imdbID":"tt7315484"},
       {"Title":"Agents of S.H.I.E.L.D.", "imdbID":"tt2364582"},
-      {"Title":"The Invasion","imdbID":"tt0427392"}
+      {"Title":"The Invasion","imdbID":"tt0427392"},
+      {"Title":"Mars Attacks!","imdbID":"tt0116996"},
+      {"Title":"The Eternaut","imdbID":"tt27740241"},
+      {"Title":"The Signal","imdbID":"tt2910814"}
     ]
   },
   {
@@ -561,8 +571,13 @@
       {"Title":"Juror #2","imdbID":"tt27403986"},
       {"Title":"Memories of Murder","imdbID":"tt0353969"},
       {"Title":"Tully","imdbID":"tt5610554"},
+      {"Title":"Pieces of Her","imdbID":"tt9170236"},
       {"Title":"Better Man","imdbID":"tt14260836"},
-      {"Title":"Adolescence","imdbID":"tt31806037"}
+      {"Title":"Adolescence","imdbID":"tt31806037"},
+      {"Title":"Last Breath","imdbID":"tt14403504"},
+      {"Title":"Incendies","imdbID":"tt1255953"},
+      {"Title":"Fractured","imdbID":"tt4332232"},
+      {"Title":"Band of Brothers","imdbID":"tt0185906"}
     ]
   },
   {
@@ -595,7 +610,9 @@
       {"Title":"Get Away","Year":"2024","imdbID":"tt10449276"},
       {"Title":"Companion","imdbID":"tt26584495"},
       {"Title":"Bad Sisters","imdbID":"tt15469618"},
-      {"Title":"Anora","imdbID":"tt28607951"}
+      {"Title":"Anora","imdbID":"tt28607951"},
+      {"Title":"Hacks","imdbID":"tt11815682"},
+      {"Title":"Murderbot","imdbID":"tt30444310"}
     ]
   },
   {
@@ -903,7 +920,9 @@
       {"Title":"Godzilla x Kong: The New Empire","Year":"2024","Rated":"PG-13","Runtime":"115 min","Genre":"Action, Adventure, Fantasy","Director":"Adam Wingard","Writer":"Terry Rossio, Adam Wingard, Simon Barrett","Actors":"Rebecca Hall, Brian Tyree Henry, Dan Stevens","Plot":"Two ancient titans, Godzilla and Kong, clash in an epic battle as humans unravel their intertwined origins and connection to Skull Island's mysteries.","Language":"English","Country":"United States, Australia","Awards":"1 win & 3 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BMTY0N2MzODctY2ExYy00OWYxLTkyNDItMTVhZGIxZjliZjU5XkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.1/10"},{"Source":"Rotten Tomatoes","Value":"54%"},{"Source":"Metacritic","Value":"47/100"}],"Metascore":"47","imdbRating":"6.1","imdbVotes":"110,252","imdbID":"tt14539740","Type":"movie","DVD":"N/A","BoxOffice":"$196,350,016","Production":"N/A","Website":"N/A","Response":"True", "TecaNota": 4, "TecaComments": "Entrega o esperado: monstros gigantes em cenas de destruição épica. Se isso basta, pode valer o ingresso. Porém, o roteiro segue o padrão ridículo da trilogia ocidental de Godzilla, com soluções absurdas e conveniências forçadas, como a 'luva mágica' para King Kong. Um espetáculo visual que exige desligar o cérebro para ser apreciado."},
       {"Title":"Barbie","Year":"2023","Rated":"PG-13","Runtime":"114 min","Genre":"Adventure, Comedy, Fantasy","Director":"Greta Gerwig","Writer":"Greta Gerwig, Noah Baumbach","Actors":"Margot Robbie, Ryan Gosling, Issa Rae","Plot":"Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.","Language":"English, Spanish","Country":"United States, United Kingdom","Awards":"Won 1 Oscar. 207 wins & 434 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BYjI3NDU0ZGYtYjA2YS00Y2RlLTgwZDAtYTE2YTM5ZjE1M2JlXkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.8/10"},{"Source":"Rotten Tomatoes","Value":"88%"},{"Source":"Metacritic","Value":"80/100"}],"Metascore":"80","imdbRating":"6.8","imdbVotes":"576,130","imdbID":"tt1517268","Type":"movie","DVD":"N/A","BoxOffice":"$636,238,421","Production":"N/A","Website":"N/A","Response":"True","TecaNota": 1, "TecaComments": "Tenho até preguiça de comentar, filme vazio com cores bonitas."},
       {"Title":"Alien: Romulus","Year":"2024","Rated":"R","Runtime":"119 min","Genre":"Horror, Sci-Fi, Thriller","Director":"Fede Alvarez","Writer":"Dan O'Bannon, Ronald Shusett, Fede Alvarez","Actors":"Cailee Spaeny, David Jonsson, Archie Renaux","Plot":"While scavenging the deep ends of a derelict space station, a group of young space colonists come face to face with the most terrifying life form in the universe.","Language":"English","Country":"United Kingdom, United States, Hungary, Australia, New Zealand, Canada","Awards":"2 wins & 3 nominations","Poster":"https://m.media-amazon.com/images/M/MV5BMDU0NjcwOGQtNjNjOS00NzQ3LWIwM2YtYWVmODZjMzQzN2ExXkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.2/10"},{"Source":"Rotten Tomatoes","Value":"80%"}],"Metascore":"N/A","imdbRating":"7.2","imdbVotes":"168,913","imdbID":"tt18412256","Type":"movie","DVD":"N/A","BoxOffice":"$105,313,091","Production":"N/A","Website":"N/A","Response":"True", "TecaNota": 4, "TecaComments": "Com personagens jovens e mal desenvolvidos, motivados por razões frágeis, e um deus ex machina que resolve tudo sem esforço, o longa transforma os temíveis alienígenas em ameaças irrelevantes. Embora tenha recebido elogios, não chega perto da profundidade e qualidades da trilogia Prometheus, mesmo com seus defeitos."},
-      {"Title":"The Substance","Year":"2024","Rated":"R","Released":"20 Sep 2024","Runtime":"141 min","Genre":"Drama, Horror, Sci-Fi","Director":"Coralie Fargeat","Writer":"Coralie Fargeat","Actors":"Demi Moore, Margaret Qualley, Dennis Quaid","Plot":"A fading celebrity takes a black-market drug: a cell-replicating substance that temporarily creates a younger, better version of herself.","Language":"English","Country":"United Kingdom, France, United States","Awards":"27 wins & 101 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BZDQ1NGE5MGMtYzdlZC00ODExLWJlMDMtNWU4NjA5OWYwMDEwXkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.4/10"},{"Source":"Rotten Tomatoes","Value":"90%"},{"Source":"Metacritic","Value":"78/100"}],"Metascore":"78","imdbRating":"7.4","imdbVotes":"168,798","imdbID":"tt17526714","Type":"movie","DVD":"N/A","BoxOffice":"$16,425,984","Production":"N/A","Website":"N/A","Response":"True", "TecaNota": 4, "TecaComments": "Filme que impressiona visualmente, mas decepciona em sua narrativa. Apesar da fotografia bem executada, o roteiro é raso e recheado de metáforas forçadas que tentam parecer profundas. Críticos exaltam uma suposta crítica social que, na prática, é mal desenvolvida. Uma experiência visualmente bonita, mas sem substância real."}
+      {"Title":"The Substance","Year":"2024","Rated":"R","Released":"20 Sep 2024","Runtime":"141 min","Genre":"Drama, Horror, Sci-Fi","Director":"Coralie Fargeat","Writer":"Coralie Fargeat","Actors":"Demi Moore, Margaret Qualley, Dennis Quaid","Plot":"A fading celebrity takes a black-market drug: a cell-replicating substance that temporarily creates a younger, better version of herself.","Language":"English","Country":"United Kingdom, France, United States","Awards":"27 wins & 101 nominations total","Poster":"https://m.media-amazon.com/images/M/MV5BZDQ1NGE5MGMtYzdlZC00ODExLWJlMDMtNWU4NjA5OWYwMDEwXkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"7.4/10"},{"Source":"Rotten Tomatoes","Value":"90%"},{"Source":"Metacritic","Value":"78/100"}],"Metascore":"78","imdbRating":"7.4","imdbVotes":"168,798","imdbID":"tt17526714","Type":"movie","DVD":"N/A","BoxOffice":"$16,425,984","Production":"N/A","Website":"N/A","Response":"True", "TecaNota": 4, "TecaComments": "Filme que impressiona visualmente, mas decepciona em sua narrativa. Apesar da fotografia bem executada, o roteiro é raso e recheado de metáforas forçadas que tentam parecer profundas. Críticos exaltam uma suposta crítica social que, na prática, é mal desenvolvida. Uma experiência visualmente bonita, mas sem substância real."},
+      {"Title":"Ash","Year":"2025","Rated":"R","Released":"21 Mar 2025","Runtime":"95 min","Genre":"Horror, Sci-Fi, Thriller","Director":"Flying Lotus","Writer":"Jonni Remmler","Actors":"Eiza González, Aaron Paul, Iko Uwais","Plot":"A woman wakes up on a distant planet and finds the crew of her space station viciously killed. Her investigation into what happened sets in motion a terrifying chain of events.","Language":"English","Country":"United States","Awards":"1 nomination total","Poster":"https://m.media-amazon.com/images/M/MV5BOTYwZDE3ZDctOTc2Mi00MWIyLWFmMjctZTJmNzNmMjZkOTI0XkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"5.8/10"},{"Source":"Rotten Tomatoes","Value":"73%"},{"Source":"Metacritic","Value":"63/100"}],"Metascore":"63","imdbRating":"5.8","imdbVotes":"1,193","imdbID":"tt17489650","Type":"movie","DVD":"N/A","BoxOffice":"$1,083,743","Production":"N/A","Website":"N/A","Response":"True", "TecaNota": 2, "TecaComments": "Tá aí um filme que não consegui nem terminar. Extremamente fraco, roteiro pobre, história mal contada, lento. Foi uma perda de tempo absurda."},
+      {"Title":"The Monkey","Year":"2025","Rated":"R","Released":"21 Feb 2025","Runtime":"98 min","Genre":"Horror","Director":"Osgood Perkins","Writer":"Osgood Perkins, Stephen King","Actors":"Theo James, Tatiana Maslany, Christian Convery","Plot":"When twin brothers Bill and Hal find their father's old monkey toy in the attic, a series of gruesome deaths start. The siblings decide to throw the toy away and move on with their lives, growing apart over the years.","Language":"English","Country":"United States, United Kingdom, Canada","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BNzZhMTc5MWUtOTE2MS00MjUwLTljYWEtYTk1ZmVjNzhmMzYzXkEyXkFqcGc@._V1_SX300.jpg","Ratings":[{"Source":"Internet Movie Database","Value":"6.1/10"},{"Source":"Rotten Tomatoes","Value":"78%"},{"Source":"Metacritic","Value":"62/100"}],"Metascore":"62","imdbRating":"6.1","imdbVotes":"34,778","imdbID":"tt27714946","Type":"movie","DVD":"N/A","BoxOffice":"$39,675,153","Production":"N/A","Website":"N/A","Response":"True", "TecaNota": 2.5, "TecaComments": "Filme hororroso. Fui na expectativa de ser uma obra de Stephen King, mas foi uma baita decepção, a história é bem fraquinha e sem nexo com roteiro pobre."}
     ]
   }
 ]
