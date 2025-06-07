@@ -165,7 +165,8 @@
       {"Title":"Animal World","imdbID":"tt7946836"},
       {"Title":"2001: A Space Odyssey","imdbID":"tt0062622"},
       {"Title":"2010: The Year We Make Contact", "imdbID":"tt0086837"},
-      {"Title":"Calls","imdbID":"tt9327706"}
+      {"Title":"Calls","imdbID":"tt9327706"},
+      {"Title":"Moon","imdbID":"tt1182345"}
     ]
   },
   {
@@ -227,7 +228,9 @@
       {"Title":"Hold Your Breath","Year":"2024","imdbID":"tt12573480"},
       {"Title":"Calls","imdbID":"tt9327706"},
       {"Title":"Presence","imdbID":"tt28249919"},
-      {"Title":"Cabin in the Woods","imdbID":"tt33343774"}
+      {"Title":"Cabin in the Woods","imdbID":"tt33343774"},
+      {"Title":"Sinners","imdbID":"tt31193180"},
+      {"Title":"The Bondsman","imdbID":"tt28256288"}
     ]
   },
   {
@@ -613,7 +616,8 @@
       {"Title":"Bad Sisters","imdbID":"tt15469618"},
       {"Title":"Anora","imdbID":"tt28607951"},
       {"Title":"Hacks","imdbID":"tt11815682"},
-      {"Title":"Murderbot","imdbID":"tt30444310"}
+      {"Title":"Murderbot","imdbID":"tt30444310"},
+      {"Title":"Sirens","imdbID":"tt31429675"}
     ]
   },
   {
