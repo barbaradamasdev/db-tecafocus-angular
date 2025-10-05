@@ -171,6 +171,7 @@ export class MovieComponent {
   }
 
   setDefaultPoster(event: Event) {
+    console.log()
     const imgElement = event.target as HTMLImageElement;
     imgElement.src = this.defaultPoster;
 
